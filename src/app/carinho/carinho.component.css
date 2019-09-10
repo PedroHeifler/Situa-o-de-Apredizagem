@@ -1,0 +1,58 @@
+#carrinho {
+    position: relative;
+  }
+  
+  #carrinhoTitulo h3 {
+    text-align: center;
+    color: black;
+  }
+  
+  #carrinhoMenu .row {
+    text-align: center;
+    border: 1px #000 solid;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  #carrinhoMenu p {
+    color: #000;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  #carrinhoMenu img {
+    width: 100%
+  }
+  
+  #carrinhoMenu #quantidate_input {
+    width: 100%;
+  }
+  
+  #carrinhoMenu .col-md-2 {
+    margin: auto;
+  }
+  
+  #carrinhoMenu .col-md-3 {
+    line-height: 160px;
+    vertical-align: middle;
+  }
+  
+  #excluir {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background: transparent;
+    color: #000000;
+    font-size: 15px;
+    font-weight: bolder;
+    transition: 0.5s;
+  }
+  
+  #excluir:hover {
+    color: red;
+    border: 2px solid red;
+  }
+  
+  #carrinhoTitulo {
+    background-color: #ee9601;
+  }
