@@ -1,0 +1,64 @@
+#detalhes_img {
+    width: 100%;
+    border: 2px solid;
+    border-radius: 10px;
+  }
+  
+  #detalhes_container {
+    background-color: #ffffffe8;
+    border-radius: 10px;
+  }
+  
+  #detalhes_container div {
+    padding: 20px
+  }
+  
+  #detalhes_preco {
+    text-align: center;
+    border: 1px #000 solid;
+    border-radius: 10px;
+  }
+  
+  #detalhes_preco .detalhes_desconto {
+    color: #c61c23;
+    font-size: 200%;
+    text-decoration: line-through;
+  }
+  
+  #detalhes_preco .detalhes_total {
+    color: #c61c23;
+    font-size: 245%;
+  }
+  
+  .detalhes_info h1 {
+    background-color: #484848;
+    color: white;
+    padding: 10px;
+    margin-top: 100px;
+  }
+  
+  .detalhes_button {
+    margin-top: 55px;
+    height: auto;
+  }
+  
+  .detalhes_button button {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #43da12;
+    border: 2px solid #15c300;
+    border-radius: 7px;
+    box-shadow: 3px 3px 10px #0000008f;
+    transition: 300ms;
+  }
+  
+  .detalhes_button button:hover {
+    transform: translateY(2px);
+    box-shadow: unset;
+  }
+  
+  .detalhes_button i {
+    color: #fff !important;
+  }
