@@ -2929,14 +2929,11 @@
         "multicast-dns-service-types": "^1.1.0"
       }
     },
-<<<<<<< HEAD
     "boostrap": {
       "version": "2.0.0",
       "resolved": "https://registry.npmjs.org/boostrap/-/boostrap-2.0.0.tgz",
       "integrity": "sha512-JEeFMOweKeGXEM9rt95eaVISOkluG9aKcl0jQCETOVH9jynCZxuBZe2oWgcWJpj5wqYWZl625SnW7OgHT2Ineg=="
     },
-=======
->>>>>>> d0a6c998e95afae23ba38641b8a69eb4e0a4bf74
     "bootstrap": {
       "version": "4.3.1",
       "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.3.1.tgz",
