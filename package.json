@@ -19,10 +19,6 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
-<<<<<<< HEAD
-    "boostrap": "^2.0.0",
-=======
->>>>>>> d0a6c998e95afae23ba38641b8a69eb4e0a4bf74
     "bootstrap": "^4.3.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
