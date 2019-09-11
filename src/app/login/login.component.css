@@ -4,7 +4,7 @@
     body {
         height: 799px;
         background-size: cover;
-        background-image: url(img/Black-and-Orange-Wallpaper-Full-HD.jpg);
+        background-image: url(src/assets/Black-and-Orange-Wallpaper-Full-HD.jpg);
         background-attachment: fixed;
         background-repeat: no-repeat;
         font-family: 'Numans', sans-serif;
