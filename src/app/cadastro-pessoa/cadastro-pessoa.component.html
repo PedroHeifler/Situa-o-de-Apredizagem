@@ -1,5 +1,5 @@
-<div>
-    <div class="container" style="display: flex !important; background-color: white; min-height: 50px !important; border-top-left-radius: 10px;
+<div class="row">
+    <div style="display: flex !important; background-color: white; min-height: 50px !important; border-top-left-radius: 10px;
     border-top-right-radius: 10px;">
         <div class="pessoa">
             <div>
@@ -18,8 +18,7 @@
         </div>
     </div>
 
-    <div id="pf" class="container"
-        style="background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
+    <div id="pf" style="background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; ">
         <section>
 
             <div class="input_img">
@@ -182,182 +181,183 @@
             </form>
         </section>
     </div>
-</div>
-<div id="pj" class="container" style="background-color: white; border-bottom-left-radius: 10px;
+    
+    <div id="pj" style="background-color: white; border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px; display: none;">
-    <section>
+        <section>
 
-        <div class="input_img">
+            <div class="input_img">
 
-            <div class="col-sm-6 offset-sm-3" style="width: 100%;margin-left: 0%;margin-right: 25%">
-                <div class="form-group inputDnD" style="text-align: left">
-                    <H5>INSERIR IMAGENS</H5>
-                    <label class="sr-only" for="inputFile">File Upload</label>
-                    <input type="file" style="width: 150px;height: 100px"
-                        class="form-control-file  text-danger font-weight-bold" id="inputFile" accept="image/*"
-                        onchange="readUrl(this)" data-title="Arraste e solte">
-                </div>
-            </div>
-        </div>
-        <form class="was-validated">
-            <div class="form-group" style="max-width: 300px; float: left;">
-                <h5>Dados pessoais</h5>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nome" aria-label="nome"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Sobrenome" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="CNPJ" aria-label="cpf"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="Nome Fantasia"
-                            aria-label="name" aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="Inscrição Estadual"
-                            aria-label="name" aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="Razão Social"
-                            aria-label="name" aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="Telefone" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="Celular" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
+                <div class="col-sm-6 offset-sm-3" style="width: 100%;margin-left: 0%;margin-right: 25%">
+                    <div class="form-group inputDnD" style="text-align: left">
+                        <H5>INSERIR IMAGENS</H5>
+                        <label class="sr-only" for="inputFile">File Upload</label>
+                        <input type="file" style="width: 150px;height: 100px"
+                            class="form-control-file  text-danger font-weight-bold" id="inputFile" accept="image/*"
+                            onchange="readUrl(this)" data-title="Arraste e solte">
                     </div>
                 </div>
             </div>
-            <div class="form-group" style="max-width: 300px; float: left;">
-                <h5>Endereço</h5>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Rua" aria-label="nome"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
+            <form class="was-validated">
+                <div class="form-group" style="max-width: 300px; float: left;">
+                    <h5>Dados pessoais</h5>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Nome" aria-label="nome"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Sobrenome" aria-label="name"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="CNPJ" aria-label="cpf"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" maxlength="11" class="form-control" placeholder="Nome Fantasia"
+                                aria-label="name" aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" maxlength="11" class="form-control" placeholder="Inscrição Estadual"
+                                aria-label="name" aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" maxlength="11" class="form-control" placeholder="Razão Social"
+                                aria-label="name" aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" maxlength="11" class="form-control" placeholder="Telefone"
+                                aria-label="name" aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" maxlength="11" class="form-control" placeholder="Celular"
+                                aria-label="name" aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Bairro" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
+                <div class="form-group" style="max-width: 300px; float: left;">
+                    <h5>Endereço</h5>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Rua" aria-label="nome"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Bairro" aria-label="name"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Cidade" aria-label="cpf"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" maxlength="11" class="form-control" placeholder="Estado"
+                                aria-label="name" aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" maxlength="11" class="form-control" placeholder="Pais" aria-label="name"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" maxlength="11" class="form-control" placeholder="CEP" aria-label="name"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Cidade" aria-label="cpf"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="Estado" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="Pais" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="CEP" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="form-group" style="max-width: 600px;float: left">
-                <h5>Conta</h5>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nome" aria-label="name"
+                <div class="form-group" style="max-width: 600px;float: left">
+                    <h5>Conta</h5>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Nome" aria-label="name"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <input type="text" class="form-control" placeholder="Apelido" aria-label="name"
                             aria-describedby="basic-addon1" required>
                         <div class="invalid-feedback"></div>
                     </div>
-                </div>
-                <div class="content_form_l">
-                    <input type="text" class="form-control" placeholder="Apelido" aria-label="name"
-                        aria-describedby="basic-addon1" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="clear"></div>
-                <div class="content_form_l">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Senha" aria-label="name"
+                    <div class="clear"></div>
+                    <div class="content_form_l">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Senha" aria-label="name"
+                                aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="content_form_l">
+                        <input type="text" class="form-control" placeholder="Confirmar Senha" aria-label="name"
                             aria-describedby="basic-addon1" required>
                         <div class="invalid-feedback"></div>
                     </div>
-                </div>
-                <div class="content_form_l">
-                    <input type="text" class="form-control" placeholder="Confirmar Senha" aria-label="name"
-                        aria-describedby="basic-addon1" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="box_select">
-                    <select class="custom-select" style="width: 482px;" required>
-                        <option value="">Pergunta de segurança</option>
-                        <option value="1">Qual o nome do seu primeiro cachorro?</option>
-                        <option value="2">Sua cidade natal?</option>
-                        <option value="3">Sua comida favorita?</option>
-                        <div class="invalid-feedback">Selecione a Moeda</div>
-                    </select>
-                </div>
-                <div class="content_form_l">
-                    <input type="text" class="form-control" placeholder="Resposta" aria-label="name"
-                        aria-describedby="basic-addon1" style="width: 482px;margin-top: 5px" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="clear">
-                    <div class="form-group form-check" style="padding-left: 0%">
-                        <a href="#">Termos de aceitação</a>
-                        <br>
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                        <label class="form-check-label" for="exampleCheck1">Concordo com os termos</label>
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                        <label class="form-check-label" for="exampleCheck1">Aceito os termos</label>
-                        <button style="margin-top: 5px">Cadastrar</button>
+                    <div class="box_select">
+                        <select class="custom-select" style="width: 482px;" required>
+                            <option value="">Pergunta de segurança</option>
+                            <option value="1">Qual o nome do seu primeiro cachorro?</option>
+                            <option value="2">Sua cidade natal?</option>
+                            <option value="3">Sua comida favorita?</option>
+                            <div class="invalid-feedback">Selecione a Moeda</div>
+                        </select>
+                    </div>
+                    <div class="content_form_l">
+                        <input type="text" class="form-control" placeholder="Resposta" aria-label="name"
+                            aria-describedby="basic-addon1" style="width: 482px;margin-top: 5px" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="clear">
+                        <div class="form-group form-check" style="padding-left: 0%">
+                            <a href="#">Termos de aceitação</a>
+                            <br>
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                            <label class="form-check-label" for="exampleCheck1">Concordo com os termos</label>
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                            <label class="form-check-label" for="exampleCheck1">Aceito os termos</label>
+                            <button style="margin-top: 5px">Cadastrar</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
-    </section>
+            </form>
+        </section>
+    </div>
 </div>
