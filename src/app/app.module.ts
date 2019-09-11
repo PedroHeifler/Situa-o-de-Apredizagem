@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { CarinhoComponent } from './carinho/carinho.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroPessoaComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    CarinhoComponent
   ],
   imports: [
     BrowserModule
