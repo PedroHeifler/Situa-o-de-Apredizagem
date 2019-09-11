@@ -1,102 +1,46 @@
-<body>
-    <div class="container" id="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a href="index.html" id="link_logo"><img src="img/logo.png" id="logo"></a>
-
-            <div class="collapse navbar-collapse" id="navbarsExample05">
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown05">
-                            <a class="dropdown-item" href="#">Monitores</a>
-                            <a class="dropdown-item" href="#">Mouses</a>
-                            <a class="dropdown-item" href="#">Teclado</a>
-                            <a class="dropdown-item" href="#">Gabinetes</a>
-                        </div>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="anunciar_produto.html">Anuncie Aqui! <span
-                                class="sr-only">(current)</span></a>
-                    </li>
-
-                </ul>
-                <form class="form-inline my-2 my-md-0">
-                    <input class="form-control" type="text" placeholder="O que voce procura?">
-                </form>
-
-                <a href="cadastro_pessoa.html" id="link_cadastro">Cadastro</a>
-                <a href="Tela_login.html" id="link_login">Entrar</a>
-                <a href="tela_carrinho.html"><i class="fas fa-shopping-cart" id="carrinho"></i></a>
+<div class="container" id="detalhes_container">
+    <div class="row">
+        <div class="col-md-6">
+            <img id="detalhes_img" src="assets/monitor.jpg">
+        </div>
+        <div class="col-md-6" id="detalhes_preco">
+            <h3>MONITOR GAMER 21.5 POL, FULL HD, 60HZ</h3>
+            <br>
+            <h4 class="detalhes_desconto">DE: R$ 400.00</h4>
+            <br>
+            <br>
+            <h4 class="detalhes_total">PARA: R$ 400.00</h4>
+            <br>
+            <div class="detalhes_button">
+                <a href="tela_carrinho.html">
+                    <button type="button"><i class="fas fa-cart-arrow-down"></i> Enviar pro Carrinho</button>
+                </a>
             </div>
-        </nav>
+        </div>
     </div>
-    <div id="myCarousel" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="img/1.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="img/2.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="img/3.jpg" alt="">
-            </div>
-        </div>
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
-
-
-    <section>
-        <div class="container" id="detalhes_container">
-
-            <div class="row">
-                <div class="col-md-6">
-                    <img id="detalhes_img" src="img/monitor.jpg">
-                </div>
-                <div class="col-md-6" id="detalhes_preco">
-                    <h3>MONITOR GAMER 21.5 POL, FULL HD, 60HZ</h3>
-                    <br>
-                    <h4 class="detalhes_desconto">DE: R$ 400.00</h4>
-                    <br>
-                    <br>
-                    <h4 class="detalhes_total">PARA: R$ 400.00</h4>
-                    <br>
-                    <div class="detalhes_button">
-                        <a href="tela_carrinho.html">
-                            <button type="button"><i class="fas fa-cart-arrow-down"></i> Enviar pro Carrinho</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="detalhes_info">
-                <h1>DESCRIÇÃO DO PRODUTO</h1>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution of letters, as opposed to using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                    (injected humour and the like).</p>
-                <h1>DEFINICOES TÉCNICAS</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <ul>
-                    <li>printing</li>
-                    <li>typesetting</li>
-                    <li>distracted</li>
-                    <li>reader</li>
-                    <li>established</li>
-                    <li>fact</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-</body>
+    <div class="detalhes_info">
+        <h1>DESCRIÇÃO DO PRODUTO</h1>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content here', making it look like
+            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+            default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+            infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+            (injected humour and the like).</p>
+        <h1>DEFINICOES TÉCNICAS</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <ul>
+            <li>printing</li>
+            <li>typesetting</li>
+            <li>distracted</li>
+            <li>reader</li>
+            <li>established</li>
+            <li>fact</li>
+        </ul>
+    </div>
+</div>

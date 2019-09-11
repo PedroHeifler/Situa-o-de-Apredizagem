@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home-component',
@@ -9,7 +10,13 @@ export class HomeComponentComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
+    $(document).ready(function () {
+      $("button").click(function () {
+        var div = $("div");
+        div.animate({ left: '100px' }, "slow");
+        div.animate({ fontSize: '5em' }, "slow");
+      });
+    });
   }
-
 }
