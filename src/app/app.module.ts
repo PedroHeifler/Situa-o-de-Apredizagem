@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { CarinhoComponent } from './carinho/carinho.component';
+import { LoginComponent } from './login/login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,11 @@ import { CarinhoComponent } from './carinho/carinho.component';
     CadastroPessoaComponent,
     HomeComponentComponent,
     CarinhoComponent
+    LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
