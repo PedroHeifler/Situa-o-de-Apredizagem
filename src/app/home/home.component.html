@@ -29,9 +29,9 @@
                 <input class="form-control" type="text" placeholder="O que voce procura?">
             </form>
 
-            <a href="cadastro_pessoa.html" id="link_cadastro">Cadastro</a>
-            <a href="Tela_login.html" id="link_login">Entrar</a>
-            <a href="tela_carrinho.html">
+            <a routerLink='/cadastro' id="link_cadastro">Cadastro</a>
+            <a routerLink='/login' id="link_login">Entrar</a>
+            <a routerLink='/carrinho'>
                 <i class="fas fa-shopping-cart" id="carrinho"></i>
             </a>
         </div>
@@ -65,14 +65,11 @@
         </a>
     </div>
 </div>
-<div class="container">
-    <app-carinho></app-carinho>
 
-    <app-cadastro-pessoa></app-cadastro-pessoa>
-
-    <app-detalhe-produto></app-detalhe-produto>
-
-    <app-anunciar></app-anunciar>
+<div id="conteudo">
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
 </div>
 
 <div class="footer">

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-home-component',
-  templateUrl: './home-component.component.html',
-  styleUrls: ['./home-component.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponentComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   constructor() { }
 

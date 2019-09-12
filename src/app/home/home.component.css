@@ -1,4 +1,13 @@
 /*navbar header*/
+
+#conteudo{
+  
+  background-size: cover;
+  background-image: url(src/assets/Black-and-Orange-Wallpaper-Full-HD.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Numans', sans-serif;
+}
 .collapse {
     overflow: visible !important;
   }
@@ -164,9 +173,7 @@
     background-color: white;
   }
   /*Carousel*/
-  .carousel {
-      margin-bottom: 100px !important;
-    }
+  
     
     .carousel .container {
       position: absolute;
@@ -302,7 +309,7 @@
       clear: both;
       background-color: #484848;
       padding: 75px 0;
-      margin-top: 50px;
+     
     }
     
   .logo{
