@@ -1,13 +1,8 @@
-/*LOGIN*/
+  /*LOGIN*/
 
 @import url('https://fonts.googleapis.com/css?family=Numans');
     body {
-        height: 799px;
-        background-size: cover;
-        background-image: url(src/assets/Black-and-Orange-Wallpaper-Full-HD.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        font-family: 'Numans', sans-serif;
+        background-color: transparent;
       }
 .container {
   height: 100%;
@@ -25,11 +20,8 @@
 .social_icon span {
   font-size: 60px;
   margin-left: 10px;
-  color: #9a802aba;
 }
-
 .social_icon span:hover {
-  color: skyblue;
   cursor: pointer;
 }
 
@@ -45,8 +37,7 @@
 
 .input-group-prepend span {
   width: 50px;
-  background-color: #9a802aba;
-  color: black;
+  color: white;
   border: 0 !important;
 }
 
@@ -69,14 +60,7 @@ input:focus {
 .login_btn {
   border-radius: 10px;
   float: right;
-  color: black;
-  background-color: #9a802aba;
   width: 100px;
-}
-
-.login_btn:hover {
-  color: black;
-  background-color: white;
 }
 
 .links {

@@ -1,42 +1,47 @@
-<div class="container" id="header">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="index.html" id="link_logo">
-            <img src="assets/logo.png" id="logo">
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
+        <a routerLink="/">
+            <img src="/assets/logo.png" id="logo">
         </a>
-
-        <div class="collapse navbar-collapse" id="navbarsExample05">
-            <ul class="navbar-nav mr-auto">
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Produtos</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown05">
-                        <a class="dropdown-item" href="#">Monitores</a>
-                        <a class="dropdown-item" href="#">Mouses</a>
-                        <a class="dropdown-item" href="#">Teclado</a>
-                        <a class="dropdown-item" href="#">Gabinetes</a>
-                    </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="anunciar_produto.html">Anuncie Aqui!
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-
-            </ul>
-            <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="O que voce procura?">
-            </form>
-
-            <a href="cadastro_pessoa.html" id="link_cadastro">Cadastro</a>
-            <a href="Tela_login.html" id="link_login">Entrar</a>
-            <a href="tela_carrinho.html">
-                <i class="fas fa-shopping-cart" id="carrinho"></i>
+        <div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a routerLink="/carrinho" class="carrinho-desktop">
+                <i class="fas fa-shopping-cart ml-2 text-dark"></i>
             </a>
         </div>
-    </nav>
-</div>
+
+        <div class="collapse navbar-collapse campo-reverter" id="navbarsExample09">
+            <a routerLink="/carrinho" class="carrinho-mobile">
+                <i class="fas fa-shopping-cart ml-2 text-dark"></i>
+            </a>
+            <form class="form-inline my-2 my-md-0">
+                <input class="form-control campo-pesquisa" type="text" placeholder="Pesquisa" aria-label="Search">
+            </form>
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">HARDWARE</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">PERIFERICOS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">COMPUTADORES</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">MOUSES</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">TECLADOS</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
 <div class="carousel">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -65,14 +70,11 @@
         </a>
     </div>
 </div>
-<div class="container">
-    <app-carinho></app-carinho>
 
-    <app-cadastro-pessoa></app-cadastro-pessoa>
-
-    <app-detalhe-produto></app-detalhe-produto>
-
-    <app-anunciar></app-anunciar>
+<div id="conteudo">
+    <div class="container p-5">
+        <router-outlet></router-outlet>
+    </div>
 </div>
 
 <div class="footer">
@@ -116,3 +118,5 @@
         </div>
     </div>
 </div>
+
+
