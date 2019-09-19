@@ -73,3 +73,53 @@ div.imgSocial img {
 .imgPagamento img {
     width: 50px;
 }
+/*Section Principal*/
+
+#principal {
+    position: relative;
+  }
+  
+  #principal div {
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  #principal .img-produto {
+    border: 1px solid;
+    transition: 500ms;
+    height: 100%;
+    background-color: white;
+  }
+  
+  #principal img {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 210px;
+  }
+  
+  #principal h3 {
+    color: red;
+    padding: 0 10px;
+  }
+  
+  #principal p {
+    color: black;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  
+  #principal a:hover {
+    text-decoration: none;
+  }
+  
+  #principal .img-produto button:hover {
+    background: #ff0000;
+    color: white;
+  }
+  
+  #principal .img-produto:hover img {
+    opacity: 0.7;
+    transition: 300ms;
+  }
