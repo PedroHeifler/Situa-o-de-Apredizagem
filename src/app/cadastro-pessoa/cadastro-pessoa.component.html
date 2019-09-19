@@ -1,32 +1,30 @@
 <div class="row bg-white p-5 rounded shadow">
     <div>
-        <div class="pessoa">
-            <div>
-                <H1>Cadastro de Cliente</H1>
-            </div>
-            <div class="pessoaFisica">
-                <label for="opt-pf">Pessoa Física</label>
-                <input id="opt-pf" checked="checked" type="radio" name="TipoPessoa" onclick="tipoPessoaSel()"/>
-            </div>
-            <div class="pessoaJuridica">
-                <label for="opt-pj">Pessoa Jurídica</label>
-                <input id="opt-pj" type="radio" name="TipoPessoa" onclick="tipoPessoaSel()"/>
-            </div>
+        <H1>Cadastro de Cliente</H1>
+        <br>
+        <div style="font-size: 30px">
+            <label><input type="radio" title="Fisica" name="TipoPessoa"
+                    (click)="RadioFisicaOuJuridica(fisica, 'fisica')" #fisica /> Fisica</label>
+            <br>
+            <label><input type="radio" title="Juridica" name="TipoPessoa"
+                    (click)="RadioFisicaOuJuridica(juridica, 'juridica')" #juridica /> Juridica </label>
         </div>
     </div>
 
-    <div id="pf">
+    <div id="pessoaFisica">
+        <hr>
         <section style="width: 1000px">
+            <h2>Pessoa Fisica</h2>
             <div class="input_img">
                 <div class="col-sm-12 pt-2 pb-2 form-group inputDnD">
                     <label class="sr-only" for="inputFile"></label>
-                    <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile" accept="image/*"
-                        onchange="readUrl(this)" data-title="Arraste e solte">
+                    <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile"
+                        accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte">
                 </div>
             </div>
 
             <nav>
-                <div class="nav nav-pills mb-5" id="nav-tab" role="tablist">
+                <div class="nav nav-pills mb-3 d-flex justify-content-center mt-5" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" data-toggle="tab" href="#dadosPessoais" role="tab">Dados
                         Pessoais</a>
                     <a class="nav-item nav-link" data-toggle="tab" href="#endereco" role="tab">Endereço</a>
@@ -34,54 +32,55 @@
                 </div>
             </nav>
 
-            <!-----maxlength="14"----->
-            <form class="was-validated row tab-content bg-white" id="myTabContent">
-                <div class="form-group col-md-6 tab-pane fade show active" id="dadosPessoais" role="tab">
-                    <h3>Dados pessoais</h3>
+            <form class="row tab-content bg-white text-center d-flex justify-content-center needs-validation" novalidate
+                id="myTabContent1">
+                <div class="form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais"
+                    role="tab">
+                    <h2>Dados pessoais</h2>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Nome" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                     </div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Sobrenome" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="CPF" required>
+                        <input type="text" class="form-control" id="cpf" placeholder="CPF" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="RG" required>
+                        <input type="text" class="form-control" id="telefone" placeholder="Telefone Fixo" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="tel" class="form-control" placeholder="Telefone" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Celular" required>
+                        <input type="text" class="form-control" id="celular" placeholder="Celular" required>
                     </div>
                 </div>
 
-                <div class="form-group col-md-6 tab-pane fade" id="endereco" role="tab">
-                    <h3>Endereço</h3>
+                <div class="form-group col-md-6 tab-pane fade border p-5 rounded" id="endereco" role="tab">
+                    <h2>Endereço</h2>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Rua" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Bairro" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Cidade" required>
+                        <input type="text" class="form-control" placeholder="Pais" required>
                     </div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Estado" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Pais" required>
+                        <input type="text" class="form-control" placeholder="Cidade" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="CEP" required>
+                        <input type="text" class="form-control" placeholder="Bairro" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Rua" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="cep" placeholder="CEP" required>
                     </div>
                 </div>
 
-                <div class="form-group col-md-6 tab-pane fade" id="conta" role="tab">
-                    <h3>Conta</h3>
+                <div class="form-group col-md-6 tab-pane fade border p-5 rounded" id="conta" role="tab">
+                    <h2>Conta</h2>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Usuario" required>
                     </div>
@@ -92,206 +91,104 @@
                         <input type="password" class="form-control" placeholder="Confirmar Senha" required>
                     </div>
 
-                    <div class="box_select mb-3">
-                        <select class="custom-select" required>
-                            <option value="">Pergunta de segurança</option>
-                            <option value="1">Qual o nome do seu primeiro cachorro?</option>
-                            <option value="2">Sua cidade natal?</option>
-                            <option value="3">Sua comida favorita?</option>
-                        </select>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Resposta" required>
-                    </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
                         <a href="#">Termos de aceitação</a>
                         <br>
                         <input type="checkbox" class="form-check-input" id="termosAcaitacao1" required>
                         <label class="form-check-label" for="termosAcaitacao1">Concordo com os termos</label>
                         <br>
-                        <input type="checkbox" class="form-check-input" id="termosAcaitacao2" required>
-                        <label class="form-check-label" for="termosAcaitacao2">Aceito os termos</label>
-                        <br>
-                        <button class="btn btn-success">Cadastrar</button>
                     </div>
+                    <button type="submit" class="btn btn-success mt-2 col-3">Cadastrar</button>
                 </div>
             </form>
+
         </section>
     </div>
 
-    <div id="pj" style="background-color: white; border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px; display: none;">
-        <section>
-
+    <div id="pessoaJuridica">
+        <hr>
+        <section style="width: 1000px">
+            <h2>Pessoa Juridica</h2>
             <div class="input_img">
-
-                <div class="col-sm-6 offset-sm-3" style="width: 100%;margin-left: 0%;margin-right: 25%">
-                    <div class="form-group inputDnD" style="text-align: left">
-                        <H5>INSERIR IMAGENS</H5>
-                        <label class="sr-only" for="inputFile">File Upload</label>
-                        <input type="file" style="width: 150px;height: 100px"
-                            class="form-control-file  text-danger font-weight-bold" id="inputFile" accept="image/*"
-                            onchange="readUrl(this)" data-title="Arraste e solte">
-                    </div>
+                <div class="col-sm-12 pt-2 pb-2 form-group inputDnD">
+                    <label class="sr-only" for="inputFile"></label>
+                    <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile"
+                        accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte">
                 </div>
             </div>
-            <form class="was-validated">
-                <div class="form-group" style="max-width: 300px; float: left;">
-                    <h5>Dados pessoais</h5>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Nome" aria-label="nome"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Sobrenome" aria-label="name"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="CNPJ" aria-label="cpf"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" maxlength="11" class="form-control" placeholder="Nome Fantasia"
-                                aria-label="name" aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" maxlength="11" class="form-control" placeholder="Inscrição Estadual"
-                                aria-label="name" aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" maxlength="11" class="form-control" placeholder="Razão Social"
-                                aria-label="name" aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" maxlength="11" class="form-control" placeholder="Telefone"
-                                aria-label="name" aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" maxlength="11" class="form-control" placeholder="Celular"
-                                aria-label="name" aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
+
+            <nav>
+                <div class="nav nav-pills mb-3 d-flex justify-content-center mt-5" id="nav-tab2" role="tablist">
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#dadosPessoais2" role="tab">Dados
+                        Pessoais</a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#endereco2" role="tab">Endereço</a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#conta2" role="tab">Conta</a>
                 </div>
-                <div class="form-group" style="max-width: 300px; float: left;">
-                    <h5>Endereço</h5>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Rua" aria-label="nome"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
+            </nav>
+
+            <form class=" row tab-content bg-white text-center d-flex justify-content-center"
+                id="myTabContent">
+                <div class="was-validated form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais2"
+                    role="tab">
+                    <h2>Dados pessoais</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nome" required>
                     </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Bairro" aria-label="name"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Sobrenome" required>
                     </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Cidade" aria-label="cpf"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="CNPJ" required>
                     </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" maxlength="11" class="form-control" placeholder="Estado"
-                                aria-label="name" aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
+                    <div class="input-group mb-3">
+                        <input type="tel" class="form-control" placeholder="Telefone Fixo">
                     </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" maxlength="11" class="form-control" placeholder="Pais" aria-label="name"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" maxlength="11" class="form-control" placeholder="CEP" aria-label="name"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Celular">
                     </div>
                 </div>
 
-                <div class="form-group" style="max-width: 600px;float: left">
-                    <h5>Conta</h5>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Nome" aria-label="name"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
+                <div class="was-validated form-group col-md-6 tab-pane fade border p-5 rounded" id="endereco2" role="tab">
+                    <h2>Endereço</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Pais" required>
                     </div>
-                    <div class="content_form_l">
-                        <input type="text" class="form-control" placeholder="Apelido" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Estado" required>
                     </div>
-                    <div class="clear"></div>
-                    <div class="content_form_l">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Senha" aria-label="name"
-                                aria-describedby="basic-addon1" required>
-                            <div class="invalid-feedback"></div>
-                        </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Cidade" required>
                     </div>
-                    <div class="content_form_l">
-                        <input type="text" class="form-control" placeholder="Confirmar Senha" aria-label="name"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Bairro" required>
                     </div>
-                    <div class="box_select">
-                        <select class="custom-select" style="width: 482px;" required>
-                            <option value="">Pergunta de segurança</option>
-                            <option value="1">Qual o nome do seu primeiro cachorro?</option>
-                            <option value="2">Sua cidade natal?</option>
-                            <option value="3">Sua comida favorita?</option>
-                            <div class="invalid-feedback">Selecione a Moeda</div>
-                        </select>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Rua" required>
                     </div>
-                    <div class="content_form_l">
-                        <input type="text" class="form-control" placeholder="Resposta" aria-label="name"
-                            aria-describedby="basic-addon1" style="width: 482px;margin-top: 5px" required>
-                        <div class="invalid-feedback"></div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="CEP" required>
                     </div>
-                    <div class="clear">
-                        <div class="form-group form-check" style="padding-left: 0%">
-                            <a href="#">Termos de aceitação</a>
-                            <br>
-                            <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
-                            <label class="form-check-label" for="termosAcaitacao">Concordo com os termos</label>
-                            <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
-                            <label class="form-check-label" for="termosAcaitacao">Aceito os termos</label>
-                            <button style="margin-top: 5px">Cadastrar</button>
-                        </div>
+                </div>
+
+                <div class="was-validated form-group col-md-6 tab-pane fade border p-5 rounded" id="conta2" role="tab">
+                    <h2>Conta</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Usuario" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Senha" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Confirmar Senha" required>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <a href="#">Termos de aceitação</a>
+                        <br>
+                        <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
+                        <label class="form-check-label" for="termosAcaitacao">Concordo com os termos</label>
+                        <br>
+                        <button type="submit" class="btn btn-success mt-2">Cadastrar</button>
                     </div>
                 </div>
             </form>

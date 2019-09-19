@@ -6,7 +6,6 @@ import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.compo
 import { HomeComponent } from './home/home.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { LoginComponent } from './login/login.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AnunciarComponent } from './anunciar/anunciar.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,11 +18,10 @@ import { AppRoutingModule } from './app-routing.module';
     CadastroPessoaComponent,
     HomeComponent,
     CarrinhoComponent,
-    DetalheProdutoComponent
+    DetalheProdutoComponent,
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
     AppRoutingModule
   ],
   providers: [],
