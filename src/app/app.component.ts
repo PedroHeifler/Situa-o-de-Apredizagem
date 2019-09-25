@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,13 +12,13 @@ export class AppComponent {
     
     function reverteCampoCarrinhoPesquisa(x) {
       if (x.matches) {
-          document.querySelector(".campo-reverter").classList.add("reverter")
-          document.querySelector(".carrinho-desktop").style.display = "none"
-          document.querySelector(".carrinho-mobile").style.display = "inline"
+          $(".campo-reverter").addClass("reverter")
+          $(".carrinho-desktop").hide()
+          $(".carrinho-mobile").show()
       } else {
-          document.querySelector(".campo-reverter").classList.remove("reverter")
-          document.querySelector(".carrinho-mobile").style.display = "none"
-          document.querySelector(".carrinho-desktop").style.display = "inline"
+          $(".campo-reverter").removeClass("reverter")
+          $(".carrinho-mobile").hide()
+          $(".carrinho-desktop").show()
       }
   }
   var x = window.matchMedia("(min-width: 960px)")
