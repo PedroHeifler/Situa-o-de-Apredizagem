@@ -1,5 +1,7 @@
 /*#dc3545*/
+
 /*#343a40*/
+
 .animacaoHover {
     border-left: 15px #6c757d solid;
     transition: 300ms;
@@ -13,4 +15,3 @@
 .active {
     border-left: 15px #28a745 solid !important
 }
-    

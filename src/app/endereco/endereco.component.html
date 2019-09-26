@@ -5,92 +5,33 @@
   </aside>
 
   <aside>
-    <div class="bg-secondary mb-4 p-4 rounded text-white animacaoHover" #i (click)='onClick(i)'>
+    <div *ngFor="let endereco of enderecos" class="bg-secondary mb-4 p-4 rounded text-white animacaoHover" #i
+      (click)='onClick(i)'>
 
       <div class="row">
         <div class="col-md-6">
-          <label>Pais: <span>...</span></label>
+          <label>Pais: <span>{{ endereco.pais }}</span></label>
         </div>
         <div class="col-md-6">
-          <label>Estado: <span>...</span></label>
+          <label>Estado: <span>{{ endereco.estado }}</span></label>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <label>Cidade: <span>...</span></label>
+          <label>Cidade: <span>{{ endereco.cidade }}</span></label>
         </div>
         <div class="col-md-6">
-          <label>Bairro: <span>...</span></label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <label>Rua: <span>...</span></label>
-        </div>
-        <div class="col-md-6">
-          <label>Cep: <span>...</span></label>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-secondary mb-4 p-4 rounded text-white animacaoHover" #b (click)='onClick(b)'>
-
-      <div class="row">
-        <div class="col-md-6">
-          <label>Pais: <span>...</span></label>
-        </div>
-        <div class="col-md-6">
-          <label>Estado: <span>...</span></label>
+          <label>Bairro: <span>{{ endereco.bairro }}</span></label>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <label>Cidade: <span>...</span></label>
+          <label>Rua: <span>{{ endereco.rua }}</span></label>
         </div>
         <div class="col-md-6">
-          <label>Bairro: <span>...</span></label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <label>Rua: <span>...</span></label>
-        </div>
-        <div class="col-md-6">
-          <label>Cep: <span>...</span></label>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-secondary mb-4 p-4 rounded text-white animacaoHover" #c (click)='onClick(c)'>
-
-      <div class="row">
-        <div class="col-md-6">
-          <label>Pais: <span>...</span></label>
-        </div>
-        <div class="col-md-6">
-          <label>Estado: <span>...</span></label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <label>Cidade: <span>...</span></label>
-        </div>
-        <div class="col-md-6">
-          <label>Bairro: <span>...</span></label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <label>Rua: <span>...</span></label>
-        </div>
-        <div class="col-md-6">
-          <label>Cep: <span>...</span></label>
+          <label>Cep: <span>{{ endereco.cep }}</span></label>
         </div>
       </div>
     </div>

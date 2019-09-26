@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { EnderecoService } from "./endereco.service";
 
 @Component({
   selector: 'app-endereco',
@@ -8,11 +9,18 @@ import * as $ from 'jquery';
 })
 export class EnderecoComponent implements OnInit {
 
-  show: boolean = true
+  show: boolean = true;
+  enderecos: any;
 
-  constructor() { }
+  constructor(private service: EnderecoService) {
+    this.enderecos = service.getEndereco();
+    console.log(this.enderecos);
+
+  }
+
 
   ngOnInit() {
+
   }
 
   onClick(seletor) {
@@ -21,7 +29,4 @@ export class EnderecoComponent implements OnInit {
     console.log(seletor);
     this.show = false
   }
-}
-
-export class NgIfSimple {
 }
