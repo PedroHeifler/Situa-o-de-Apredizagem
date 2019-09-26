@@ -9,22 +9,26 @@ import { LoginComponent } from './login/login.component';
 import { AnunciarComponent } from './anunciar/anunciar.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
 import { AppRoutingModule } from './app-routing.module';
+import { EnderecoComponent } from './endereco/endereco.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    AnunciarComponent,
-    CadastroPessoaComponent,
-    HomeComponent,
-    CarrinhoComponent,
-    DetalheProdutoComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      LoginComponent,
+      AnunciarComponent,
+      CadastroPessoaComponent,
+      HomeComponent,
+      CarrinhoComponent,
+      DetalheProdutoComponent,
+      EnderecoComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
