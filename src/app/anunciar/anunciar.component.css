@@ -1,10 +1,16 @@
+.anuncio{
+  width: 100%;
+}
+
+.custom-select{
+  width: 140%;
+}
 .txt_produto {
     font-size: 14px;
-    padding-top: 10px;
   }
   
   .box_select {
-    width: 150px;
+    width: 35%;
   }
   
   #BL .content_form_l {
@@ -21,13 +27,9 @@
     float: right;
     margin-left: 50px;
   }
-  
-  .clear {
-    clear: both;
-  }
-  
+    
   .input-group-prepend .form-control {
-    width: 500px;
+    width: 100%;
     height: 100px !important;
   }
   
@@ -35,8 +37,11 @@
     max-width: 0;
   }
   
-  .margem12px {
-    margin-top: 12px;
+  .content_form_l{
+    width: 35%;
+    float: left;
+    margin: 0.5% ;
+    height: 34px !important;
   }
   
   .inputDnD .form-control-file {
@@ -74,8 +79,9 @@
   }
   
   .input_img {
-    padding-top: 30px;
-    width: 1140px;
+    width: 100%;
+    height: 100%;
+    float: left;
   }
   
   .col-sm-6 {
@@ -92,12 +98,35 @@
     height: 38px !important;
   }
   
+  .form-group .form-check-input {
+    height: 22%;
+  }
+
   .form-check-label {
     margin-bottom: 0;
-    margin-left: 15px;
+    margin-left: 2px;
   }
   
   #anunciar_produto {
     background: #ffffffe8;
     border-radius: 10px;
   }
+  .confirmar{
+    float: left !important;
+  }
+  .col-sm-6{
+    margin: 1%; width: 150px
+  }
+  .form-group{
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding-top: 6%;
+  }
+
+.box_selecao{
+  float: left;
+}
+.box_select{
+  width: 47%;
+}
