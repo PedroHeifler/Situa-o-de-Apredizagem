@@ -1,86 +1,13 @@
 <section>
     <div id="principal">
-        <div class="row">
-            <div class="col-md-3 mt-4 mb-4">
-                <div class="img-produto">
-                    <a href="detalhes_produto.html">
-                        <img src="assets/monitor.jpg">
-                        <h3>R$400.00</h3>
-                        <p>Melhor munitor do mundo 8k ultra HD, mais de 1bilhao de cores</p>
-                        <button>Ver Mais Detalhes</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mt-4 mb-4">
-                <div class="img-produto">
-                    <a href="detalhes_produto.html">
-                        <img src="assets/mouse.jpg">
-                        <h3>R$60.00</h3>
-                        <p>Mouse Gamer RGB com 5000dpi e durabilidade de 10 milhoes de cliques</p>
-                        <button>Ver Mais Detalhes</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mt-4 mb-4">
-                <div class="img-produto">
-                    <a href="detalhes_produto.html">
-                        <img src="assets/teclado.jpg">
-                        <h3>R$300.00</h3>
-                        <p>Teclado Mecanico com RGB, Melhor preco do Brasil</p>
-                        <button>Ver Mais Detalhes</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mt-4 mb-4">
-                <div class="img-produto">
-                    <a href="detalhes_produto.html">
-                        <img src="assets/gabinete-gamer-c3-tech-mt-g1000bk-preto.jpg">
-                        <h3>R$400.00</h3>
-                        <p>Gabinete Transparente com cooler RGB Hiper Ventilacao</p>
-                        <button>Ver Mais Detalhes</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 mt-4 mb-4">
-                <div class="img-produto">
-                    <a href="detalhes_produto.html">
-                        <img src="assets/monitor.jpg">
-                        <h3>R$400.00</h3>
-                        <p>Melhor munitor do mundo 8k ultra HD, mais de 1bilhao de cores</p>
-                        <button>Ver Mais Detalhes</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mt-4 mb-4">
-                <div class="img-produto">
-                    <a href="detalhes_produto.html">
-                        <img src="assets/mouse.jpg">
-                        <h3>R$60.00</h3>
-                        <p>Mouse Gamer RGB com 5000dpi e durabilidade de 10 milhoes de cliques</p>
-                        <button>Ver Mais Detalhes</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mt-4 mb-4">
-                <div class="img-produto">
-                    <a href="detalhes_produto.html">
-                        <img src="assets/teclado.jpg">
-                        <h3>R$300.00</h3>
-                        <p>Teclado Mecanico com RGB, Melhor preco do Brasil</p>
-                        <button>Ver Mais Detalhes</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 mt-4 mb-4">
-                <div class="img-produto">
-                    <a href="detalhes_produto.html">
-                        <img src="assets/gabinete-gamer-c3-tech-mt-g1000bk-preto.jpg">
-                        <h3>R$400.00</h3>
-                        <p>Gabinete Transparente com cooler RGB Hiper Ventilacao</p>
-                        <button>Ver Mais Detalhes</button>
-                    </a>
+        <div class="row d-flex d-flex justify-content-center">
+            <div *ngFor="let produto of produtos" class="card text-center m-3" style="width: 14rem">
+                <img src="assets/{{ produto.imagem }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ produto.nome }}</h5>
+                    <p>R$ {{ produto.valor }}</p>
+                    <p class="card-text text-left text-truncate" title="{{ produto.descricao }}">{{ produto.descricao }}</p>
+                    <a href="#" class="btn btn-primary">Ver Mais Detalhes</a>
                 </div>
             </div>
         </div>
