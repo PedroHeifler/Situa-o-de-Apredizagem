@@ -1,19 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
-            aria-controls="navbarsExample09" aria-expanded="true">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a routerLink="/">
+        <a class="navbar-brand" routerLink="/">
             <img src="assets/sloganCata.png" id="logo">
         </a>
         <a routerLink="/carrinho" class="carrinho-desktop">
             <i class="fas fa-shopping-cart mr-2 text-dark"></i>
         </a>
 
-        
-        <div class="collapse navbar-collapse campo-reverter" id="navbarsExample09">
-            
+
+        <div class="collapse navbar-collapse campo-reverter" id="navbarTogglerDemo03">
+
             <a routerLink="/cadastro">
                 <button class="btn btn-outline-dark">Cadastar-se</button>
             </a>
@@ -73,7 +74,7 @@
     </div>
 </div>
 
-<div class="footer">
+<footer class="footer" class="bg-dark pt-5 pb-5 text-center">
     <div class="container">
         <div class="row">
 
@@ -95,9 +96,9 @@
                 <a href="#">Anuncie aqui!</a><br>
             </div>
 
-            <div>
-                <img class="logo" src="/assets/logo.png">
-                <div class="imgSocial">
+            <div class="col-md-3">
+                <img class="logo" src="assets/sloganCata.png">
+                <div class="imgSocial d-flex justify-content-center">
                     <img src="/assets/facebook.png">
                     <img src="/assets/Instagram.png">
                     <img src="/assets/gmail.png">
@@ -113,4 +114,4 @@
             <img src="/assets/visa.png">
         </div>
     </div>
-</div>
+</footer>
