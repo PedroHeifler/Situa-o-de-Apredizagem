@@ -1,29 +1,28 @@
-<div class="anuncio">
+<section class="anuncio">
     <form class="was-validated">
-        <div class="form-group">
-            <h5>DADOS DO PRODUTO</h5>
-            <div class="content_form_l">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Nome" aria-label="name"
-                        aria-describedby="basic-addon1" required>
-                    <div class="invalid-feedback"></div>
+        <div class="form-group" id="dados_produto">
+            <h5>Sobre o Produto</h5>
+            <div class="coluna_A">
+                <div class="content_form_l">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="nome" placeholder="Nome" aria-label="name" aria-describedby="basic-addon1" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="content_form_l">
+                    <div class="input-group mb-3">
+                        <input type="number" step="0.01" min="0" max="999999" id="preco" class="form-control" placeholder="Preço unitário" aria-label="number" aria-describedby="basic-addon1" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="content_form_l">
+                    <div class="input-group mb-3">
+                        <input type="number" min="0" max="100" class="form-control" id="qtd" placeholder="Quantidade" aria-label="number" aria-describedby="basic-addon1" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
                 </div>
             </div>
-            <div class="content_form_l">
-                <div class="input-group mb-3">
-                    <input type="number" step="0.01" min="0" max="999999" class="form-control"
-                        placeholder="Preço unitário" aria-label="number" aria-describedby="basic-addon1" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-            </div>
-            <div class="content_form_l">
-                <div class="input-group mb-3">
-                    <input type="number" min="0" max="100" class="form-control" style="max-width: 40%" placeholder="QTD"
-                        aria-label="number" aria-describedby="basic-addon1" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-            </div>
-            <div class="box_selecao">
+            <div class="coluna_B">
                 <div class="content_form_l">
                     <div class="box_select">
                         <select class="custom-select" required>
@@ -56,81 +55,50 @@
                         </select>
                     </div>
                 </div>
-
-                <div class="content_form_l">
-                    <div class="input-group-prepend">
-                        <input type="text" class="form-control" placeholder="Descrição" aria-label="text"
-                            aria-describedby="basic-addon1" required>
-                        <div class="invalid-feedback"></div>
-                    </div>
+            </div>
+            <div class="content_form_l" id="descricao">
+                <div class="input-group-prepend">
+                    <textarea rows="5" cols="50" class="form-control" aria-label="text" aria-describedby="basic-addon1" required></textarea>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-            <div class="form-group">
-                <h5>LOCAL DO PRODUTO</h5>
+        </div>
+        <div class="form-group" id="endereco_produto">
+            <h5>Endereço Do Produto</h5>
+            <div class="end">
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Cidade" aria-label="name"
-                            aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control" placeholder="Cidade" aria-label="name" aria-describedby="basic-addon1" required>
                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Estado" aria-label="name"
-                            aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control" placeholder="Estado" aria-label="name" aria-describedby="basic-addon1" required>
                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Pais" aria-label="name"
-                            aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control" placeholder="Pais" aria-label="name" aria-describedby="basic-addon1" required>
                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" maxlength="11" class="form-control" placeholder="Cep" aria-label="name"
-                            aria-describedby="basic-addon1" required>
+                        <input type="text" maxlength="11" class="form-control" placeholder="Cep" aria-label="name" aria-describedby="basic-addon1" required>
                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
-            </div>
-            <div class="input_img">
-                <H5>INSERIR IMAGENS</H5>
-                <div class="col-sm-6 offset-sm-3">
-                    <div class="form-group inputDnD">
-                        <label class="sr-only" for="inputFile">File Upload</label>
-                        <input type="file" class="form-control-file  text-danger font-weight-bold" id="inputFile"
-                            accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte">
-                    </div>
-                </div>
-                <div class="col-sm-6 offset-sm-3">
-                    <div class="form-group inputDnD">
-                        <label class="sr-only" for="inputFile">File Upload</label>
-                        <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile"
-                            accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte">
-                    </div>
-                </div>
-                <div class="col-sm-6 offset-sm-3">
-                    <div class="form-group inputDnD">
-                        <label class="sr-only" for="inputFile">File Upload</label>
-                        <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile"
-                            accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte">
-                    </div>
-                </div>
-                <div class="col-sm-6 offset-sm-3">
-                    <div class="form-group inputDnD">
-                        <label class="sr-only" for="inputFile">File Upload</label>
-                        <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile"
-                            accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte">
-                    </div>
-                </div>
-                <div class="col-sm-6 offset-sm-3">
-                    <div class="form-group inputDnD">
-                        <label class="sr-only" for="inputFile">File Upload</label>
-                        <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile"
-                            accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte">
+                <div class="was-validated" id="imagens">
+                    <div class="input_img">
+                        <div class="col-sm-6 offset-sm-3">
+                            <H5>INSERIR IMAGEM</H5>
+                            <div class="form-group inputDnD">
+                                <label class="sr-only" for="inputFile">File Upload</label>
+                                <input type="file" class="form-control-file  text-danger font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,7 +108,6 @@
                     <br>
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                     <label class="form-check-label" for="exampleCheck1">Concordo com os termos</label>
-
                     <div>
                         <button>Cadastrar</button>
                     </div>
@@ -148,4 +115,4 @@
             </div>
         </div>
     </form>
-</div>
+</section>
