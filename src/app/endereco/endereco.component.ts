@@ -14,8 +14,6 @@ export class EnderecoComponent implements OnInit {
 
   constructor(private service: EnderecoService) {
     this.enderecos = service.getEndereco();
-    console.log(this.enderecos);
-
   }
 
 
@@ -26,7 +24,6 @@ export class EnderecoComponent implements OnInit {
   onClick(seletor) {
     $(seletor).toggleClass("active")
     $(".animacaoHover").not(seletor).removeClass("active")
-    console.log(seletor);
     this.show = false
   }
 }
