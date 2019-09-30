@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
@@ -9,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { AnunciarComponent } from './anunciar/anunciar.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AnunciarService } from './anunciar/anunciar.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,16 @@ import { AppRoutingModule } from './app-routing.module';
     CadastroPessoaComponent,
     HomeComponent,
     CarrinhoComponent,
-    DetalheProdutoComponent,
+    DetalheProdutoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AnunciarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
