@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { EnderecoService } from "./endereco.service";
+import { EnderecoService } from './endereco.service';
 
 @Component({
   selector: 'app-endereco',
@@ -22,8 +22,9 @@ export class EnderecoComponent implements OnInit {
   }
 
   onClick(seletor) {
-    $(seletor).toggleClass("active")
-    $(".animacaoHover").not(seletor).removeClass("active")
+    $(seletor).toggleClass('active')
+    $('.animacaoHover').not(seletor).removeClass('active')
     this.show = false
   }
+  
 }

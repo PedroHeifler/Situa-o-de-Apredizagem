@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AppService {
-  categioria = ["HARDWARE","PERIFERICOS","COMPUTADOR", "MOUSES", "TECLADOS"]
+  categioria = ['HARDWARE', 'PERIFERICOS', 'COMPUTADOR', 'MOUSES', 'TECLADOS'];
 constructor() { }
 
 getCategoria() {
