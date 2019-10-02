@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { AnunciarComponent } from './anunciar/anunciar.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AnunciarService } from './anunciar/anunciar.service';
 
 @NgModule({
@@ -31,5 +32,6 @@ import { AnunciarService } from './anunciar/anunciar.service';
   ],
   providers: [AnunciarService],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
