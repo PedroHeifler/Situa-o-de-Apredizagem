@@ -8,7 +8,7 @@
             <div class="carousel-item active">
                 <div id="principal">
                     <div class="row d-flex d-flex justify-content-center">
-                        <div *ngFor="let produto of produtos | slice:0:4;" class="card text-center m-3"
+                        <div *ngFor="let produto of produtos | slice:0:4; index as productId" class="card text-center m-3"
                             style="width: 14rem">
                             <img src="assets/{{ produto.imagem }}" class="card-img-top" title="{{ produto.nome }}">
                             <div class="card-body">
@@ -16,7 +16,7 @@
                                 <p>R$ {{ produto.valor }}</p>
                                 <p class="card-text text-left text-truncate" title="{{ produto.descricao }}">
                                     {{ produto.descricao }}</p>
-                                <a routerLink="/detalhes" class="btn btn-primary">Ver Mais Detalhes</a>
+                                <a [routerLink]="['/detalhes',productId]" class="btn btn-primary">Ver Mais Detalhes</a>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
             <div class="carousel-item">
                 <div id="principal">
                     <div class="row d-flex d-flex justify-content-center">
-                        <div *ngFor="let produto of produtos | slice:4:8;" class="card text-center m-3"
+                        <div *ngFor="let produto of produtos | slice:4:8; index as productId " class="card text-center m-3"
                             style="width: 14rem">
                             <img src="assets/{{ produto.imagem }}" class="card-img-top" alt="...">
                             <div class="card-body">
