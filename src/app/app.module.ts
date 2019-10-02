@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
@@ -9,26 +10,28 @@ import { LoginComponent } from './login/login.component';
 import { AnunciarComponent } from './anunciar/anunciar.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
 import { AppRoutingModule } from './app-routing.module';
-import { EnderecoComponent } from './endereco/endereco.component';
+
+import { AnunciarService } from './anunciar/anunciar.service';
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      LoginComponent,
-      AnunciarComponent,
-      CadastroPessoaComponent,
-      HomeComponent,
-      CarrinhoComponent,
-      DetalheProdutoComponent,
-      EnderecoComponent
-   ],
-   imports: [
-      BrowserModule,
-      AppRoutingModule
-   ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    AnunciarComponent,
+    CadastroPessoaComponent,
+    HomeComponent,
+    CarrinhoComponent,
+    DetalheProdutoComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers: [AnunciarService],
+  bootstrap: [AppComponent]
+
 })
 export class AppModule { }

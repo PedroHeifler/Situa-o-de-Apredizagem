@@ -1,103 +1,238 @@
-.txt_produto {
-    font-size: 14px;
-    padding-top: 10px;
-  }
-  
-  .box_select {
-    width: 150px;
-  }
-  
-  #BL .content_form_l {
-    float: left;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  
-  .content_form_l input {
-    width: 250px;
-  }
-  
-  .content_form_r {
-    float: right;
-    margin-left: 50px;
-  }
-  
-  .clear {
-    clear: both;
-  }
-  
-  .input-group-prepend .form-control {
-    width: 500px;
-    height: 100px !important;
-  }
-  
-  .invalid-feedback {
-    max-width: 0;
-  }
-  
-  .margem12px {
-    margin-top: 12px;
-  }
-  
-  .inputDnD .form-control-file {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 6em;
-    outline: none;
-    visibility: hidden;
-    cursor: pointer;
-    background-color: #c61c23;
-    box-shadow: 0 0 5px solid currentColor;
-  }
-  
-  .inputDnD .form-control-file:before {
-    content: attr(data-title);
-    position: absolute;
-    top: 0.5em;
-    left: 0;
-    width: 100%;
-    min-height: 6em;
-    line-height: 5.5;
-    padding-top: 0;
-    opacity: 1;
-    visibility: visible;
-    text-align: center;
-    border: 0.25em dashed currentColor;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    overflow: hidden;
-  }
-  
-  .inputDnD .form-control-file:hover:before {
-    border-style: solid;
-    box-shadow: inset 0px 0px 0px 0.25em currentColor;
-  }
-  
-  .input_img {
-    padding-top: 30px;
-    width: 1140px;
-  }
-  
-  .col-sm-6 {
-    float: left;
-    width: 20px;
-    padding: 10px;
-  }
-  
-  input[type="text"] {
-    height: 38px !important;
-  }
-  
-  input[type="number"] {
-    height: 38px !important;
-  }
-  
-  .form-check-label {
-    margin-bottom: 0;
-    margin-left: 15px;
-  }
-  
-  #anunciar_produto {
-    background: #ffffffe8;
-    border-radius: 10px;
-  }
+ .anuncio {
+     background-color: white;
+     display: flex;
+     text-align: left;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     padding: 60px;
+ }
+ 
+ #dados_produto input {
+     min-width: 200px;
+     max-width: 250px;
+     margin: 5px;
+     float: left;
+ }
+ 
+ #endereco_produto .end input {
+     min-width: 200px;
+     max-width: 250px;
+     margin: 5px;
+     float: left;
+ }
+ 
+ .confirmar input {
+     max-width: 50px;
+ }
+ 
+ .custom-select {
+     min-width: 200px;
+     max-width: 250px;
+     margin: 5px;
+     float: left;
+ }
+ 
+ .box_select {
+     width: 150px;
+ }
+ 
+ .coluna_A .content_form_l {
+     width: 200px;
+     height: 50px;
+ }
+ 
+ .coluna_B .content_form_l {
+     width: 200px;
+     height: 50px;
+ }
+ 
+ .content_form_l {
+     width: 200px;
+     float: left;
+ }
+ 
+ .coluna_A {
+     width: 214px;
+     float: left;
+ }
+ 
+ .content_form_r {
+     float: left;
+     margin-left: 50px;
+ }
+ 
+ .clear {
+     clear: both;
+ }
+ 
+ .input-group {
+     width: 0;
+ }
+ 
+ .input-group-prepend {
+     max-width: 250px;
+ }
+ 
+ .input-group-prepend .form-control {
+     width: 250px;
+     height: 130px !important;
+     float: right;
+ }
+ 
+ .invalid-feedback {
+     max-width: 0;
+ }
+ 
+ #descricao {
+     float: left;
+     margin-left: 5px;
+ }
+ 
+ #descricao .content_form_l {
+     max-width: 250px;
+ }
+ 
+ .margem12px {
+     margin-top: 12px;
+ }
+ 
+ .inputDnD .form-control-file {
+     position: relative;
+     width: 100%;
+     height: max-content;
+     min-height: 6em;
+     outline: none;
+     visibility: hidden;
+     cursor: pointer;
+     background-color: #c61c23;
+     box-shadow: 0 0 5px solid currentColor;
+ }
+ 
+ .inputDnD .form-control-file:before {
+     content: attr(data-title);
+     position: inherit;
+     top: 0.5em;
+     left: 0;
+     width: 100%;
+     min-height: 6em;
+     line-height: 3.5;
+     padding-top: 0;
+     opacity: 1;
+     visibility: visible;
+     text-align: center;
+     border: 0.25em dashed currentColor;
+     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+     overflow: hidden;
+ }
+ 
+ .inputDnD .form-control-file:hover:before {
+     border-style: solid;
+     box-shadow: inset 0px 0px 0px 0.25em currentColor;
+ }
+ 
+ #imagens {
+     align-items: center;
+     width: 40%;
+     height: 126px;
+ }
+ 
+ #imagens .offset-sm-3 {
+     margin: 0;
+     width: 140px;
+     height: 40px;
+     float: left;
+ }
+ 
+ .input_img {
+     width: max-content;
+     height: 75%;
+     float: left;
+     margin: 1px;
+ }
+ 
+ .input_img .form-group .inputDnD {
+     float: left;
+ }
+ 
+ .col-sm-6 .offset-sm-3 {
+     padding-top: 0;
+     width: 10%;
+ }
+ 
+ input[type="text"] {
+     height: 38px !important;
+ }
+ 
+ input[type="number"] {
+     height: 38px !important;
+ }
+ 
+ .form-check-label {
+     margin-bottom: 0;
+     margin-left: 0;
+ }
+ 
+ #anunciar_produto {
+     background: #ffffffe8;
+     border-radius: 10px;
+ }
+ 
+ .coluna_B {
+     float: left;
+     height: auto;
+     width: 200px;
+ }
+ 
+ #endereco_produto {
+     float: left;
+     margin: 0px;
+     width: 23%;
+     height: 100%;
+ }
+ 
+ #endereco_produto .content_form_l {
+     width: 214px;
+     height: 50px;
+     float: left;
+ }
+ 
+ .confirmar {
+     width: 210px;
+     height: 100%;
+     float: right;
+ }
+ 
+ .confirmar .form-check {
+     width: 100%;
+     text-align: left;
+ }
+ 
+ .offset-sm-3 {
+     margin-left: 20%
+ }
+ 
+ textarea {
+     margin: 3px;
+ }
+ 
+ #dados_produto {
+     width: 42%;
+     height: 110%;
+     margin: 0 auto;
+     float: left;
+ }
+ 
+ h5 {
+     width: max-content;
+ }
+ 
+ .was-validated {
+     width: 100%;
+ }
+ 
+ .listProduto {
+     width: 100%;
+     height: 100%;
+     text-align: start;
+ }
