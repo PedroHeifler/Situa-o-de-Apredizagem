@@ -1,49 +1,26 @@
 <section class="anuncio">
-    <div class="listProduto">
-        <div *ngFor="let produto of produtos">
-
-            <p *ngIf="produto.nome">
-                Nome: {{ produto.nome }}
-            </p>
-
-            <p *ngIf="produto.quantidade">
-                quantidade: {{ produto.quantidade }}
-            </p>
-
-            <p *ngIf="produto.preco_unit">
-                preço: {{ produto.preco_unit }}
-            </p>
-
-            <p *ngIf="produto.tipo">
-                tipo: {{ produto.tipo }}
-            </p>
-
-            <p *ngIf="produto.imagem_produto">
-                imagem: {{ imagem_produto }}
-            </p>
-
-            <p *ngIf="produto.descricao">
-                descrição: {{ produto.descricao }}
-            </p>
-        </div>
-    </div>
     <form #Form="ngForm" (ngSubmit)="onSubmitProduto(Form)">
         <div class="form-group" id="dados_produto">
             <h5>Sobre o Produto</h5>
             <div class="coluna_A">
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="newProduto.nome" placeholder="Nome" aria-label="name" aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="newProduto.nome"
+                            placeholder="Nome" aria-label="name" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="number" step="0.01" min="0" name="preco_unit" [(ngModel)]="newProduto.preco_unit" max="999999" id="preco" class="form-control" placeholder="Preço unitário" aria-label="number" aria-describedby="basic-addon1" required>
+                        <input type="number" step="0.01" min="0" name="preco_unit" [(ngModel)]="newProduto.preco_unit"
+                            max="999999" id="preco" class="form-control" placeholder="Preço unitário"
+                            aria-label="number" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="number" min="0" max="100" name="quantidade" [(ngModel)]="newProduto.quantidade" class="form-control" id="qtd" placeholder="Quantidade" aria-label="number" aria-describedby="basic-addon1" required>
+                        <input type="number" min="0" max="100" name="quantidade" [(ngModel)]="newProduto.quantidade"
+                            class="form-control" id="qtd" placeholder="Quantidade" aria-label="number"
+                            aria-describedby="basic-addon1" required>
                     </div>
                 </div>
             </div>
@@ -80,7 +57,8 @@
             </div>
             <div class="content_form_l" id="descricao">
                 <div class="input-group-prepend">
-                    <textarea name="descricao" [(ngModel)]="newProduto.descricao" rows="5" cols="50" class="form-control" aria-label="text" aria-describedby="basic-addon1" required></textarea>
+                    <textarea name="descricao" [(ngModel)]="newProduto.descricao" rows="5" cols="50"
+                        class="form-control" aria-label="text" aria-describedby="basic-addon1" required></textarea>
                 </div>
             </div>
         </div>
@@ -89,24 +67,28 @@
             <div class="end">
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" name="cidade" [(ngModel)]="newProduto.cidade" class="form-control" placeholder="Cidade" aria-label="name" aria-describedby="basic-addon1" required>
+                        <input type="text" name="cidade" [(ngModel)]="newProduto.cidade" class="form-control"
+                            placeholder="Cidade" aria-label="name" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="estado" [(ngModel)]="newProduto.estado" placeholder="Estado" aria-label="name" aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control" name="estado" [(ngModel)]="newProduto.estado"
+                            placeholder="Estado" aria-label="name" aria-describedby="basic-addon1" required>
 
                     </div>
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="pais" [(ngModel)]="newProduto.pais" placeholder="Pais" aria-label="name" aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control" name="pais" [(ngModel)]="newProduto.pais"
+                            placeholder="Pais" aria-label="name" aria-describedby="basic-addon1" required>
 
                     </div>
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="text" maxlength="11" name="cep" [(ngModel)]="newProduto.cep" class="form-control" placeholder="Cep" aria-label="name" aria-describedby="basic-addon1" required>
+                        <input type="text" maxlength="11" name="cep" [(ngModel)]="newProduto.cep" class="form-control"
+                            placeholder="Cep" aria-label="name" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
                 <div id="imagens">
@@ -115,7 +97,9 @@
                             <H5>INSERIR IMAGEM</H5>
                             <div class="form-group inputDnD">
                                 <label class="sr-only" for="imagem_produto">File Upload</label>
-                                <input type="file" name="imagem_produto" [(ngModel)]="newProduto.imagem_produto" class="form-control-file  text-danger font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte" required>
+                                <input type="file" name="imagem_produto" [(ngModel)]="newProduto.imagem_produto"
+                                    class="form-control-file  text-danger font-weight-bold" id="inputFile"
+                                    accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte" required>
                             </div>
                         </div>
                     </div>
@@ -125,7 +109,7 @@
                 <div class="form-group form-check">
                     <a href=" #">Termos de anuncio</a>
                     <br>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" >
                     <label class="form-check-label form-group" for="exampleCheck1">Concordo com os termos</label>
                     <div>
                         <button type="submit" [disabled]="!Form.valid">Cadastrar</button>

@@ -11,6 +11,6 @@ export const produtos = [
       estado: '',
       pais: '',
       cep: '',
-      imagem_produto: '',
+      imagem_produto: ''
     },
   ];
