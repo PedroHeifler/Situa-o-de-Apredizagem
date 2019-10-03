@@ -2,10 +2,65 @@
     <!--Estolher a Forma de Pagamento-->
     <h2>Escolha a forma de pagamento</h2>
     <p>Clique na forma de pagamento que você deseja</p>
-    <div class="row tipoPagamento">
-        <img class="col-md-1 p-1 m-3 rounded bordaPagamento" src="assets/visa.png" #visa (click)="escolhaPagamento(visa)">
-        <img class="col-md-1 p-1 m-3 rounded bordaPagamento" src="assets/mastercard.png" #mastercard (click)="escolhaPagamento(mastercard)">
-        <img class="col-md-1 p-1 m-3 rounded bordaPagamento" src="assets/paypal.png" #paypal (click)="escolhaPagamento(paypal)">
-        <img class="col-md-1 p-1 m-3 rounded bordaPagamento" src="assets/boleto.png" #boleto (click)="escolhaPagamento(boleto)">
+    <div class="tipoPagamento">
+        <nav>
+            <div class="nav" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-visa-tab" data-toggle="tab" href="#nav-visa" role="tab"
+                    aria-selected="true" #visa (click)="escolhaPagamento(visa)">
+                    <img style="max-width: 100px; max-height: 100px" src="assets/visa.png">
+                </a>
+                <a class="nav-item nav-link" id="nav-mastercard-tab" data-toggle="tab" href="#nav-mastercard" role="tab"
+                    aria-selected="false" #mastercard (click)="escolhaPagamento(mastercard)">
+                    <img style="max-width: 100px; max-height: 100px" src="assets/mastercard.png">
+                </a>
+                <a class="nav-item nav-link" id="nav-paypal-tab" data-toggle="tab" href="#nav-paypal" role="tab"
+                    aria-selected="false" #paypal (click)="escolhaPagamento(paypal)">
+                    <img style="max-width: 100px; max-height: 100px" src="assets/paypal.png">
+                </a>
+                <a class="nav-item nav-link" id="nav-boleto-tab" data-toggle="tab" href="#nav-boleto" role="tab"
+                    aria-selected="false" #boleto (click)="escolhaPagamento(boleto)">
+                    <img style="max-width: 100px; max-height: 100px" src="assets/boleto.png">
+                </a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-visa" role="tabpanel">visa</div>
+            <div class="tab-pane fade" id="nav-mastercard" role="tabpanel">mastercard</div>
+            <div class="tab-pane fade" id="nav-paypal" role="tabpanel">paypal</div>
+            <div class="tab-pane fade" id="nav-boleto" role="tabpanel">boleto</div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <ul class="nav nav-tabs" id="tipoPagamento" role="tablist">
+            <img class="col-md-1 p-1 m-3 rounded bordaPagamento nav-link" src="assets/visa.png" #visa
+                (click)="escolhaPagamento(visa)" id="visa-tab" data-toggle="tab" href="#visa" role="tab" aria-selected="false">
+
+            <img class="col-md-1 p-1 m-3 rounded bordaPagamento nav-link" src="assets/mastercard.png" #mastercard
+                (click)="escolhaPagamento(mastercard)" id="mastercard-tab" data-toggle="tab" href="#mastercard"
+                role="tab" aria-selected="false">
+
+            <img class="col-md-1 p-1 m-3 rounded bordaPagamento nav-link" src="assets/paypal.png" #paypal
+                (click)="escolhaPagamento(paypal)" id="paypal-tab" data-toggle="tab" href="#paypal" role="tab" aria-selected="false">
+
+            <img class="col-md-1 p-1 m-3 rounded bordaPagamento nav-link" src="assets/boleto.png" #boleto
+                (click)="escolhaPagamento(boleto)" id="boleto-tab" data-toggle="tab" href="#boleto" role="tab" aria-selected="false">
+        </ul>
+
+        <div class="tab-content" id="myTab">
+            <div class="tab-pane fade show active" id="visa" role="tabpanel">visa</div>
+            <div class="tab-pane fade" id="mastercard" role="tabpanel">mastercard</div>
+            <div class="tab-pane fade" id="paypal" role="tabpanel">paypal</div>
+            <div class="tab-pane fade" id="boleto" role="tabpanel">boleto</div>
+        </div> -->
     </div>
 </section>

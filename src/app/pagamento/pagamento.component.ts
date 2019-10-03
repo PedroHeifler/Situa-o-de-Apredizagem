@@ -16,7 +16,7 @@ export class PagamentoComponent implements OnInit {
 
   escolhaPagamento(seletor){
     $(seletor).toggleClass("bordaPagamentoAtivo")
-    $('.tipoPagamento img').not(seletor).removeClass('bordaPagamentoAtivo')
+    $('.tipoPagamento a').not(seletor).removeClass('bordaPagamentoAtivo')
   }
 
 }
