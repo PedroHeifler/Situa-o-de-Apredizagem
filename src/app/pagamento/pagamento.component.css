@@ -1,0 +1,7 @@
+.bordaPagamento {
+    border: 3px #000 solid
+}
+
+.bordaPagamentoAtivo {
+    border: 3px #28a745 solid
+}

@@ -15,7 +15,8 @@ export class PagamentoComponent implements OnInit {
   }
 
   escolhaPagamento(seletor){
-    $(seletor).attr('class', 'col-md-1 p-1 m-3 rounded border border-success')
+    $(seletor).toggleClass("bordaPagamentoAtivo")
+    $('.tipoPagamento img').not(seletor).removeClass('bordaPagamentoAtivo')
   }
 
 }
