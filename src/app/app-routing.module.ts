@@ -8,6 +8,7 @@ import { AnunciarComponent } from './anunciar/anunciar.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { EnderecoComponent } from './endereco/endereco.component';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'detalhes/:productId', component: DetalheProdutoComponent },
   { path: 'carrinho', component: CarrinhoComponent },
   { path: 'endereco', component: EnderecoComponent },
-
+  { path: 'pagamento', component: PagamentoComponent },
 ];
 
 @NgModule({

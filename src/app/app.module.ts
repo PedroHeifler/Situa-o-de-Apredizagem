@@ -12,6 +12,7 @@ import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.compo
 import { AppRoutingModule } from './app-routing.module';
 
 import { AnunciarService } from './anunciar/anunciar.service';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AnunciarService } from './anunciar/anunciar.service';
     HomeComponent,
     CarrinhoComponent,
     DetalheProdutoComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    PagamentoComponent
   ],
   imports: [
     BrowserModule,
