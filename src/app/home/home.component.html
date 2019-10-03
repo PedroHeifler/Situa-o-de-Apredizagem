@@ -34,7 +34,7 @@
                                 <p>R$ {{ produto.valor }}</p>
                                 <p class="card-text text-left text-truncate" title="{{ produto.descricao }}">
                                     {{ produto.descricao }}</p>
-                                <a routerLink="/detalhes" class="btn btn-primary">Ver Mais Detalhes</a>
+                                <a [routerLink]="['/detalhes',productId]" class="btn btn-primary">Ver Mais Detalhes</a>
                             </div>
                         </div>
                     </div>
