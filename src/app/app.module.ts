@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms'
-
+import { EnderecoComponent } from './endereco/endereco.component';
 import { AppComponent } from './app.component';
 import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
 import { HomeComponent } from './home/home.component';
@@ -21,7 +21,8 @@ import { AnunciarService } from './anunciar/anunciar.service';
     CadastroPessoaComponent,
     HomeComponent,
     CarrinhoComponent,
-    DetalheProdutoComponent
+    DetalheProdutoComponent,
+    EnderecoComponent
   ],
   imports: [
     BrowserModule,
