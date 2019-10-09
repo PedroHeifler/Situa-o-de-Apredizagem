@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AnunciarService } from './anunciar/anunciar.service';
 import { EnderecoComponent } from './endereco/endereco.component';
+import { CadastroPessoaService } from './cadastro-pessoa/cadastro-pessoa.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { EnderecoComponent } from './endereco/endereco.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AnunciarService],
+  providers: [AnunciarService,CadastroPessoaService],
   bootstrap: [AppComponent]
 
 })

@@ -16,20 +16,18 @@ export class CadastroPessoaComponent implements OnInit {
   newClientes_juridico : any;
   
   constructor(private cadastroPessoaService : CadastroPessoaService ){
-    this.cadastroPessoaService = new CadastroPessoaService;
+    this.cadastroPessoaService = cadastroPessoaService;
   }
 
   ngOnInit() {
+    this.getClientes_fisico;
+    this.newClientes_fisico = new Object();
+    this.getClientes_juridico;
+    this.newClientes_juridico = new Object();
+
     $('#pessoaJuridica').hide();
     $('#pessoaFisica').hide();
 
-    $('#telefone, #celular').mask('(00) 0000-0000');
-    
-    
-    this.getClientesFisico;
-    this.newClientes_fisico = new Object();
-    this.getClientesJuridico;
-    this.newClientes_juridico = new Object();
   }
 
   RadioFisicaOuJuridica(seletor, nome) {
@@ -51,26 +49,28 @@ export class CadastroPessoaComponent implements OnInit {
     }
   }
 
-  getClientesFisico(): void{
+  getClientes_fisico(): void{
     this.clientes_fisico = this.cadastroPessoaService.getClientes_fisico();
   }
 
-  getClientesJuridico(): void{
-    this.clientes_fisico = this.cadastroPessoaService.getClientes_fisico();
+  getClientes_juridico(): void{
+    this.clientes_juridico = this.cadastroPessoaService.getClientes_juridico();
   }
+
   onSubmitClienteFisico(formulario:NgForm){
     if(formulario.valid){
       this.cadastroPessoaService.saveClientes_fisico(this.newClientes_fisico);
       this.newClientes_fisico = new Object();
-      this.getClientesFisico();
+      this.getClientes_fisico();
     }
+    console.log(formulario.value)
   }
   
   onSubmitClienteJuridico(formulario:NgForm){
     if(formulario.valid){
       this.cadastroPessoaService.saveClientes_juridico(this.newClientes_juridico);
       this.newClientes_juridico = new Object();
-      this.getClientesJuridico();
+      this.getClientes_juridico();
     }
   }
 }

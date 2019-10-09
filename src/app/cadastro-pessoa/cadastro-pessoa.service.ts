@@ -15,6 +15,10 @@ export class CadastroPessoaService {
     return this.clientes_fisico;
   }
   
+  getClientes_juridico():any{
+    return this.clientes_juridico;
+  }
+
   saveClientes_fisico(form:any){
     this.clientes_fisico.push(form);
   }
