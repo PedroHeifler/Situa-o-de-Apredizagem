@@ -12,6 +12,8 @@ import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.compo
 import { AppRoutingModule } from './app-routing.module';
 
 import { AnunciarService } from './anunciar/anunciar.service';
+import { EnderecoComponent } from './endereco/endereco.component';
+import { CadastroPessoaService } from './cadastro-pessoa/cadastro-pessoa.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { AnunciarService } from './anunciar/anunciar.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AnunciarService],
+  providers: [AnunciarService,CadastroPessoaService],
   bootstrap: [AppComponent]
 
 })
