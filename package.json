@@ -22,6 +22,7 @@
     "@fortawesome/angular-fontawesome": "^0.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "angular": "^1.7.8",
     "bootstrap": "^4.3.1",
     "bootstrap-jquery": "^3.3.2",
     "jquery": "^3.4.1",
@@ -31,7 +32,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.0",
-    "@angular/cli": "~8.3.0",
+    "@angular/cli": "^8.3.15",
     "@angular/compiler-cli": "~8.2.3",
     "@angular/language-service": "~8.2.3",
     "@fortawesome/fontawesome-free": "^5.10.2",
