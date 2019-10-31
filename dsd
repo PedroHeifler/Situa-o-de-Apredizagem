@@ -1,0 +1,300 @@
+[33mcommit 16d898454d998ed33ebf19ef5ddf73b90110be19[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Your Name <you@example.com>
+Date:   Tue Oct 1 21:46:13 2019 -0300
+
+    detalhes no footer e cadastro
+
+[33mcommit 46629f94e2b2fb93b3a215c96b126a093725faca[m
+Author: Your Name <you@example.com>
+Date:   Tue Oct 1 20:37:30 2019 -0300
+
+    Carousel na Home
+
+[33mcommit 9365fe063a490625e2e01c078549d0ce962aa886[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Pedro Henrique <pedroheifler@hotmail.com>
+Date:   Mon Sep 30 15:35:27 2019 -0300
+
+    padronizacao ng lint
+
+[33mcommit 3b5f3abfb8132ca42ddd38481890c8b3dca31bbe[m
+Author: Pedro Henrique <pedroheifler@hotmail.com>
+Date:   Fri Sep 27 18:38:26 2019 -0300
+
+    estilo do footer
+
+[33mcommit e22ad93935634dc82d2aa93da2dd9c7d66d4bae7[m
+Merge: 96a7395 3e918ff
+Author: PedroHeifler <48891623+PedroHeifler@users.noreply.github.com>
+Date:   Fri Sep 27 17:36:04 2019 -0300
+
+    endereco > master
+    
+    Endereco
+
+[33mcommit 3e918ffdb122a12841186bb470cf6fac9c82ef9b[m
+Merge: cb8b7fb 96a7395
+Author: PedroHeifler <48891623+PedroHeifler@users.noreply.github.com>
+Date:   Fri Sep 27 17:35:37 2019 -0300
+
+    Merge branch 'master' into endereco
+
+[33mcommit 96a73959d393da144d6561ad26aa86df1359da1b[m
+Author: Your Name <you@example.com>
+Date:   Thu Sep 26 21:23:10 2019 -0300
+
+    Modificação no estilo dos produtos na home
+
+[33mcommit 30c0ead7d1ba2f35f639f3a29e8878158575e849[m
+Author: Your Name <you@example.com>
+Date:   Thu Sep 26 19:31:07 2019 -0300
+
+    Service de categoria e arrumando reponsividade do cadastro
+
+[33mcommit cb8b7fb87210b4f2be469ed934cdd99245265e99[m[33m ([m[1;31morigin/endereco[m[33m)[m
+Author: Pedro Henrique <pedroheifler@hotmail.com>
+Date:   Thu Sep 26 16:56:45 2019 -0300
+
+    service funcionando e mostrando enderecos
+
+[33mcommit bea19ca9c1ffc712855dbaf3d4ec5acc1d11f669[m
+Author: Pedro Henrique <pedroheifler@hotmail.com>
+Date:   Thu Sep 26 16:24:25 2019 -0300
+
+    estilo e selecao de endereco
+
+[33mcommit 774099c6f3ad5a0d6186cc046293e5e7197153b0[m[33m ([m[1;31morigin/Cadastro[m[33m)[m
+Merge: 8eec0b3 0c2b7a8
+Author: PedroHeifler <48891623+PedroHeifler@users.noreply.github.com>
+Date:   Wed Sep 25 15:28:03 2019 -0300
+
+    Cadastro > master
+    
+    Alteracao na navbar da home e no cadasro de usuario
+
+[33mcommit 0c2b7a87c07d763a50554d4f94de87fea7802b9d[m
+Author: Pedro Henrique <pedroheifler@hotmail.com>
+Date:   Wed Sep 25 15:21:14 2019 -0300
+
+    Alteracao na navbar da home e no cadasro de usuario
+
+[33mcommit 8eec0b3f84dc31068f9980f3f5695b135733b3f6[m
+Merge: d5147da 06b67dc
+Author: Victor F. Gonçalves <48810770+victor3325@users.noreply.github.com>
+Date:   Tue Sep 24 21:09:13 2019 -0300
+
+    Merge pull request #3 from PedroHeifler/Cadastro
+    
+    Cadastro quase pronto
+
+[33mcommit 06b67dc62f0cc95d6d48b8bd24de4178ee7b861e[m
+Author: Pedro Henrique <pedroheifler@hotmail.com>
+Date:   Thu Sep 19 20:17:29 2019 -0300
+
+    Cadastro quase pronto
+
+[33mcommit d5147da9617ee9ed377239fd0b2feeb6bda12994[m
+Author: Pedro Henrique <pedroheifler@hotmail.com>
+Date:   Thu Sep 19 16:36:34 2019 -0300
+
+    Consertando a cagada
+
+[33mcommit 97d10cca0d69eff8ce8496c052f255070503b3c4[m
+Merge: bd25952 e68377f
+Author: Pedro Henrique <pedroheifler@hotmail.com>
+Date:   Thu Sep 19 16:10:53 2019 -0300
+
+    Estilo da home
+
+[33mcommit bd259528f4badf6cecb8278a42a396fc7322f261[m
+Author: Your Name <you@example.com>
+Date:   Wed Sep 11 21:41:13 2019 -0300
+
+    Simplificando estilo da home
+
+[33mcommit e68377f02c09d4edc7637e8aa4949d378f405273[m
+Merge: 0066699 8da859b
+Author: PedroHeifler <48891623+PedroHeifler@users.noreply.github.com>
+Date:   Tue Sep 17 19:50:46 2019 -0300
+
+    Merge pull request #2 from PedroHeifler/Home
+    
+    Mudando a home
+
+[33mcommit 8da859b2b9778d0bcdec5ba0712d096d618c046f[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 17 19:49:13 2019 -0300
+
+    Mudando a home
+
+[33mcommit 0066699246e0cd12209d5f86a0f5d8ef628cb079[m
+Author: Your Name <you@example.com>
+Date:   Wed Sep 11 21:41:13 2019 -0300
+
+    aplicando router
+    
+    router adicionado para login,carrinho,home e cadastro
+
+[33mcommit fdb8ffd2156f9498bc8a6b29948fcb5847f4a0bb[m
+Author: Your Name <you@example.com>
+Date:   Wed Sep 11 20:37:00 2019 -0300
+
+    Alinhamento das telas
+
+[33mcommit 53e00c114c21087c7c9a3021efac9d9bd97abd39[m
+Merge: c5bd15d 7f8cccf
+Author: Your Name <you@example.com>
+Date:   Wed Sep 11 20:09:06 2019 -0300
+
+    Merge branch 'master' of https://github.com/PedroHeifler/Situacao-de-Apredizagem
+
+[33mcommit c5bd15d11fa35829db037aa6d9185f4d3fc932a0[m
+Author: Your Name <you@example.com>
+Date:   Wed Sep 11 20:07:27 2019 -0300
+
+    comitando pq tem q comitar
+    
+    comitei
+
+[33mcommit 7f8cccff00c2ab4cec7fc118e2538d6edb3b2a7c[m
+Author: Your Name <you@example.com>
+Date:   Wed Sep 11 20:05:27 2019 -0300
+
+    Carousel funcionando
+
+[33mcommit 1535aa89403a0b5239dc25462fe9db0418301683[m
+Merge: 75e907d 2c40b8d
+Author: Your Name <you@example.com>
+Date:   Wed Sep 11 19:38:27 2019 -0300
+
+    Correcao
+
+[33mcommit 75e907dcbd381e53a477573efe09419e065f8944[m
+Author: Your Name <you@example.com>
+Date:   Wed Sep 11 19:36:15 2019 -0300
+
+    Correcao
+
+[33mcommit 2c40b8d8f086113ff97d213710f72d11deddd27f[m
+Author: PedroHeifler <48891623+PedroHeifler@users.noreply.github.com>
+Date:   Wed Sep 11 08:40:46 2019 -0300
+
+    Update README.md
+
+[33mcommit 20016fa7bb9a28f9cfab3a3188318c9113b25e89[m
+Merge: ddda114 f35985f
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:48:33 2019 -0300
+
+    Merge branch 'master' of https://github.com/PedroHeifler/Situacao-de-Apredizagem
+
+[33mcommit ddda11489cab1e85cfcc3937ba9d263378a56c91[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:47:37 2019 -0300
+
+    home component
+    
+    criação home
+
+[33mcommit f35985fb7b02e706c7dacf20c16b23bd7bd0c7fa[m
+Merge: e66a8bb f0e7faa
+Author: miguelzimmer <53197414+miguelzimmer@users.noreply.github.com>
+Date:   Tue Sep 10 21:31:23 2019 -0300
+
+    Merge pull request #1 from PedroHeifler/awesome-feature
+    
+    nova feature
+
+[33mcommit f0e7faabb784da91a95524799174840cd7a17330[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:27:51 2019 -0300
+
+    teste
+
+[33mcommit e66a8bbda521a640612bd99dbbb8e7783ed86a0f[m
+Merge: 0e2b418 03725fe
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:26:16 2019 -0300
+
+    conflito
+
+[33mcommit 0e2b41801aac207a4033daa6addd8eef0276cd12[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:25:40 2019 -0300
+
+    conflito
+
+[33mcommit 03725fe335b4dac6c8be783505a8ed65adc143c3[m
+Merge: 9bdb61d d6780f7
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:17:08 2019 -0300
+
+    Login pronto
+
+[33mcommit 9bdb61dbc6d3d833346bb6bb70bcf1460e4d9c85[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:08:33 2019 -0300
+
+    Login Pronto
+
+[33mcommit d6780f7516c8902364807ae0bf52df4abdce56f6[m
+Merge: c905c70 7466b99
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:02:15 2019 -0300
+
+    Merge branch 'master' of https://github.com/PedroHeifler/Situacao-de-Apredizagem
+
+[33mcommit c905c708b9b27618d2cb01ebc4046e1c0c32327d[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 21:01:30 2019 -0300
+
+    Teste
+    
+    Teste miguelito
+
+[33mcommit 7466b9901b67f09077c6edada3b338d84e31a2c7[m
+Merge: 5f7ed19 d0a6c99
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 20:52:54 2019 -0300
+
+    resolving conflict
+
+[33mcommit 5f7ed19f7b2e0e565f4526bdab609706eb1323e1[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 20:39:19 2019 -0300
+
+    Anuncio
+
+[33mcommit d0a6c998e95afae23ba38641b8a69eb4e0a4bf74[m
+Merge: 7c73ebb 3eb293b
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 20:30:11 2019 -0300
+
+    Merge branch 'master' of https://github.com/PedroHeifler/Situacao-de-Apredizagem
+
+[33mcommit 7c73ebb2f46dddeb8f662efa07d0c3089270ab19[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 20:27:43 2019 -0300
+
+    pessoa
+    
+    cadastro pessoa ,css incompleto
+
+[33mcommit 3eb293badefa5a659912ff6c9353364fa1a5f8d3[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 20:25:59 2019 -0300
+
+    Carrinho
+    
+    Tela Carrinho
+
+[33mcommit 5068b604a379699d3b0af763ce8167c9edde14c3[m
+Author: Your Name <you@example.com>
+Date:   Tue Sep 10 19:02:58 2019 -0300
+
+    Angular/CLI
+
+[33mcommit 4fc3334b26a0af45cc897d429368fa85038633e4[m
+Author: PedroHeifler <48891623+PedroHeifler@users.noreply.github.com>
+Date:   Tue Sep 10 18:46:41 2019 -0300
+
+    Initial commit
