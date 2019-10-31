@@ -14,9 +14,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cadastro', component: CadastroPessoaComponent },
   { path: 'anuncio', component: AnunciarComponent},
-  { path: 'detalhes', component: DetalheProdutoComponent },
+  { path: 'detalhes/:productId', component: DetalheProdutoComponent },
   { path: 'carrinho', component: CarrinhoComponent },
   { path: 'endereco', component: EnderecoComponent },
+
 ];
 
 @NgModule({

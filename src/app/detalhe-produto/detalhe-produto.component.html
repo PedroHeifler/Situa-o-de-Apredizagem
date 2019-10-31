@@ -1,16 +1,13 @@
 <section class="container">
-    <div id="detalhes_container">
+    <div id="detalhes_container" *ngIf="produto">
         <div class="row">
             <div class="col-md-6">
-                <img id="detalhes_img" src="assets/monitor.jpg">
+                <img id="detalhes_img" src="assets/{{produto.imagem}}">
             </div>
             <div class="col-md-6" id="detalhes_preco">
-                <h3>MONITOR GAMER 21.5 POL, FULL HD, 60HZ</h3>
+                <h3>{{produto.nome}}</h3>
                 <br>
-                <h4 class="detalhes_desconto">DE: R$ 400.00</h4>
-                <br>
-                <br>
-                <h4 class="detalhes_total">PARA: R$ 400.00</h4>
+                <h4 class="detalhes_total">{{ produto.valor | currency:'BRL':true}} </h4>
                 <br>
                 <div class="detalhes_button">
                     <a href="tela_carrinho.html">
@@ -21,28 +18,8 @@
         </div>
         <div class="detalhes_info">
             <h1>DESCRIÇÃO DO PRODUTO</h1>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                distribution of letters, as opposed to using 'Content here, content here', making it look like
-                readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                (injected humour and the like).</p>
-            <h1>DEFINICOES TÉCNICAS</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <ul>
-                <li>printing</li>
-                <li>typesetting</li>
-                <li>distracted</li>
-                <li>reader</li>
-                <li>established</li>
-                <li>fact</li>
-            </ul>
+            <p>{{produto.descricao}} </p>
+            
         </div>
     </div>
 </section>

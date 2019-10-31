@@ -1,4 +1,5 @@
 <section class="container-fluid">
+    
     <div id="carouselProduto" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselProduto" data-slide-to="0" class="active"></li>
@@ -8,9 +9,27 @@
             <div class="carousel-item active">
                 <div id="principal">
                     <div class="row d-flex d-flex justify-content-center">
-                        <div *ngFor="let produto of produtos | slice:0:4;" class="card text-center m-3"
+                        <div *ngFor="let produto of produtos | slice:0:4; index as productId" class="card text-center m-3"
                             style="width: 14rem">
                             <img src="assets/{{ produto.imagem }}" class="card-img-top" title="{{ produto.nome }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ produto.nome }}</h5>
+                                <p>R$ {{ produto.valor }}</p>
+                                <p class="card-text text-left text-truncate" title="{{ produto.descricao }}">
+                                    {{ produto.descricao }}</p>
+                                <a [routerLink]="['/detalhes',productId]" class="btn btn-primary">Ver Mais Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div id="principal">
+                    <div class="row d-flex d-flex justify-content-center">
+                        <div *ngFor="let produto of produtos | slice:4:8; index as productId " class="card text-center m-3"
+                            style="width: 14rem">
+                            <img src="assets/{{ produto.imagem }}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ produto.nome }}</h5>
                                 <p>R$ {{ produto.valor }}</p>
@@ -22,11 +41,50 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselProduto" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselProduto" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+
+    <!-----Titulo----->
+    <div class="titulo_principal hr">
+        <h1 class="text-dark text-center">Destaques</h1>
+    </div>
+
+    <div id="carouselProduto" class="carousel slide mt-5" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselProduto" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselProduto" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner pb-5">
+            <div class="carousel-item active">
+                <div id="principal">
+                    <div class="row d-flex d-flex justify-content-center">
+                        <div *ngFor="let produto of produtos | slice:0:4; index as productId" class="card text-center m-3"
+                            style="width: 14rem">
+                            <img src="assets/{{ produto.imagem }}" class="card-img-top" title="{{ produto.nome }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ produto.nome }}</h5>
+                                <p>R$ {{ produto.valor }}</p>
+                                <p class="card-text text-left text-truncate" title="{{ produto.descricao }}">
+                                    {{ produto.descricao }}</p>
+                                <a [routerLink]="['/detalhes',productId]" class="btn btn-primary">Ver Mais Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="carousel-item">
                 <div id="principal">
                     <div class="row d-flex d-flex justify-content-center">
-                        <div *ngFor="let produto of produtos | slice:4:8;" class="card text-center m-3"
+                        <div *ngFor="let produto of produtos | slice:4:8; index as productId " class="card text-center m-3"
                             style="width: 14rem">
                             <img src="assets/{{ produto.imagem }}" class="card-img-top" alt="...">
                             <div class="card-body">
