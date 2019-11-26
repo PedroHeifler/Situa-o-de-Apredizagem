@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'anuncio', component: AnunciarComponent},
   { path: 'detalhes/:productId', component: DetalheProdutoComponent },
   { path: 'carrinho', component: CarrinhoComponent },
-  { path: 'endereco', component: EnderecoComponent },
+  { path: 'endereco', component: EnderecoComponent }
+  
 
 ];
 
@@ -25,6 +26,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
-  ], exports: [RouterModule]
+  ], exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }

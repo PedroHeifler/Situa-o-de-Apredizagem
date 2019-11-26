@@ -9,10 +9,10 @@ import * as $ from 'jquery';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  produtos: {}
+  
 
   constructor(private homeService: HomeService) {
-    this.produtos = homeService.getProdutos()
+   
    }
 
   public ngOnInit() {
