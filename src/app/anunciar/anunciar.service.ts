@@ -23,7 +23,7 @@ export class AnunciarService {
   */
   
   // Define API
-  apiURL = 'http://localhost:8080';
+  apiURL = '/api';
 
   constructor(private http: HttpClient) { }
 
@@ -36,7 +36,7 @@ export class AnunciarService {
 
   // HttpClient API get() method => Fetch Products list
   getProductos(): Observable<Produtos[]> {
-    return this.http.get<Produtos[]>(this.apiURL + '/produto/lista')
+    return this.http.get<Produtos[]>(this.apiURL + '/anuncio/lista')
       .pipe(
         retry(1),
         catchError(this.handleError)
@@ -44,7 +44,7 @@ export class AnunciarService {
   }
   // HttpClient API post() method => Create product
   criarProduto(produto): Observable<Number> {
-    return this.http.post<Number>(this.apiURL + '/produto', JSON.stringify(produto), this.httpOptions)
+    return this.http.post<Number>(this.apiURL + '/anuncio', JSON.stringify(produto), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)
@@ -52,7 +52,7 @@ export class AnunciarService {
   }
   // HttpClient API put() method => Update product
   updateProduto(id, produto): Observable<Produtos> {
-    return this.http.put<Produtos>(this.apiURL + '/produto/' + id, JSON.stringify(produto), this.httpOptions)
+    return this.http.put<Produtos>(this.apiURL + '/produto/update' + id, JSON.stringify(produto), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)
@@ -60,7 +60,7 @@ export class AnunciarService {
   }
   // HttpClient API delete() method => Delete product
   deleteProduto(id) {
-    return this.http.delete<Produtos>(this.apiURL + '/products/' + id, this.httpOptions)
+    return this.http.delete<Produtos>(this.apiURL + '/produto/deletar' + id, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)

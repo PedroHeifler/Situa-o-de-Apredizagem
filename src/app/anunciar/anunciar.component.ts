@@ -11,32 +11,31 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class AnunciarComponent implements OnInit {
 
-  private novoProduto: Produtos;
+  novoProduto: Produtos = new Produtos();
   private produtos: Produtos[];
 
   constructor(private anunciarService: AnunciarService) { }
 
   ngOnInit() {
-
+    this.novoProduto = new Produtos();
   }
 
   getProduto(): void {
-      this.anunciarService.getProductos().subscribe(
-        produtos => this.produtos = produtos);
+    this.anunciarService.getProductos().subscribe(
+      produtos => this.produtos = produtos);
   }
   onSubmitProduto(formulario: NgForm) {
     if (formulario.valid) {
       this.anunciarService.criarProduto(this.novoProduto).subscribe(
         id => {
-          this.novoProduto = new Produtos();
-          this.getProduto;
+          this.novoProduto 
         }
       )
     }
   }
-    share(){
-      window.alert(`EAEAEAEAEAE`)
-    }
+  share() {
+    window.alert(`EAEAEAEAEAE`)
+  }
 
 }
 
