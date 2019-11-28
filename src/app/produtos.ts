@@ -23,9 +23,4 @@ export class Produtos {
   quantidade: number;
   categoria: string;
   moeda: string;
-  entrega: string;
-  pais: string;
-  estado: string;
-  cidade: string;
-  cep: string;
 }

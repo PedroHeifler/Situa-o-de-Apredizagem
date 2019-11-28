@@ -1,0 +1,41 @@
+<section class="container">
+    <form #Form1="ngForm" (ngSubmit)="onSubmitUsuario(Form1)" id="cadastroUsuario">
+        <div class="form-group" id="dados">
+            <div class=" content_form_l ">
+                <div class=" input-group mb-3 ">
+                    <input type=" text " class=" form-control " name=" login " [(ngModel)]="
+                        novoUsuario.login " placeholder=" login " required>
+                </div>
+            </div>
+            <div class=" content_form_l ">
+                <div class=" input-group mb-3 ">
+                    <input type=" email " class=" form-control " email name=" e-mail " [(ngModel)]="
+                         novoUsuario.email " placeholder=" e-mail " required>
+                </div>
+            </div>
+            <div class=" content_form_l ">
+                <div class=" input-group mb-3 ">
+                    <input type=" password " class=" form-control " name=" senha " [(ngModel)]="
+                        novoUsuario.senha " placeholder=" Senha " required>
+                </div>
+            </div>
+            <div class=" content_form_l ">
+                <div class=" input-group mb-3 ">
+                    <input type=" password " class=" form-control " placeholder=" Confirmar Senha " required>
+                </div>
+            </div>
+
+            <div class=" form-check">
+                <a href=" #">Termos de anuncio</a>
+                <br>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label form-group" for="exampleCheck1">Concordo com os termos</label>
+
+            </div>
+            <div>
+                <button type="submit" [disabled]="!Form1.valid">Cadastrar</button>
+            </div>
+        </div>
+
+    </form>
+</section>
