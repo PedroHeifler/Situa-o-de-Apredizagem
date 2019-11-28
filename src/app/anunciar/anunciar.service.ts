@@ -9,19 +9,6 @@ import { retry, catchError } from 'rxjs/operators';
 @Injectable()
 export class AnunciarService {
 
-  /* produtos = produtos;
- 
-   constructor() { }
-   
-   getProdutos() :any{
-     return this.produtos;
-   }
- 
-   saveProdutos(form:any){
-     this.produtos.push(form);
-   }
-   */
-
   // Define API
   apiURL = '/api';
 

@@ -23,4 +23,5 @@ export class Produtos {
   quantidade: number;
   categoria: string;
   moeda: string;
+  imagem: string;
 }
