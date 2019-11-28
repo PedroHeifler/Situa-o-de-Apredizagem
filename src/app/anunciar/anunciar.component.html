@@ -11,8 +11,8 @@
                 </div>
                 <div class="content_form_l">
                     <div class="input-group mb-3">
-                        <input type="number" step="0.01" min="0" name="preco" #nome="ngModel" [(ngModel)]="novoProduto.preco"
-                            max="999999" id="preco" class="form-control" placeholder="Preço unitário"
+                        <input type="number" step="0.01" min="0" id="preco_unit" name="preco_unit" #nome="ngModel" [(ngModel)]="novoProduto.preco_unit"
+                            max="999999"  class="form-control" placeholder="Preço unitário"
                             aria-label="number" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
@@ -110,8 +110,26 @@
                     <div>
                         <button type="submit" [disabled]="!f.valid">Cadastrar</button>
                     </div>
+                    <div>
+                        <button type="button" (click)="">Deletar</button>
+                    </div>
+                    <div>
+                        <button type="button" (click)="">Update</button>
+                    </div>
                 </div>
             </div>
         </div>
     </form>
+
+    <!---TESTE--->
+    <div  *ngFor="let produto of produtos;">
+        <h1 class="text-black">{{produto.nome}}</h1>
+        <h1 class="text-black">{{produto.preco_unit}}</h1>
+        <h1 class="text-black">{{produto.quantidade}}</h1>
+        <h1 class="text-black">{{produto.categoria}}</h1>
+        <h1 class="text-black">{{produto.moeda}}</h1>
+        <h1 class="text-black">{{produto.entrega}}</h1>
+        <h1 class="text-black">{{produto.descricao}}</h1>
+        <h1 class="text-black">{{produto.endereco}}</h1>
+    </div>
 </section>

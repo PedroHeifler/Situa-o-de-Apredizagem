@@ -9,19 +9,19 @@ import { retry, catchError } from 'rxjs/operators';
 @Injectable()
 export class AnunciarService {
 
- /* produtos = produtos;
+  /* produtos = produtos;
+ 
+   constructor() { }
+   
+   getProdutos() :any{
+     return this.produtos;
+   }
+ 
+   saveProdutos(form:any){
+     this.produtos.push(form);
+   }
+   */
 
-  constructor() { }
-  
-  getProdutos() :any{
-    return this.produtos;
-  }
-
-  saveProdutos(form:any){
-    this.produtos.push(form);
-  }
-  */
-  
   // Define API
   apiURL = '/api';
 
@@ -35,7 +35,7 @@ export class AnunciarService {
   }
 
   // HttpClient API get() method => Fetch Products list
-  getProductos(): Observable<Produtos[]> {
+  getProdutos(): Observable<Produtos[]> {
     return this.http.get<Produtos[]>(this.apiURL + '/anuncio/lista')
       .pipe(
         retry(1),

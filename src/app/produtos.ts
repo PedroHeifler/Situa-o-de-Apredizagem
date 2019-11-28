@@ -19,7 +19,7 @@ export class Produtos {
   id: number;
   nome: string;
   descricao: string;
-  preco: number;
+  preco_unit: number;
   quantidade: number;
   categoria: string;
   moeda: string;
