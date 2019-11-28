@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+import { Enderecos } from '../endereco';
+import { NgForm } from '@angular/forms';
 import { EnderecoService } from './endereco.service';
 
 @Component({
@@ -9,22 +10,31 @@ import { EnderecoService } from './endereco.service';
 })
 export class EnderecoComponent implements OnInit {
 
-  show: boolean = true;
-  enderecos: any;
+  novoEndereco : Enderecos = new Enderecos();
+  private enderecos : Enderecos[];
 
-  constructor(private service: EnderecoService) {
-    this.enderecos = service.getEndereco();
-  }
-
+  constructor(private enderecoService: EnderecoService) {
+      this.enderecoService = enderecoService;
+   }
 
   ngOnInit() {
-
+    this.novoEndereco = new Enderecos();
+    this.getEndereco;
+  }
+  getEndereco(): void{
+    this.enderecoService.getEnderecos().subscribe(
+      usuarios => this.enderecos = usuarios);
+    
   }
 
-  onClick(seletor) {
-    $(seletor).toggleClass('active')
-    $('.animacaoHover').not(seletor).removeClass('active')
-    this.show = false
+  onSubmitUsuario(formulario: NgForm) {
+    if (formulario.valid) {
+      this.enderecoService.criarEndereco(this.novoEndereco).subscribe(
+        id => {
+          this.novoEndereco
+        }
+      )
+    }
   }
-  
+
 }

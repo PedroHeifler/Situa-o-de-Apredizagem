@@ -13,8 +13,6 @@ export const clientes_fisico = [
         rua: '',
         cep: '',
 
-        usuario:'',
-        senha:'',
 //*fazer verificação de tipo de cliente com o radio selecionado
         //*tipo_cliente:''
     },
@@ -33,9 +31,7 @@ export const clientes_juridico = [
         bairro: '',
         rua: '',
         cep: '',
-        
-        usuario:'',
-        senha:'',
+ 
 //*fazer verificação de tipo de cliente com o radio selecionado
         //*tipo_cliente:''
     },

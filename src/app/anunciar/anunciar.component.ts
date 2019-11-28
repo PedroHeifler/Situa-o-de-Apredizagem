@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AnunciarService } from './anunciar.service';
 import { Produtos } from "../produtos";
-import { windowWhen } from 'rxjs/operators';
-import { ActivatedRoute } from "@angular/router";
-import { EnderecoService } from '../endereco/endereco.service';
+
+
 @Component({
   selector: 'app-anunciar',
   templateUrl: './anunciar.component.html',
@@ -15,9 +14,7 @@ export class AnunciarComponent implements OnInit {
   novoProduto: Produtos = new Produtos();
   private produtos: Produtos[];
 
-  constructor(private anunciarService: AnunciarService,
-    private enderecoService: EnderecoService
-  ) { }
+  constructor(private anunciarService: AnunciarService) { }
 
   ngOnInit() {
     this.novoProduto = new Produtos();
@@ -37,10 +34,6 @@ export class AnunciarComponent implements OnInit {
         }
       )
     }
-  }
-
-  share() {
-    window.alert(`EAEAEAEAEAE`)
   }
 }
 

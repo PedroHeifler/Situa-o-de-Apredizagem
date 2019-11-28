@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import * as $ from 'jquery';
-import { CadastroPessoaService } from './cadastro-pessoa.service';
+import { PerfilPessoaService } from './perfil-pessoa.service';
 
 @Component({
-  selector: 'app-cadastro-pessoa',
-  templateUrl: './cadastro-pessoa.component.html',
-  styleUrls: ['./cadastro-pessoa.component.css']
+  selector: 'app-perfil-pessoa',
+  templateUrl: './perfil-pessoa.component.html',
+  styleUrls: ['./perfil-pessoa.component.css']
 })
-export class CadastroPessoaComponent implements OnInit {
+export class PerfilPessoaComponent implements OnInit {
   clientes_fisico : [];
   clientes_juridico: [];
 
   newClientes_fisico : any;
   newClientes_juridico : any;
   
-  constructor(private cadastroPessoaService : CadastroPessoaService ){
-    this.cadastroPessoaService = cadastroPessoaService;
+  constructor(private perfilPessoaService : PerfilPessoaService ){
+    this.perfilPessoaService = perfilPessoaService;
   }
 
   ngOnInit() {
@@ -50,16 +50,16 @@ export class CadastroPessoaComponent implements OnInit {
   }
 
   getClientes_fisico(): void{
-    this.clientes_fisico = this.cadastroPessoaService.getClientes_fisico();
+    this.clientes_fisico = this.perfilPessoaService.getClientes_fisico();
   }
 
   getClientes_juridico(): void{
-    this.clientes_juridico = this.cadastroPessoaService.getClientes_juridico();
+    this.clientes_juridico = this.perfilPessoaService.getClientes_juridico();
   }
 
   onSubmitClienteFisico(formulario:NgForm){
     if(formulario.valid){
-      this.cadastroPessoaService.saveClientes_fisico(this.newClientes_fisico);
+      this.perfilPessoaService.saveClientes_fisico(this.newClientes_fisico);
       this.newClientes_fisico = new Object();
       this.getClientes_fisico();
     }
@@ -68,7 +68,7 @@ export class CadastroPessoaComponent implements OnInit {
   
   onSubmitClienteJuridico(formulario:NgForm){
     if(formulario.valid){
-      this.cadastroPessoaService.saveClientes_juridico(this.newClientes_juridico);
+      this.perfilPessoaService.saveClientes_juridico(this.newClientes_juridico);
       this.newClientes_juridico = new Object();
       this.getClientes_juridico();
     }
