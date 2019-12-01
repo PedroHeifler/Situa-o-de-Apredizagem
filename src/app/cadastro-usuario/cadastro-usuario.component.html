@@ -1,41 +1,56 @@
-<section class="container">
-    <form #Form1="ngForm" (ngSubmit)="onSubmitUsuario(Form1)" id="cadastroUsuario">
-        <div class="form-group" id="dados">
-            <div class=" content_form_l ">
-                <div class=" input-group mb-3 ">
-                    <input type=" text " class=" form-control " name=" login " [(ngModel)]="
-                        novoUsuario.login " placeholder=" login " required>
+<body>
+    <div class="container p-5">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Cadastrar-se</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square text-muted"></i></span>
+                        <span><i class="fab fa-google-plus-square text-muted"></i></span>
+                        <span><i class="fab fa-twitter-square text-muted"></i></span>
+                    </div>
                 </div>
-            </div>
-            <div class=" content_form_l ">
-                <div class=" input-group mb-3 ">
-                    <input type=" email " class=" form-control " email name=" e-mail " [(ngModel)]="
-                         novoUsuario.email " placeholder=" e-mail " required>
+                <div class="card-body">
+                    <form #f="ngForm">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-dark"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Login" [(ngModel)]="novoUsuario.login"
+                                #nome="ngModel" name="login" required>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-dark"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Email" [(ngModel)]="novoUsuario.email"
+                                #nome="ngModel" name="email" required>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-dark"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Senha"
+                                [(ngModel)]="novoUsuario.senha" #nome="ngModel" name="senha" required>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-dark"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Confirmar Senha"
+                                [(ngModel)]="novoUsuario.confirmarSenha" #nome="ngModel" name="confirmarSenha"
+                                (keyup)="confirmarSenha($event)" required>
+                        </div>
+                        <div class="row align-items-center remember">
+                            <input type="checkbox">Lembrar-se
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="submit" id="cadastrar" [disabled]="!f.valid" [routerLink]="['/']" value="Cadastrar"
+                                class="btn btn-success login_btn">
+                        </div>
+                    </form>
                 </div>
-            </div>
-            <div class=" content_form_l ">
-                <div class=" input-group mb-3 ">
-                    <input type=" password " class=" form-control " name=" senha " [(ngModel)]="
-                        novoUsuario.senha " placeholder=" Senha " required>
-                </div>
-            </div>
-            <div class=" content_form_l ">
-                <div class=" input-group mb-3 ">
-                    <input type=" password " class=" form-control " placeholder=" Confirmar Senha " required>
-                </div>
-            </div>
-
-            <div class=" form-check">
-                <a href=" #">Termos de anuncio</a>
-                <br>
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label form-group" for="exampleCheck1">Concordo com os termos</label>
-
-            </div>
-            <div>
-                <button type="submit" [disabled]="!Form1.valid">Cadastrar</button>
             </div>
         </div>
-
-    </form>
-</section>
+    </div>
+</body>

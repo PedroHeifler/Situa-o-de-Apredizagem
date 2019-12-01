@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Usuarios } from '../usuarios';
+import * as $ from 'jquery';
 import { CadastroUsuarioService } from './cadastro-usuario.service';
 
 @Component({
@@ -19,13 +20,6 @@ export class CadastroUsuarioComponent implements OnInit {
 
   ngOnInit() {
     this.novoUsuario = new Usuarios();
-    this.getUsuario();
-  }
-
-  getUsuario(): void{
-    this.cadastroUsuarioService.getUsuarios().subscribe(
-      usuarios => this.usuarios = usuarios);
-    
   }
 
   onSubmitUsuario(formulario: NgForm) {
@@ -35,6 +29,14 @@ export class CadastroUsuarioComponent implements OnInit {
           this.novoUsuario
         }
       )
+    }
+  }
+
+  confirmarSenha(event : any) {
+    if (event.target.value != this.novoUsuario.senha) {
+      var b = document.getElementById("cadastrar"); 
+
+      b.setAttribute("disabled", "disabled");
     }
   }
 
