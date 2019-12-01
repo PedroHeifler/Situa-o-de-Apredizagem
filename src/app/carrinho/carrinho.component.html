@@ -1,33 +1,64 @@
-<section class="container">
-    <div id="carrinho">
-        <div style="background-color: white; border-radius: 20px;">
-            <div id="carrinhoTitulo">
-                <div class="row">
-                    <div class="col-md-2">
-                        <h3>Produto</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Valor unitário</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h3>Quantidade</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>SubTotal</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h3>Excluir</h3>
-                    </div>
+<section class="container pt-5">
+    <form>
+        <table class="table bg-white text-center mb-0 border-bottom">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quatidade</th>
+                    <th scope="col">Valor Unitário</th>
+                    <th scope="col">Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="max-width: 170px;">
+                        <img src="../../assets/monitor.jpg" style="width: 150px; max-width: 150px;">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </td>
+                    <td><input type="number" class="form-control" min="0" style="max-width: 100px;"></td>
+                    <td>R$ 1.000.00</td>
+                    <td><i class="fas fa-times-circle text-center text-danger mt-5" style="font-size: 30px;"></i></td>
+                </tr>
+                <tr>
+                    <td style="max-width: 170px;">
+                        <img src="../../assets/mouse.jpg" style="width: 150px;">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </td>
+                    <td><input type="number" class="form-control" min="0" style="max-width: 100px;"></td>
+                    <td>R$ 5.000.00</td>
+                    <td><i class="fas fa-times-circle text-center text-danger mt-5" style="font-size: 30px;"></i></td>
+                </tr>
+                <tr>
+                    <td style="max-width: 170px;">
+                        <img src="../../assets/teclado.jpg" style="width: 150px; max-width: 150px;">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </td>
+                    <td><input type="number" class="form-control" min="0" style="max-width: 100px;"></td>
+                    <td>R$ 10.000.00</td>
+                    <td><i class="fas fa-times-circle text-center text-danger mt-5" style="font-size: 30px;"></i></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row m-0">
+            <div class="bg-white col-md-7 pt-5">
+                <label>CEP:</label>
+                <div class="d-flex">
+                    <input type="text" data-inputmask="'mask': '99.999-999'" class="form-control w-50" placeholder="99.999-999" min="6" required #inputFrete>
+                    <input type="submit" class="btn btn-dark ml-2" (click)="OnClickCalcularFrete()" value="Calcular" [disabled]="!inputFrete.value">
+                </div>
+                <br>
+                <p>Digite o endereço de entrega para calcular o seu frete.</p>
+            </div>
+
+            <div class="bg-white col-md-5">
+                <div class="bd-highlight m-4">
+                    <p>subTotal: </p>
+                    <p id="frete">Frete: </p>
+                    <p style="font-weight: bold; font-size: 25px;">Total: </p>
+                    <button type="button" class="btn btn-success">Confirmar Compra!</button>
                 </div>
             </div>
-            <div class="carrinho-valor-total">
-                <p>Total dos Produtos: R$</p>
-                <p>Frete: R$</p>
-                <br>
-                <p>Total: R$</p>
-                <button type="button" class="btn-success" onclick="window.open('tela_forma_pagamento.html')">Confirmar
-                    Compra!</button>
-            </div>
         </div>
-    </div>
+    </form>
 </section>

@@ -49,3 +49,29 @@
     opacity: 0.7;
     transition: 300ms;
   }
+
+  /*---Titulos---*/
+
+  .titulo_principal {
+    border: 3px solid white;
+    width: min-content;
+    margin: auto;
+    border-radius: 30px;
+    padding: 0 50px;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+  }
+
+  .titulo_principal::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 176vh;
+    height: 3px;
+    background: white;
+    margin: 0 auto;
+    margin-top: 25px;
+    left: -70vh;
+    z-index: -1;
+  }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AnunciarService } from './anunciar.service'
+import { AnunciarService } from './anunciar.service';
+import { Produtos } from "../produtos";
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-anunciar',
   templateUrl: './anunciar.component.html',
@@ -8,29 +11,30 @@ import { AnunciarService } from './anunciar.service'
 })
 export class AnunciarComponent implements OnInit {
 
-  produtos : [];
+  novoProduto: Produtos = new Produtos();
+  private produtos: Produtos[];
 
-  newProduto : any;
+  constructor(private anunciarService: AnunciarService) { }
 
-  constructor(private anunciarService : AnunciarService){
-    this.anunciarService = anunciarService;
+  ngOnInit() {
+    this.novoProduto = new Produtos();
+    //this.getProduto();
   }
 
-  ngOnInit(){
-    this.getProdutos;
-    this.newProduto = new Object();
-  }
+  // getProduto(): void {
+  //   this.anunciarService.getProdutos().subscribe(
+  //     produtos => this.produtos = produtos);
+  // }
 
-  getProdutos(): void{
-    this.produtos = this.anunciarService.getProdutos();
-  }
-
-  onSubmitProduto(formulario:NgForm){
-    if(formulario.valid){
-      this.anunciarService.saveProdutos(this.newProduto);
-      this.newProduto = new Object();
-      this.getProdutos();
+  onSubmitProduto(formulario: NgForm) {
+    if (formulario.valid) {
+      this.anunciarService.criarProduto(this.novoProduto).subscribe(
+        id => {
+          this.novoProduto
+        }
+      )
     }
   }
-
 }
+
+
