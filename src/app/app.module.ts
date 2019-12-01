@@ -9,6 +9,7 @@ import { AnunciarComponent } from './anunciar/anunciar.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AnunciarService } from './anunciar/anunciar.service';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 import { EnderecoComponent } from './endereco/endereco.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +29,7 @@ import { EnderecoService } from './endereco/endereco.service';
     CarrinhoComponent,
     DetalheProdutoComponent,
     EnderecoComponent,
+    PagamentoComponent
     CadastroUsuarioComponent
   ],
   imports: [
