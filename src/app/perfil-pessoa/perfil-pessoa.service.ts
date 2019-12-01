@@ -5,7 +5,7 @@ import { clientes_juridico } from '../clientes';
 @Injectable({
   providedIn: 'root'
 })
-export class CadastroPessoaService {
+export class PerfilPessoaService {
 
   clientes_fisico = clientes_fisico;
   clientes_juridico = clientes_juridico;

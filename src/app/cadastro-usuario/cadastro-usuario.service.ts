@@ -1,20 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Produtos } from "../produtos";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Usuarios } from '../usuarios';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
-
-@Injectable()
-export class AnunciarService {
-
+@Injectable({
+  providedIn: 'root'
+})
+export class CadastroUsuarioService {
   // Define API
   apiURL = '/api';
-
   constructor(private http: HttpClient) { }
 
-  // Http Options
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -22,24 +19,24 @@ export class AnunciarService {
   }
 
   // HttpClient API get() method => Fetch Products list
-  getProdutos(): Observable<Produtos[]> {
-    return this.http.get<Produtos[]>(this.apiURL + '/anuncio/lista')
+  getUsuarios(): Observable<Usuarios[]> {
+    return this.http.get<Usuarios[]>(this.apiURL + '/usuario/lista')
       .pipe(
         retry(1),
         catchError(this.handleError)
       )
   }
   // HttpClient API post() method => Create product
-  criarProduto(produto): Observable<Number> {
-    return this.http.post<Number>(this.apiURL + '/anuncio', JSON.stringify(produto), this.httpOptions)
+  criarUsuario(usuario): Observable<Number> {
+    return this.http.post<Number>(this.apiURL + '/usuario', JSON.stringify(usuario), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)
       )
   }
   // HttpClient API put() method => Update product
-  updateProduto(id, produto): Observable<Produtos> {
-    return this.http.put<Produtos>(this.apiURL + '/anuncio/update' + id, JSON.stringify(produto), this.httpOptions)
+  updateProduto(id, usuario): Observable<Usuarios> {
+    return this.http.put<Usuarios>(this.apiURL + '/usuario/update' + id, JSON.stringify(usuario), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)
@@ -47,7 +44,7 @@ export class AnunciarService {
   }
   // HttpClient API delete() method => Delete product
   deleteProduto(id) {
-    return this.http.delete<Produtos>(this.apiURL + '/anuncio/deletar' + id, this.httpOptions)
+    return this.http.delete<Usuarios>(this.apiURL + '/usuario/deletar' + id, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)

@@ -43,7 +43,7 @@
                             <input type="text" class="form-control" name="sobrenome" [(ngModel)]="newClientes_fisico.sobrenome" placeholder="Sobrenome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control"  name="cpf" [(ngModel)]="newClientes_fisico.cpf" id="cpf" placeholder="CPF" required>
+                            <input type="text" class="form-control" name="cpf" [(ngModel)]="newClientes_fisico.cpf" id="cpf" placeholder="CPF" required>
                         </div>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="telefone" [(ngModel)]="newClientes_fisico.telefone" id="telefone" placeholder="Telefone Fixo" required>
@@ -53,49 +53,8 @@
                         </div>
                     </div>
 
-                    <div class=" form-group col-md-6 tab-pane fade border p-5 rounded" id="endereco" role="tab">
-                        <h2>Endereço</h2>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="pais" [(ngModel)]="newClientes_fisico.pais" placeholder="Pais" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="estado" [(ngModel)]="newClientes_fisico.estado" placeholder="Estado" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cidade" [(ngModel)]="newClientes_fisico.cidade" placeholder="Cidade" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="bairro" [(ngModel)]="newClientes_fisico.bairro" placeholder="Bairro" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="rua" [(ngModel)]="newClientes_fisico.rua" placeholder="Rua" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="cep" name="cep" [(ngModel)]="newClientes_fisico.cep" placeholder="CEP" required>
-                        </div>
-                    </div>
 
-                    <div class=" form-group col-md-6 tab-pane fade border p-5 rounded" id="conta" role="tab">
-                        <h2>Conta</h2>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="nome" [(ngModel)]="newClientes_fisico.nome" placeholder="Usuario" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" name="senha" [(ngModel)]="newClientes_fisico.senha" placeholder="Senha" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Confirmar Senha" required>
-                        </div>
 
-                        <div class="form-group col-md-12">
-                            <a href="#">Termos de aceitação</a>
-                            <br>
-                            <input type="checkbox" class="form-check-input" id="termosAcaitacao1" required>
-                            <label class="form-check-label" for="termosAcaitacao1">Concordo com os termos</label>
-                            <br>
-                        </div>
-                        <button type="submit" [disabled]="!Form1.valid" class="btn btn-success mt-2 col-3">Cadastrar</button>
-                    </div>
                 </div>
 
             </section>
@@ -162,30 +121,17 @@
                             <input type="text" class="form-control" name="cep" [(ngModel)]="newClientes_juridico.cep" placeholder="CEP" required>
                         </div>
                     </div>
-
-                    <div class=" form-group col-md-6 tab-pane fade border p-5 rounded" id="conta2" role="tab">
-                        <h2>Conta</h2>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="usuario" [(ngModel)]="newClientes_juridico.usuario" placeholder="Usuario" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" name="senha" [(ngModel)]="newClientes_juridico.senha" placeholder="Senha" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Confirmar Senha" required>
-                        </div>
-
-                        <div class="form-group col-md-12">
-                            <a href="#">Termos de aceitação</a>
-                            <br>
-                            <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
-                            <label class="form-check-label" for="termosAcaitacao">Concordo com os termos</label>
-                            <br>
-                            <button type="submit" [disabled]="!Form2.valid" class="btn btn-success mt-2">Cadastrar</button>
-                        </div>
+                    <div class="form-group col-md-12">
+                        <a href="#">Termos de aceitação</a>
+                        <br>
+                        <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
+                        <label class="form-check-label" for="termosAcaitacao">Concordo com os termos</label>
+                        <br>
+                        <button type="submit" [disabled]="!Form2.valid" class="btn btn-success mt-2">Cadastrar</button>
                     </div>
                 </div>
             </section>
         </form>
     </div>
+
 </section>
