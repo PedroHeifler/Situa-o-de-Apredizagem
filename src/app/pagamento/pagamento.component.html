@@ -1,114 +1,116 @@
-<section class="container rounded bg-white">
-    <!--Estolher a Forma de Pagamento-->
-    <h2>Escolha a forma de pagamento</h2>
-    <p>Clique na forma de pagamento que você deseja</p>
-    <div class="tipoPagamento">
-        <nav>
-            <div class="nav" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-visa-tab" data-toggle="tab" href="#nav-visa" role="tab" aria-selected="true" #visa (click)="escolhaPagamento(visa)">
-                    <img style="max-width: 100px; max-height: 100px" src="assets/visa.png">
-                </a>
-                <a class="nav-item nav-link" id="nav-mastercard-tab" data-toggle="tab" href="#nav-mastercard" role="tab" aria-selected="false" #mastercard (click)="escolhaPagamento(mastercard)">
-                    <img style="max-width: 100px; max-height: 100px" src="assets/mastercard.png">
-                </a>
-                <!-- <a class="nav-item nav-link" id="nav-paypal-tab" data-toggle="tab" href="#nav-paypal" role="tab" aria-selected="false" #paypal (click)="escolhaPagamento(paypal)">
+<section class="container pt-5">
+    <div class=" p-3 bg-white rounded">
+        <!--Escolher a Forma de Pagamento-->
+        <h2>Escolha a forma de pagamento</h2>
+        <p>Clique na forma de pagamento que você deseja</p>
+        <div class="tipoPagamento">
+            <nav>
+                <div class="nav" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-visa-tab" data-toggle="tab" href="#nav-visa" role="tab" aria-selected="true" #visa (click)="escolhaPagamento(visa)">
+                        <img style="max-width: 100px; max-height: 100px" src="assets/visa.png">
+                    </a>
+                    <a class="nav-item nav-link" id="nav-mastercard-tab" data-toggle="tab" href="#nav-mastercard" role="tab" aria-selected="false" #mastercard (click)="escolhaPagamento(mastercard)">
+                        <img style="max-width: 100px; max-height: 100px" src="assets/mastercard.png">
+                    </a>
+                    <!-- <a class="nav-item nav-link" id="nav-paypal-tab" data-toggle="tab" href="#nav-paypal" role="tab" aria-selected="false" #paypal (click)="escolhaPagamento(paypal)">
                     <img style="max-width: 100px; max-height: 100px" src="assets/paypal.png">
                 </a> -->
-                <a class="nav-item nav-link" id="nav-boleto-tab" data-toggle="tab" href="#nav-boleto" role="tab" aria-selected="false" #boleto (click)="escolhaPagamento(boleto)">
-                    <img style="max-width: 100px; max-height: 100px" src="assets/boleto.png">
-                </a>
-            </div>
-        </nav>
+                    <a class="nav-item nav-link" id="nav-boleto-tab" data-toggle="tab" href="#nav-boleto" role="tab" aria-selected="false" #boleto (click)="escolhaPagamento(boleto)">
+                        <img style="max-width: 100px; max-height: 100px" src="assets/boleto.png">
+                    </a>
+                </div>
+            </nav>
 
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-visa" role="tabpanel">
-                <aside class="row mt-4">
-                    <div class="col-md-6 ml-5">
-                        <div class="form-group">
-                            <label for="numeroCartao">Número do cartão</label>
-                            <input type="text" class="form-control" id="numeroCartao">
-                        </div>
-                        <div class="form-group">
-                            <label for="numeroCartao">Parcelas</label>
-                            <select class="form-control">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-visa" role="tabpanel">
+                    <aside class="row mt-4">
+                        <div class="col-md-6 ml-5">
+                            <div class="form-group">
+                                <label for="numeroCartao">Número do cartão</label>
+                                <input type="text" class="form-control" id="numeroCartao">
+                            </div>
+                            <div class="form-group">
+                                <label for="numeroCartao">Parcelas</label>
+                                <select class="form-control">
                                 <option>Em quantas parcelas deseja pagar?</option>
                                 <option>A vista por R$1.000,00</option>
                                 <option>2x de R$500,00</option>
                             </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nomeCartao">Nome impresso no cartão</label>
+                                <input type="text" class="form-control" id="nomeCartao">
+                            </div>
+                            <div class="form-group">
+                                <label for="validadeCartao">Validade</label>
+                                <input type="month" class="form-control" id="validadeCartao">
+                            </div>
+                            <div class="form-group">
+                                <label for="codigoCartao">Código de segurança</label>
+                                <input type="number" min="0" max="999" class="form-control" id="codigoCartao">
+                            </div>
+                            <div class="mb-5 mt-4">
+                                <button type="submit" class="btn btn-success float-right">Finalizar pagamento</button>
+                                <button type="button" class="btn btn-secondary">Voltar</button>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="nomeCartao">Nome impresso no cartão</label>
-                            <input type="text" class="form-control" id="nomeCartao">
+                        <div class="col-md-4 ml-5 mb-5 mt-3">
+                            <div class="border p-4 pb-5">
+                                <h3 class="text-success">Subtotal: R$ 1.000,00</h3>
+                                <br>
+                                <h3 class="text-success">Entrega: R$ 200,00</h3>
+                                <br>
+                                <h3 class="text-success">Total: R$ 1.200,00</h3>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="validadeCartao">Validade</label>
-                            <input type="month" class="form-control" id="validadeCartao">
-                        </div>
-                        <div class="form-group">
-                            <label for="codigoCartao">Código de segurança</label>
-                            <input type="number" min="0" max="999" class="form-control" id="codigoCartao">
-                        </div>
-                        <div class="mb-5 mt-4">
-                            <button type="submit" class="btn btn-success float-right">Finalizar pagamento</button>
-                            <button type="button" class="btn btn-secondary">Voltar</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ml-5 mb-5 mt-3">
-                        <div class="border p-4 pb-5">
-                            <h3 class="text-success">Subtotal: R$ 1.000,00</h3>
-                            <br>
-                            <h3 class="text-success">Entrega: R$ 200,00</h3>
-                            <br>
-                            <h3 class="text-success">Total: R$ 1.200,00</h3>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-            <div class="tab-pane fade" id="nav-mastercard" role="tabpanel">
-                <aside class="row mt-4">
-                    <div class="col-md-6 ml-5">
-                        <div class="form-group">
-                            <label for="numeroCartao">Número do cartão</label>
-                            <input type="text" class="form-control" id="numeroCartao">
-                        </div>
-                        <div class="form-group">
-                            <label for="numeroCartao">Parcelas</label>
-                            <select class="form-control">
-                                        <option>Em quantas parcelas deseja pagar?</option>
-                                        <option>A vista por R$1.000,00</option>
+                    </aside>
+                </div>
+                <div class="tab-pane fade" id="nav-mastercard" role="tabpanel">
+                    <aside class="row mt-4">
+                        <div class="col-md-6 ml-5">
+                            <div class="form-group">
+                                <label for="numeroCartao">Número do cartão</label>
+                                <input type="text" class="form-control" id="numeroCartao">
+                            </div>
+                            <div class="form-group">
+                                <label for="numeroCartao">Parcelas</label>
+                                <select class="form-control">
+                                <option>Em quantas parcelas deseja pagar?</option>
+                                <option>A vista por R$1.000,00</option>
                                         <option>2x de R$500,00</option>
                                     </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nomeCartao">Nome impresso no cartão</label>
+                                <input type="text" class="form-control" id="nomeCartao">
+                            </div>
+                            <div class="form-group">
+                                <label for="validadeCartao">Validade</label>
+                                <input type="month" class="form-control" id="validadeCartao">
+                            </div>
+                            <div class="form-group">
+                                <label for="codigoCartao">Código de segurança</label>
+                                <input type="number" min="0" max="999" class="form-control" id="codigoCartao">
+                            </div>
+                            <div class="mb-5 mt-4">
+                                <button type="submit" class="btn btn-success float-right">Finalizar pagamento</button>
+                                <button type="button" class="btn btn-secondary">Voltar</button>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="nomeCartao">Nome impresso no cartão</label>
-                            <input type="text" class="form-control" id="nomeCartao">
-                        </div>
-                        <div class="form-group">
-                            <label for="validadeCartao">Validade</label>
-                            <input type="month" class="form-control" id="validadeCartao">
-                        </div>
-                        <div class="form-group">
-                            <label for="codigoCartao">Código de segurança</label>
-                            <input type="number" min="0" max="999" class="form-control" id="codigoCartao">
-                        </div>
-                        <div class="mb-5 mt-4">
+                    </aside>
+                </div>
+                <!-- <div class="tab-pane fade" id="nav-paypal" role="tabpanel">paypal</div> -->
+                <div class="tab-pane fade" id="nav-boleto" role="tabpanel">
+                    <aside class="col-md-6 mt-5 pb-3">
+                        <p>O Boleto bancário será exibido após a confirmação da compra e poderá ser impresso para pagamento em qualquer agência bancária, ou ter o número anotado para pagamento pelo telefone ou internet.</p>
+                        <p>Valor total: </p>
+
+                        <div class="mt-4">
                             <button type="submit" class="btn btn-success float-right">Finalizar pagamento</button>
                             <button type="button" class="btn btn-secondary">Voltar</button>
                         </div>
-                    </div>
-                </aside>
-            </div>
-            <!-- <div class="tab-pane fade" id="nav-paypal" role="tabpanel">paypal</div> -->
-            <div class="tab-pane fade" id="nav-boleto" role="tabpanel">
-                <aside class="col-md-6 mt-5 pb-3">
-                    <p>O Boleto bancário será exibido após a confirmação da compra e poderá ser impresso para pagamento em qualquer agência bancária, ou ter o número anotado para pagamento pelo telefone ou internet.</p>
-                    <p>Valor total: </p>
-
-                    <div class="mt-4">
-                        <button type="submit" class="btn btn-success float-right">Finalizar pagamento</button>
-                        <button type="button" class="btn btn-secondary">Voltar</button>
-                    </div>
-                </aside>
+                    </aside>
+                </div>
             </div>
         </div>
     </div>

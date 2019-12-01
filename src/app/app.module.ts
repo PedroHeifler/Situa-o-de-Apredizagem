@@ -29,7 +29,7 @@ import { EnderecoService } from './endereco/endereco.service';
     CarrinhoComponent,
     DetalheProdutoComponent,
     EnderecoComponent,
-    PagamentoComponent
+    PagamentoComponent,
     CadastroUsuarioComponent
   ],
   imports: [
