@@ -9,6 +9,7 @@ import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.compo
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { EnderecoComponent } from './endereco/endereco.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,8 +19,8 @@ const routes: Routes = [
   { path: 'detalhes/:productId', component: DetalheProdutoComponent },
   { path: 'carrinho', component: CarrinhoComponent },
   { path: 'endereco', component: EnderecoComponent },
-  { path: 'cadastro', component: CadastroUsuarioComponent}
-  
+  { path: 'cadastro', component: CadastroUsuarioComponent},
+  { path: 'logout', component: LogoutComponent }
 
 ];
 

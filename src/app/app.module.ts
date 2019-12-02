@@ -17,6 +17,8 @@ import { PerfilPessoaComponent } from './perfil-pessoa/perfil-pessoa.component';
 import { PerfilPessoaService } from './perfil-pessoa/perfil-pessoa.service';
 import { CadastroUsuarioService } from './cadastro-usuario/cadastro-usuario.service';
 import { EnderecoService } from './endereco/endereco.service';
+import { LogoutComponent } from './logout/logout.component';
+import { AuthenticationService } from './login/authentication.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { EnderecoService } from './endereco/endereco.service';
     CarrinhoComponent,
     DetalheProdutoComponent,
     EnderecoComponent,
-    CadastroUsuarioComponent
+    CadastroUsuarioComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { EnderecoService } from './endereco/endereco.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AnunciarService, PerfilPessoaService, CadastroUsuarioService, EnderecoService],
+  providers: [AuthenticationService,AnunciarService, PerfilPessoaService, CadastroUsuarioService, EnderecoService],
   bootstrap: [AppComponent]
 
 })
