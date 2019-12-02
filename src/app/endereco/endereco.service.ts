@@ -25,7 +25,7 @@ export class EnderecoService {
         catchError(this.handleError)
       )
   }
-  // HttpClient API post() method => Create product
+  // HttpClient API post() method => Criar Endereco
   criarEndereco(usuario): Observable<Number> {
     return this.http.post<Number>(this.apiURL + '/anuncio', JSON.stringify(usuario), this.httpOptions)
       .pipe(
@@ -33,7 +33,7 @@ export class EnderecoService {
         catchError(this.handleError)
       )
   }
-  // HttpClient API put() method => Update product
+  // HttpClient API put() method => Atualizar Endereco
   updateEndereco(id, endereco): Observable<Enderecos> {
     return this.http.put<Enderecos>(this.apiURL + '/produto/update' + id, JSON.stringify(endereco), this.httpOptions)
       .pipe(
@@ -41,7 +41,7 @@ export class EnderecoService {
         catchError(this.handleError)
       )
   }
-  // HttpClient API delete() method => Delete product
+  // HttpClient API delete() method => Deletar Endereco
   deleteEndereco(id) {
     return this.http.delete<Enderecos>(this.apiURL + '/produto/deletar' + id, this.httpOptions)
       .pipe(

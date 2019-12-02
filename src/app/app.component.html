@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" routerLink="/">
@@ -14,13 +13,16 @@
 
         <div class="collapse navbar-collapse campo-reverter" id="navbarTogglerDemo03">
 
-            <a routerLink="/cadastro">
+            <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/cadastro">
                 <button class="btn btn-outline-dark">Cadastar-se</button>
             </a>
-            <a routerLink="/login" class="ml-1 mr-1">
+            <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="ml-1 mr-1">
                 <button class="btn btn-outline-dark">Logar</button>
             </a>
-            <a routerLink="/carrinho" class="carrinho-mobile mr-2">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="ml-1 mr-1">
+                <button class="btn btn-outline-dark">Sair</button>
+            </a>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/carrinho" class="carrinho-mobile mr-2">
                 <i class="fas fa-shopping-cart ml-2 text-dark"></i>
             </a>
 
@@ -57,10 +59,10 @@
             </div>
             <div class="col-md-3">
                 <h3>Meus pedidos</h3>
-                <a href="#">Meus pedidos</a><br>
+                <a *ngIf="loginService.isUserLoggedIn()" href="#">Meus pedidos</a><br>
                 <a href="#">Garantia</a><br>
                 <a href="#">Contate-nos</a><br>
-                <a routerLink="/anuncio">Anuncie aqui!</a><br>
+                <a *ngIf="loginService.isUserLoggedIn()" routerLink="/anuncio">Anuncie aqui!</a><br>
             </div>
 
             <div class="col-md-3">

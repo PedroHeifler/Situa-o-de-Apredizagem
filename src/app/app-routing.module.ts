@@ -10,17 +10,20 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { EnderecoComponent } from './endereco/endereco.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AuthGaurdService } from './auth-guard.service';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent },
-  { path: 'perfil_pessoa', component: PerfilPessoaComponent},
-  { path: 'anuncio', component: AnunciarComponent},
+  { path: 'perfil_pessoa', component: PerfilPessoaComponent, canActivate:[AuthGaurdService] },
+  { path: 'anuncio', component: AnunciarComponent,canActivate:[AuthGaurdService] },
   { path: 'detalhes/:productId', component: DetalheProdutoComponent },
-  { path: 'carrinho', component: CarrinhoComponent },
-  { path: 'endereco', component: EnderecoComponent },
-  { path: 'pagamento', component: PagamentoComponent },
-  { path: 'cadastro', component: CadastroUsuarioComponent}
+  { path: 'carrinho', component: CarrinhoComponent, canActivate:[AuthGaurdService] },
+  { path: 'endereco', component: EnderecoComponent, canActivate:[AuthGaurdService] },
+  { path: 'cadastro', component: CadastroUsuarioComponent},
+  { path: 'logout', component: LogoutComponent, canActivate:[AuthGaurdService] }
+
 ];
 
 @NgModule({

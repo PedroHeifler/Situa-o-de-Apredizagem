@@ -18,7 +18,7 @@ export class CadastroUsuarioService {
     })
   }
 
-  // HttpClient API get() method => Fetch Products list
+  // HttpClient API get() method => Fetch usuario list
   getUsuarios(): Observable<Usuarios[]> {
     return this.http.get<Usuarios[]>(this.apiURL + '/usuario/lista')
       .pipe(
@@ -26,7 +26,7 @@ export class CadastroUsuarioService {
         catchError(this.handleError)
       )
   }
-  // HttpClient API post() method => Create product
+  // HttpClient API post() method => Criar usuario
   criarUsuario(usuario): Observable<Number> {
     return this.http.post<Number>(this.apiURL + '/usuario', JSON.stringify(usuario), this.httpOptions)
       .pipe(
@@ -34,7 +34,7 @@ export class CadastroUsuarioService {
         catchError(this.handleError)
       )
   }
-  // HttpClient API put() method => Update product
+  // HttpClient API put() method => Update usuario
   updateProduto(id, usuario): Observable<Usuarios> {
     return this.http.put<Usuarios>(this.apiURL + '/usuario/update' + id, JSON.stringify(usuario), this.httpOptions)
       .pipe(
@@ -42,7 +42,7 @@ export class CadastroUsuarioService {
         catchError(this.handleError)
       )
   }
-  // HttpClient API delete() method => Delete product
+  // HttpClient API delete() method => Delete usuario
   deleteProduto(id) {
     return this.http.delete<Usuarios>(this.apiURL + '/usuario/deletar' + id, this.httpOptions)
       .pipe(

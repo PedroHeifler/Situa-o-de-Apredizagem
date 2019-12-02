@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { AppService } from './app.service';
+import { AuthenticationService } from './login/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit {
   title = 'situacao-de-aprendizagem';
   categorias: string[];
 
-  constructor(private service: AppService) {
+  constructor(private service: AppService,private loginService:AuthenticationService) {
     this.categorias = service.getCategoria();
   }
 
