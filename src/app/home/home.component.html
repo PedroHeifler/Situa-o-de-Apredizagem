@@ -38,9 +38,9 @@
             <div class="carousel-item active">
                 <div id="principal">
                     <div class="row d-flex d-flex justify-content-center">
-                        <div *ngFor="let produto of produtos | slice:0:4"
-                            class="card text-center m-3" style="width: 14rem">
-                            <img src="assets/{{ produto.imagem }}" class="card-img-top" title="{{ produto.nome }}">
+                        <div *ngFor="let produto of produtos | slice:0:4" class="card text-center m-3"
+                            style="width: 14rem">
+                            <img src="" class="card-img-top" title="{{ produto.nome }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ produto.nome }}</h5>
                                 <p>R$ {{ produto.preco_unit }}</p>
@@ -58,7 +58,7 @@
                     <div class="row d-flex d-flex justify-content-center">
                         <div *ngFor="let produto of produtos | slice:4:8; index as productId "
                             class="card text-center m-3" style="width: 14rem">
-                            <img src="assets/{{ produto.imagem }}" class="card-img-top" alt="...">
+                            <img src="" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ produto.nome }}</h5>
                                 <p>R$ {{ produto.valor }}</p>
@@ -97,7 +97,7 @@
                     <div class="row d-flex d-flex justify-content-center">
                         <div *ngFor="let produto of produtos | slice:0:4; index as productId"
                             class="card text-center m-3" style="width: 14rem">
-                            <img src="{{ produto.imagem_produto }}" class="card-img-top" title="{{ produto.nome }}">
+                            <img src="" class="card-img-top" title="{{ produto.nome }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ produto.nome }}</h5>
                                 <p>R$ {{ produto.preco_unit }}</p>
@@ -113,9 +113,9 @@
             <div class="carousel-item">
                 <div id="principal">
                     <div class="row d-flex d-flex justify-content-center">
-                        <div *ngFor="let produto of produtos | slice:4:8"
-                            class="card text-center m-3" style="width: 14rem">
-                            <img src="assets/{{ produto.imagem_produto }}" class="card-img-top" alt="...">
+                        <div *ngFor="let produto of produtos | slice:4:8" class="card text-center m-3"
+                            style="width: 14rem">
+                            <img src="/assets/mouse.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ produto.nome }}</h5>
                                 <p>R$ {{ produto.valor }}</p>

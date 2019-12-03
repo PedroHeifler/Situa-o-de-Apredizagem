@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Produtos } from "../produtos";
 import { AnunciarService } from '../anunciar/anunciar.service';
-import { Location } from  '@angular/common';
+import { Location } from '@angular/common';
+import { CarrinhoComponent } from '../carrinho/carrinho.component';
+import { CarrinhoService } from '../carrinho/carrinho.service';
 
 @Component({
   selector: 'app-detalhe-produto',
@@ -16,6 +18,7 @@ export class DetalheProdutoComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private anunciarService: AnunciarService,
+    private carrinhoService: CarrinhoService,
     private _location: Location
   ) { }
 
@@ -36,11 +39,19 @@ export class DetalheProdutoComponent implements OnInit {
     this._location.back();
   }
 
+  enviarParaCarrinho(produto: Produtos) {
+    this.carrinhoService.enviarParaCarrinho(produto).subscribe(
+      id => {
+        this.produto
+      }
+    )
+  }
+
   delete(produtoParaRemover: Produtos) {
     if (confirm('Deseja realmente remover o produto "' + produtoParaRemover.nome + '"?')) {
       this.anunciarService.deleteProduto(produtoParaRemover.id).subscribe(
         produto => {
-          window.alert('Produto "' + produtoParaRemover.nome+ '" excluído!');
+          window.alert('Produto "' + produtoParaRemover.nome + '" excluído!');
           this.back();
         }
       );
