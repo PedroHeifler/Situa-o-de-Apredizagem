@@ -29,6 +29,13 @@ export class AnunciarService {
         catchError(this.handleError)
       )
   }
+  getProduto(id): Observable<Produtos> {
+    return this.http.get<Produtos>(this.apiURL + '/anuncio/' + id + '/detalhes')
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
   // HttpClient API post() method => Create product
   criarProduto(produto): Observable<Number> {
     return this.http.post<Number>(this.apiURL + '/anuncio', JSON.stringify(produto), this.httpOptions)
@@ -47,7 +54,7 @@ export class AnunciarService {
   }
   // HttpClient API delete() method => Delete product
   deleteProduto(id) {
-    return this.http.delete<Produtos>(this.apiURL + '/anuncio/deletar' + id, this.httpOptions)
+    return this.http.delete<Produtos>(this.apiURL + '/anuncio/deletar/' + id, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)

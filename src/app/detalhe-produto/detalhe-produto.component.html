@@ -1,17 +1,22 @@
 <section class="container">
     <div id="detalhes_container" *ngIf="produto">
+            <p>TESTEEE</p>
         <div class="row">
             <div class="col-md-6">
-                <img id="detalhes_img" src="assets/{{produto.imagem}}">
+                <!--<img id="detalhes_img" src="assets/{{produto.imagem}}">-->
             </div>
             <div class="col-md-6" id="detalhes_preco">
                 <h3>{{produto.nome}}</h3>
                 <br>
-                <h4 class="detalhes_total">{{ produto.valor | currency:'BRL':true}} </h4>
+                <h4 class="detalhes_total">{{ produto.preco_unit | currency:'BRL':true}} </h4>
                 <br>
                 <div class="detalhes_button">
-                    <a href="tela_carrinho.html">
-                        <button type="button"><i class="fas fa-cart-arrow-down"></i> Enviar pro Carrinho</button>
+                    <a>
+                        <button type="button" class="enviar"><i class="fas fa-cart-arrow-down"></i> Enviar pro Carrinho</button>
+                    </a>
+                    <br>
+                    <a>
+                        <button type="button" (click)="delete(produto)" class="deletar"><i class="fas fa-trash"></i> Deletar</button>
                     </a>
                 </div>
             </div>
@@ -19,7 +24,6 @@
         <div class="detalhes_info">
             <h1>DESCRIÇÃO DO PRODUTO</h1>
             <p>{{produto.descricao}} </p>
-            
         </div>
     </div>
 </section>

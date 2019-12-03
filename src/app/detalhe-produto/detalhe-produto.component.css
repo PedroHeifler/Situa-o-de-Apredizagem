@@ -42,13 +42,26 @@
     height: auto;
   }
   
-  .detalhes_button button {
+  .detalhes_button .enviar {
     padding: 15px;
     font-size: 20px;
     font-weight: bold;
     color: white;
     background: #43da12;
     border: 2px solid #15c300;
+    border-radius: 7px;
+    box-shadow: 3px 3px 10px #0000008f;
+    transition: 300ms;
+  }
+
+  .detalhes_button .deletar {
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: red;
+    border: 2px solid red;
     border-radius: 7px;
     box-shadow: 3px 3px 10px #0000008f;
     transition: 300ms;

@@ -32,6 +32,7 @@ import { AuthenticationService } from './login/authentication.service';
     DetalheProdutoComponent,
     EnderecoComponent,
     CadastroUsuarioComponent,
+    PagamentoComponent,
     LogoutComponent
   ],
   imports: [
