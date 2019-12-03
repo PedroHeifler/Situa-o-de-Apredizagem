@@ -5,9 +5,15 @@
                 <div class="card-header">
                     <h3>Cadastrar-se</h3>
                     <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fab fa-facebook-square text-muted"></i></span>
-                        <span><i class="fab fa-google-plus-square text-muted"></i></span>
-                        <span><i class="fab fa-twitter-square text-muted"></i></span>
+                        <a href="https://pt-br.facebook.com/">
+                            <span><i class="fab fa-facebook-square text-muted"></i></span>
+                        </a>
+                        <a href="https://www.google.com.br/">
+                            <span><i class="fab fa-google-plus-square text-muted"></i></span>
+                        </a>
+                        <a href="https://twitter.com/login?lang=pt">
+                            <span><i class="fab fa-twitter-square text-muted"></i></span>
+                        </a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -38,15 +44,15 @@
                                 <span class="input-group-text bg-dark"><i class="fas fa-key"></i></span>
                             </div>
                             <input type="password" class="form-control" placeholder="Confirmar Senha"
-                                [(ngModel)]="novoUsuario.confirmarSenha" #nome="ngModel" name="confirmarSenha"
-                                (keyup)="confirmarSenha($event)" required>
+                                [(ngModel)]="novoUsuario.confirmarSenha" #nome="ngModel" name="confirmarSenha" required>
                         </div>
-                        <div class="row align-items-center remember">
-                            <input type="checkbox">Lembrar-se
-                        </div>
+
+                        <span *ngIf="novoUsuario.senha != novoUsuario.confirmarSenha" id="erro" class="error"> Campos
+                            devem ser iguais!!! </span>
                         <div class="form-group form-check">
-                            <input type="submit" id="cadastrar" [disabled]="!f.valid" [routerLink]="['/']" value="Cadastrar"
-                                class="btn btn-success login_btn">
+                            <input type="submit" id="cadastrar" [disabled]="!f.valid"
+                                *ngIf="novoUsuario.senha == novoUsuario.confirmarSenha" [routerLink]="['/']"
+                                value="Cadastrar" class="btn btn-success login_btn">
                         </div>
                     </form>
                 </div>

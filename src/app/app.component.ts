@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   categorias: string[];
 
   constructor(private service: AppService,private loginService:AuthenticationService) {
-    this.categorias = service.getCategoria();
+    /*this.categorias = service.getCategoria();*/
   }
 
   public ngOnInit() {
