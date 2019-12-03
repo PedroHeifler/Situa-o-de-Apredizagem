@@ -35,7 +35,7 @@ export class CadastroUsuarioComponent implements OnInit {
   confirmarSenha(event : any) {
     if (event.target.value != this.novoUsuario.senha) {
       var b = document.getElementById("cadastrar"); 
-
+      
       b.setAttribute("disabled", "disabled");
     }
   }
