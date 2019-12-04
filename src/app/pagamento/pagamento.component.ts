@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { CarrinhoService } from '../carrinho/carrinho.service';
+import { CarrinhoComponent } from '../carrinho/carrinho.component';
+import { ActivatedRoute } from '@angular/router';
+import { AnunciarService } from '../anunciar/anunciar.service';
+import { Carrinho } from '../carrinho';
 
 @Component({
   selector: 'app-pagamento',
@@ -7,8 +12,14 @@ import * as $ from 'jquery';
   styleUrls: ['./pagamento.component.css']
 })
 export class PagamentoComponent implements OnInit {
-
-  constructor() { }
+   
+  carrinho: Carrinho;
+  constructor(
+    private route: ActivatedRoute,
+    private anunciarService: AnunciarService,
+    private carrinhoService: CarrinhoService,
+    private _location: Location
+  ) { }
 
   ngOnInit() {
 
@@ -18,5 +29,10 @@ export class PagamentoComponent implements OnInit {
     $(seletor).toggleClass("bordaPagamentoAtivo")
     $('.tipoPagamento a').not(seletor).removeClass('bordaPagamentoAtivo')
   }
+  getCarrinho(id: Number) {
+    this.carrinhoService.getCarrinho(id).subscribe(
+      carrinho => this.carrinho = carrinho);
+  }
+    
 
 }

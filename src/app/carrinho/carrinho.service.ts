@@ -3,6 +3,7 @@ import { Produtos } from "../produtos";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { Carrinho } from "../carrinho";
 
 @Injectable({
   providedIn: 'root'
@@ -32,12 +33,19 @@ export class CarrinhoService {
   }
 
   // HttpClient API get() method => Fetch Products list
-  getProdutos(): Observable<Produtos[]> {
+  getCarrinhos(): Observable<Produtos[]> {
     return this.http.get<Produtos[]>(this.apiURL + '/carrinho/lista')
       .pipe(
         retry(1),
         catchError(this.handleError)
       )
+  }
+  getCarrinho(id): Observable<Carrinho> {
+    return this.http.get<Carrinho>(this.apiURL + '/carrinho' + id)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
   }
 
   // Error handling

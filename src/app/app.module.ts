@@ -20,6 +20,7 @@ import { CadastroUsuarioService } from './cadastro-usuario/cadastro-usuario.serv
 import { EnderecoService } from './endereco/endereco.service';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthenticationService } from './login/authentication.service';
+import { CarrinhoService } from './carrinho/carrinho.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { AuthenticationService } from './login/authentication.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthenticationService,AnunciarService, PerfilPessoaService, CadastroUsuarioService, EnderecoService],
+  providers: [AuthenticationService,AnunciarService, PerfilPessoaService, CadastroUsuarioService, EnderecoService,CarrinhoService],
   bootstrap: [AppComponent]
 
 })
