@@ -1,24 +1,24 @@
 <section class="container">
-    <form #Form="ngForm" (ngSubmit)="onSubmitClienteJuridico(Form)" id="endereco">
-        <div class=" form-group col-md-6 tab-pane fade border p-5 rounded" id="endereco" role="tab">
+    <form #Form="ngForm" (ngSubmit)="onSubmitEndereco(Form)">
+        <div class="col-md-6 p-5 " id="endereco">
             <h2>Endereço</h2>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="pais" [(ngModel)]="newEndereco.pais" placeholder="Pais" required>
+                <input type="text" class="form-control" name="pais" [(ngModel)]="novoEndereco.pais" placeholder="Pais" required>
             </div>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="estado" [(ngModel)]="newEndereco.estado" placeholder="Estado" required>
+                <input type="text" class="form-control" name="estado" [(ngModel)]="novoEndereco.estado" placeholder="Estado" required>
             </div>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="cidade" [(ngModel)]="newEndereco.cidade" placeholder="Cidade" required>
+                <input type="text" class="form-control" name="cidade" [(ngModel)]="novoEndereco.cidade" placeholder="Cidade" required>
             </div>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="bairro" [(ngModel)]="newEndereco.bairro" placeholder="Bairro" required>
+                <input type="text" class="form-control" name="bairro" [(ngModel)]="novoEndereco.bairro" placeholder="Bairro" required>
             </div>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="rua" [(ngModel)]="newEndereco.rua" placeholder="Rua" required>
+                <input type="text" class="form-control" name="rua" [(ngModel)]="novoEndereco.rua" placeholder="Rua" required>
             </div>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" id="cep" name="cep" [(ngModel)]="newEndereco.cep" placeholder="CEP" required>
+                <input type="text" class="form-control" data-inputmask="'mask': '99999-999'" id="cep" name="cep" [(ngModel)]="novoEndereco.cep" placeholder="CEP" required>
             </div>
             <button type="submit" [disabled]="!Form.valid" class="btn btn-success mt-2">Cadastrar</button>
         </div>

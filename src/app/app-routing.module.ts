@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'detalhes/:productId', component: DetalheProdutoComponent },
   { path: 'carrinho', component: CarrinhoComponent, canActivate:[AuthGaurdService] },
   { path: 'endereco', component: EnderecoComponent, canActivate:[AuthGaurdService] },
-  { path: 'cadastro', component: CadastroUsuarioComponent},
+  { path: 'usuario', component: CadastroUsuarioComponent},
   { path: 'pagamento', component: PagamentoComponent},
   { path: 'logout', component: LogoutComponent, canActivate:[AuthGaurdService] }
 

@@ -1,17 +1,19 @@
-/*#dc3545*/
-
-/*#343a40*/
-
-.animacaoHover {
-    border-left: 15px #6c757d solid;
-    transition: 300ms;
+.container {
+    padding-top: 5%;
+    width: 30%;
+    height: max-content;
+    align-content: center;
 }
 
-.animacaoHover:hover {
-    border-left: 15px #343a40 solid;
-    transition: 300ms;
+#endereco {
+    width: 100%;
+    background-color: white;
 }
 
-.active {
-    border-left: 15px #28a745 solid !important
+#endereco input {
+    width: fit-content;
+}
+
+.col-md-6 {
+    max-width: 100%;
 }

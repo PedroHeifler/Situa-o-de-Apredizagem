@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" routerLink="/">
@@ -31,12 +30,12 @@
                 <input class="form-control campo-pesquisa" type="text" placeholder="Pesquisa" aria-label="Search">
             </form>
 
-            <ul class="navbar-nav mr-auto d-flex flex-row">
-                <li class="nav-item active">
-                    <a class="nav-link" id="navbar_atalhos" routerLink="/anuncio">Anuncie Aqui!</a>
+            <ul class="navbar-nav mr-auto" id="linksuser">
+                <li class="nav-item active m-2">
+                    <a *ngIf="loginService.isUserLoggedIn()" class="link" routerLink="/endereco">Meus Dados</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" id="navbar_atalhos" routerLink="/perfil_pessoa">Meus dados</a>
+                <li class="nav-item active m-2">
+                    <a *ngIf="loginService.isUserLoggedIn()" class="link" routerLink="/anuncio">Anuncie aqui!</a>
                 </li>
             </ul>
         </div>

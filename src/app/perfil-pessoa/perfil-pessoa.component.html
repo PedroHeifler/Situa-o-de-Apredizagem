@@ -12,122 +12,78 @@
                         (click)="RadioFisicaOuJuridica(juridica, 'juridica')" #juridica /> Juridica </label>
             </div>
         </div>
-        <form #Form1="ngForm" (ngSubmit)="onSubmitClienteFisico(Form1)" id="pessoaFisica">
+        <form #Form1="ngForm" (ngSubmit)="onSubmitPessoaFisica(Form1)" id="pessoaFisica">
             <hr>
             <section style="max-width: 1000px">
                 <h2>Pessoa Fisica</h2>
-                <div class="input_img">
-                    <div class="col-sm-12 pt-2 pb-2 form-group inputDnD">
-                        <label class="sr-only" for="inputFile"></label>
-                        <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile" accept="image/*" data-title="Arraste e solte">
-
-                    </div>
-                </div>
-
-                <nav>
-                    <div class="nav nav-pills mb-3 d-flex justify-content-center mt-5" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" data-toggle="tab" href="#dadosPessoais" role="tab">Dados
-                            Pessoais</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#endereco" role="tab">Endereço</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#conta" role="tab">Conta</a>
-                    </div>
-                </nav>
 
                 <div class="row tab-content bg-white text-center d-flex justify-content-center needs-validation" novalidate id="myTabContent1">
                     <div class=" form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais" role="tab">
                         <h2>Dados pessoais</h2>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="nome" [(ngModel)]="newClientes_fisico.nome" placeholder="Nome" required>
+                            <input type="text" class="form-control" name="nome" [(ngModel)]="novoPessoaFisica.nome" placeholder="Nome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="sobrenome" [(ngModel)]="newClientes_fisico.sobrenome" placeholder="Sobrenome" required>
+                            <input type="text" class="form-control" name="sobrenome" [(ngModel)]="novoPessoaFisica.sobrenome" placeholder="Sobrenome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cpf" [(ngModel)]="newClientes_fisico.cpf" id="cpf" placeholder="CPF" required>
+                            <input type="text" class="form-control" name="cpf" data-inputmask="'mask': '999.999.999-99'" [(ngModel)]="novoPessoaFisica.cpf" id="cpf" placeholder="CPF" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="telefone" [(ngModel)]="newClientes_fisico.telefone" id="telefone" placeholder="Telefone Fixo" required>
+                            <input type="text" class="form-control" name="telefone" data-inputmask="'mask': '(999)9999-9999'" [(ngModel)]="novoPessoaFisica.telefone" id="telefone" placeholder="Telefone Fixo" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="celular" [(ngModel)]="newClientes_fisico.celular" id="celular" placeholder="Celular" required>
+                            <input type="text" class="form-control" name="celular" data-inputmask="'mask': '(999)99999-9999'" [(ngModel)]="novoPessoaFisica.celular" id="celular" placeholder="Celular" required>
                         </div>
                     </div>
 
-
+                    <div class="form-group col-md-12">
+                        <a href="#">Termos de aceitação</a>
+                        <br>
+                        <input type="checkbox" class="form-check-input" id="termosAceitacao" required>
+                        <label class="form-check-label" for="termosAceitacao">Concordo com os termos</label>
+                        <br>
+                        <button type="submit" [disabled]="!Form1.valid" class="btn btn-success mt-2">Cadastrar</button>
+                    </div>
 
                 </div>
 
             </section>
 
         </form>
-        <form #Form2="ngForm" (ngSubmit)="onSubmitClienteJuridico(Form2)" id="pessoaJuridica">
+        <form #Form2="ngForm" (ngSubmit)="onSubmitPessoaJuridica(Form2)" id="pessoaJuridica">
             <hr>
             <section style="max-width: 1000px">
                 <h2>Pessoa Juridica</h2>
-                <div class="input_img">
-                    <div class="col-sm-12 pt-2 pb-2 form-group inputDnD">
-                        <label class="sr-only" for="inputFile"></label>
-                        <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte" required>
-                    </div>
-                </div>
-
-                <nav>
-                    <div class="nav nav-pills mb-3 d-flex justify-content-center mt-5" id="nav-tab2" role="tablist">
-                        <a class="nav-item nav-link active" data-toggle="tab" href="#dadosPessoais2" role="tab">Dados
-                            da Empresa</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#endereco2" role="tab">Endereço</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#conta2" role="tab">Conta</a>
-                    </div>
-                </nav>
 
                 <div class="row tab-content bg-white text-center d-flex justify-content-center" id="myTabContent">
                     <div class=" form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais2" role="tab">
                         <h2>Dados da Empresa</h2>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="nome_empresa" [(ngModel)]="newClientes_juridico.nome_empresa" placeholder="Nome" required>
+                            <input type="text" class="form-control" name="nome_empresa" [(ngModel)]="novoPessoaJuridica.nome" placeholder="Nome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="responsavel" [(ngModel)]="newClientes_juridico.responsavel" placeholder="Responsavel" required>
+                            <input type="text" class="form-control" name="responsavel" [(ngModel)]="novoPessoaJuridica.responsavel" placeholder="Responsavel" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cnpj" [(ngModel)]="newClientes_juridico.cnpj" placeholder="CNPJ" required>
+                            <input type="text" class="form-control" name="cnpj" data-inputmask="'mask': '99.999.999/9999-99'" [(ngModel)]="novoPessoaJuridica.cnpj" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="tel" class="form-control" name="telefone_fixo" [(ngModel)]="newClientes_juridico.telefone_fixo" placeholder="Telefone Fixo" required>
+                            <input type="tel" class="form-control" maxlength="14" data-inputmask="'mask': '(999)9999-9999'" name="telefone_fixo" [(ngModel)]="novoPessoaJuridica.telefone" placeholder="Telefone Fixo" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="celular" [(ngModel)]="newClientes_juridico.celular" placeholder="Celular" required>
+                            <input type="text" class="form-control" maxlength="15" data-inputmask="'mask': '(999)99999-9999'" name=" celular " [(ngModel)]="novoPessoaJuridica.celular " placeholder="Celular " required>
                         </div>
                     </div>
 
-                    <div class=" form-group col-md-6 tab-pane fade border p-5 rounded" id="endereco2" role="tab">
-                        <h2>Endereço</h2>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="pais" [(ngModel)]="newClientes_juridico.pais" placeholder="Pais" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="estado" [(ngModel)]="newClientes_juridico.estado" placeholder="Estado" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cidade" [(ngModel)]="newClientes_juridico.cidade" placeholder="Cidade" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="bairro" [(ngModel)]="newClientes_juridico.bairro" placeholder="Bairro" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="celular" [(ngModel)]="newClientes_juridico.celular" placeholder="Rua" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cep" [(ngModel)]="newClientes_juridico.cep" placeholder="CEP" required>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <a href="#">Termos de aceitação</a>
+
+                    <div class="form-group col-md-12 ">
+                        <a href="# ">Termos de aceitação</a>
                         <br>
-                        <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
-                        <label class="form-check-label" for="termosAcaitacao">Concordo com os termos</label>
+                        <input type="checkbox" class="form-check-input " id="termosAceitacao " required>
+                        <label class="form-check-label " for="termosAceitacao ">Concordo com os termos</label>
                         <br>
-                        <button type="submit" [disabled]="!Form2.valid" class="btn btn-success mt-2">Cadastrar</button>
+                        <button type="submit" [disabled]="!Form2.valid " class="btn btn-success mt-2 ">Cadastrar</button>
                     </div>
                 </div>
             </section>

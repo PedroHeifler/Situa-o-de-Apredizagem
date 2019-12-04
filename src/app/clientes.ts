@@ -1,38 +1,26 @@
-export const clientes_fisico = [
-    {
-        nome: '',
-        sobrenome: '',
-        cpf: '',
-        telefone_fixo: '',
-        celular: '',
-     
-        pais: '',
-        estado: '',
-        cidade: '',
-        bairro: '',
-        rua: '',
-        cep: '',
+import { Enderecos } from './endereco';
+import { Usuarios } from './usuarios';
 
-//*fazer verificação de tipo de cliente com o radio selecionado
-        //*tipo_cliente:''
-    },
-];
-export const clientes_juridico = [
-    {
-        nome_empresa: '',
-        responsavel: '',
-        cnpj: '',
-        telefone_fixo: '',
-        celular: '',
+export class PessoaFisica {
+    id: number;
+    nome: String;
+    sobrenome: String;
+    cpf: String;
+    telefone: String;
+    celular: String;
+    endereco: number;
+    usuario: number;
+}
 
-        pais: '',
-        estado: '',
-        cidade: '',
-        bairro: '',
-        rua: '',
-        cep: '',
- 
-//*fazer verificação de tipo de cliente com o radio selecionado
-        //*tipo_cliente:''
-    },
-];
+export class PessoaJuridica {
+    id: number;
+    nome: String;
+    responsavel: String;
+    cnpj: String;
+    telefone: String;
+    celular: String;
+    endereco: number;
+    usuario: number;
+   
+}
+

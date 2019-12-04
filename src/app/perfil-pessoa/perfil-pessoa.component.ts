@@ -2,6 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import * as $ from 'jquery';
 import { PerfilPessoaService } from './perfil-pessoa.service';
+import { PessoaJuridica, PessoaFisica } from '../clientes';
+import * as Inputmask from "inputmask";
+import { Alert } from 'selenium-webdriver';
+
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Usuarios } from '../usuarios';
+import { CadastroUsuarioService } from '../cadastro-usuario/cadastro-usuario.service';
+import { EnderecoService } from '../endereco/endereco.service';
+
 
 @Component({
   selector: 'app-perfil-pessoa',
@@ -9,24 +18,27 @@ import { PerfilPessoaService } from './perfil-pessoa.service';
   styleUrls: ['./perfil-pessoa.component.css']
 })
 export class PerfilPessoaComponent implements OnInit {
-  clientes_fisico : [];
-  clientes_juridico: [];
 
-  newClientes_fisico : any;
-  newClientes_juridico : any;
-  
-  constructor(private perfilPessoaService : PerfilPessoaService ){
-    this.perfilPessoaService = perfilPessoaService;
+  novoPessoaJuridica: PessoaJuridica = new PessoaJuridica();
+  private pessoajuridica: PessoaJuridica[];
+
+  novoPessoaFisica: PessoaFisica = new PessoaFisica();
+  private pessoafisica: PessoaFisica[];
+
+
+  router: Router;
+  constructor(private usuario: CadastroUsuarioService ,private perfilPessoaService: PerfilPessoaService, router: Router) {
+    this.router = router;
   }
 
   ngOnInit() {
-    this.getClientes_fisico;
-    this.newClientes_fisico = new Object();
-    this.getClientes_juridico;
-    this.newClientes_juridico = new Object();
-
+    this.novoPessoaFisica = new PessoaFisica();
+    this.novoPessoaJuridica = new PessoaJuridica();
     $('#pessoaJuridica').hide();
     $('#pessoaFisica').hide();
+    Inputmask().mask(document.querySelectorAll("input"));
+    this.getPessoaFisica();
+    this.getPessoaJuridica();
 
   }
 
@@ -49,29 +61,41 @@ export class PerfilPessoaComponent implements OnInit {
     }
   }
 
-  getClientes_fisico(): void{
-    this.clientes_fisico = this.perfilPessoaService.getClientes_fisico();
+  onSubmitPessoaJuridica(formulario: NgForm) {
+    if (formulario.valid) {
+        this.perfilPessoaService.criarPessoaJuridica(this.novoPessoaJuridica).subscribe(
+        id => {
+          this.novoPessoaJuridica
+          this.getPessoaJuridica()
+        }
+      )
+      
+      alert("Cadastro concluido!")
+    }
+
   }
 
-  getClientes_juridico(): void{
-    this.clientes_juridico = this.perfilPessoaService.getClientes_juridico();
+
+  getPessoaJuridica(): void {
+    this.perfilPessoaService.getPessoaJuridicaS().subscribe(
+      pessoajuridica => this.pessoajuridica = pessoajuridica);
   }
 
-  onSubmitClienteFisico(formulario:NgForm){
-    if(formulario.valid){
-      this.perfilPessoaService.saveClientes_fisico(this.newClientes_fisico);
-      this.newClientes_fisico = new Object();
-      this.getClientes_fisico();
+  onSubmitPessoaFisica(formulario: NgForm) {
+    if (formulario.valid) {
+      this.perfilPessoaService.criarPessoaFisica(this.novoPessoaFisica).subscribe(
+        id => {
+          this.novoPessoaFisica
+          this.getPessoaFisica()
+        }
+      )
+      alert("Cadastro concluido!")
     }
-    console.log(formulario.value)
   }
-  
-  onSubmitClienteJuridico(formulario:NgForm){
-    if(formulario.valid){
-      this.perfilPessoaService.saveClientes_juridico(this.newClientes_juridico);
-      this.newClientes_juridico = new Object();
-      this.getClientes_juridico();
-    }
+
+  getPessoaFisica(): void {
+    this.perfilPessoaService.getPessoaFisicaS().subscribe(
+      pessoafisica => this.pessoafisica = pessoafisica);
   }
 }
 
