@@ -1,6 +1,5 @@
 <section class="container">
     <div id="detalhes_container" *ngIf="produto">
-            <p>TESTEEE</p>
         <div class="row">
             <div class="col-md-6">
                 <!--<img id="detalhes_img" src="assets/{{produto.imagem}}">-->
@@ -12,7 +11,7 @@
                 <br>
                 <div class="detalhes_button">
                     <a>
-                        <button type="button" class="enviar"><i class="fas fa-cart-arrow-down"></i> Enviar pro Carrinho</button>
+                        <button type="button" (click)="enviarParaCarrinho(produto)" class="enviar"><i class="fas fa-cart-arrow-down"></i> Enviar pro Carrinho</button>
                     </a>
                     <br>
                     <a>

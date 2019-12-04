@@ -15,6 +15,11 @@
     color: red;
 }
 
+#navbar-atalhos{
+  
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .form-inline.my-2.my-md-0 .form-control {
     height: 0% !important;
     background: white;
