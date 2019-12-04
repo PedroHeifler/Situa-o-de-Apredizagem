@@ -10,14 +10,12 @@ import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.compo
 import { AppRoutingModule } from './app-routing.module';
 import { AnunciarService } from './anunciar/anunciar.service';
 import { PagamentoComponent } from './pagamento/pagamento.component';
-import { EnderecoComponent } from './endereco/endereco.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { PerfilPessoaComponent } from './perfil-pessoa/perfil-pessoa.component';
 import { PerfilPessoaService } from './perfil-pessoa/perfil-pessoa.service';
 import { CadastroUsuarioService } from './cadastro-usuario/cadastro-usuario.service';
-import { EnderecoService } from './endereco/endereco.service';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthenticationService } from './login/authentication.service';
 
@@ -30,7 +28,7 @@ import { AuthenticationService } from './login/authentication.service';
     HomeComponent,
     CarrinhoComponent,
     DetalheProdutoComponent,
-    EnderecoComponent,
+  
     CadastroUsuarioComponent,
     PagamentoComponent,
     LogoutComponent
@@ -42,7 +40,7 @@ import { AuthenticationService } from './login/authentication.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthenticationService,AnunciarService, PerfilPessoaService, CadastroUsuarioService, EnderecoService],
+  providers: [AuthenticationService,AnunciarService, PerfilPessoaService, CadastroUsuarioService],
   bootstrap: [AppComponent]
 
 })

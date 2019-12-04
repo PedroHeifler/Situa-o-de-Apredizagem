@@ -7,7 +7,6 @@ import { PerfilPessoaComponent } from './perfil-pessoa/perfil-pessoa.component';
 import { AnunciarComponent } from './anunciar/anunciar.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
-import { EnderecoComponent } from './endereco/endereco.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -20,7 +19,6 @@ const routes: Routes = [
   { path: 'anuncio', component: AnunciarComponent,canActivate:[AuthGaurdService] },
   { path: 'detalhes/:productId', component: DetalheProdutoComponent },
   { path: 'carrinho', component: CarrinhoComponent, canActivate:[AuthGaurdService] },
-  { path: 'endereco', component: EnderecoComponent, canActivate:[AuthGaurdService] },
   { path: 'cadastro', component: CadastroUsuarioComponent},
   { path: 'pagamento', component: PagamentoComponent},
   { path: 'logout', component: LogoutComponent, canActivate:[AuthGaurdService] }

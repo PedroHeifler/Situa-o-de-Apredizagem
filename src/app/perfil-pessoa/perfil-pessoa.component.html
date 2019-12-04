@@ -4,134 +4,67 @@
         <div>
             <H1>Cadastro de Cliente</H1>
             <br>
-            <div style="font-size: 30px">
-                <label><input type="radio" title="Fisica" name="TipoPessoa"
-                        (click)="RadioFisicaOuJuridica(fisica, 'fisica')" #fisica /> Fisica</label>
-                <br>
-                <label><input type="radio" title="Juridica" name="TipoPessoa"
-                        (click)="RadioFisicaOuJuridica(juridica, 'juridica')" #juridica /> Juridica </label>
-            </div>
         </div>
-        <form #Form1="ngForm" (ngSubmit)="onSubmitClienteFisico(Form1)" id="pessoaFisica">
+        <form #Form="ngForm" (ngSubmit)="onSubmitPessoa(Form)" id="pessoaFisica">
             <hr>
             <section style="max-width: 1000px">
-                <h2>Pessoa Fisica</h2>
-                <div class="input_img">
-                    <div class="col-sm-12 pt-2 pb-2 form-group inputDnD">
-                        <label class="sr-only" for="inputFile"></label>
-                        <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile" accept="image/*" data-title="Arraste e solte">
-
-                    </div>
-                </div>
-
-                <nav>
-                    <div class="nav nav-pills mb-3 d-flex justify-content-center mt-5" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" data-toggle="tab" href="#dadosPessoais" role="tab">Dados
-                            Pessoais</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#endereco" role="tab">Endereço</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#conta" role="tab">Conta</a>
-                    </div>
-                </nav>
-
                 <div class="row tab-content bg-white text-center d-flex justify-content-center needs-validation" novalidate id="myTabContent1">
                     <div class=" form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais" role="tab">
                         <h2>Dados pessoais</h2>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="nome" [(ngModel)]="newClientes_fisico.nome" placeholder="Nome" required>
+                            <input type="text" class="form-control" name="nome" [(ngModel)]="novoPessoa.nome" placeholder="Nome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="sobrenome" [(ngModel)]="newClientes_fisico.sobrenome" placeholder="Sobrenome" required>
+                            <input type="text" class="form-control" name="sobrenome" [(ngModel)]="novoPessoa.sobrenome" placeholder="Sobrenome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cpf" [(ngModel)]="newClientes_fisico.cpf" id="cpf" placeholder="CPF" required>
+                            <input type="text" class="form-control" name="cpf" [(ngModel)]="novoPessoa.cpf" id="cpf" placeholder="CPF" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="telefone" [(ngModel)]="newClientes_fisico.telefone" id="telefone" placeholder="Telefone Fixo" required>
+                            <input type="text" class="form-control" name="telefone" [(ngModel)]="novoPessoa.telefone" id="telefone" placeholder="Telefone Fixo" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="celular" [(ngModel)]="newClientes_fisico.celular" id="celular" placeholder="Celular" required>
+                            <input type="text" class="form-control" name="celular" [(ngModel)]="novoPessoa.celular" id="celular" placeholder="Celular" required>
                         </div>
-                    </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="nome_empresa" [(ngModel)]="novoPessoa.nome_empresa" placeholder="Empresa" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="responsavel" [(ngModel)]="novoPessoa.responsavel" placeholder="Responsavel" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="cnpj" [(ngModel)]="novoPessoa.cnpj" placeholder="CNPJ" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="pais" [(ngModel)]="novoPessoa.pais" placeholder="Pais" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="estado" [(ngModel)]="novoPessoa.estado" placeholder="Estado" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="cidade" [(ngModel)]="novoPessoa.cidade" placeholder="Cidade" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="bairro" [(ngModel)]="novoPessoa.bairro" placeholder="Bairro" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="rua" [(ngModel)]="novoPessoa.rua" placeholder="rua" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="cep" [(ngModel)]="novoPessoa.cep" placeholder="CEP" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <a href="#">Termos de aceitação</a>
+                            <br>
+                            <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
+                            <label class="form-check-label" for="termosAcaitacao">Concordo com os termos</label>
+                            <br>
 
-
-
-                </div>
-
-            </section>
-
-        </form>
-        <form #Form2="ngForm" (ngSubmit)="onSubmitClienteJuridico(Form2)" id="pessoaJuridica">
-            <hr>
-            <section style="max-width: 1000px">
-                <h2>Pessoa Juridica</h2>
-                <div class="input_img">
-                    <div class="col-sm-12 pt-2 pb-2 form-group inputDnD">
-                        <label class="sr-only" for="inputFile"></label>
-                        <input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Arraste e solte" required>
-                    </div>
-                </div>
-
-                <nav>
-                    <div class="nav nav-pills mb-3 d-flex justify-content-center mt-5" id="nav-tab2" role="tablist">
-                        <a class="nav-item nav-link active" data-toggle="tab" href="#dadosPessoais2" role="tab">Dados
-                            da Empresa</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#endereco2" role="tab">Endereço</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#conta2" role="tab">Conta</a>
-                    </div>
-                </nav>
-
-                <div class="row tab-content bg-white text-center d-flex justify-content-center" id="myTabContent">
-                    <div class=" form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais2" role="tab">
-                        <h2>Dados da Empresa</h2>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="nome_empresa" [(ngModel)]="newClientes_juridico.nome_empresa" placeholder="Nome" required>
                         </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="responsavel" [(ngModel)]="newClientes_juridico.responsavel" placeholder="Responsavel" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cnpj" [(ngModel)]="newClientes_juridico.cnpj" placeholder="CNPJ" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="tel" class="form-control" name="telefone_fixo" [(ngModel)]="newClientes_juridico.telefone_fixo" placeholder="Telefone Fixo" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="celular" [(ngModel)]="newClientes_juridico.celular" placeholder="Celular" required>
-                        </div>
-                    </div>
-
-                    <div class=" form-group col-md-6 tab-pane fade border p-5 rounded" id="endereco2" role="tab">
-                        <h2>Endereço</h2>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="pais" [(ngModel)]="newClientes_juridico.pais" placeholder="Pais" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="estado" [(ngModel)]="newClientes_juridico.estado" placeholder="Estado" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cidade" [(ngModel)]="newClientes_juridico.cidade" placeholder="Cidade" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="bairro" [(ngModel)]="newClientes_juridico.bairro" placeholder="Bairro" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="celular" [(ngModel)]="newClientes_juridico.celular" placeholder="Rua" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cep" [(ngModel)]="newClientes_juridico.cep" placeholder="CEP" required>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <a href="#">Termos de aceitação</a>
-                        <br>
-                        <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
-                        <label class="form-check-label" for="termosAcaitacao">Concordo com os termos</label>
-                        <br>
-                        <button type="submit" [disabled]="!Form2.valid" class="btn btn-success mt-2">Cadastrar</button>
+                        <button type="submit" [disabled]="!Form.valid" class="btn btn-success mt-2">Cadastrar</button>
                     </div>
                 </div>
             </section>
         </form>
     </div>
-
 </section>
