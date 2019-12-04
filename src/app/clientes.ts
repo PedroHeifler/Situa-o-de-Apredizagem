@@ -8,8 +8,8 @@ export class PessoaFisica {
     cpf: String;
     telefone: String;
     celular: String;
-    endereco:Enderecos;
-    usuario:Usuarios;
+    endereco: number;
+    usuario: number;
 }
 
 export class PessoaJuridica {
@@ -19,8 +19,8 @@ export class PessoaJuridica {
     cnpj: String;
     telefone: String;
     celular: String;
-    endereco:Enderecos;
-    usuario:Usuarios;
+    endereco: number;
+    usuario: number;
    
 }
 

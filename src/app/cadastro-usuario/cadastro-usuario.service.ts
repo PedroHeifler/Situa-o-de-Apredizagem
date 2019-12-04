@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ErrorHandler } from '@angular/core';
 import { Usuarios } from '../usuarios';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class CadastroUsuarioService {
     })
   }
   getUsuario(id): Observable<Usuarios> {
-    return this.http.get<Usuarios>(this.apiURL + '/usuario/' + id + '/detalhes')
+    return this.http.get<Usuarios>(this.apiURL + '/usuario/' + id )
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -33,6 +33,7 @@ export class CadastroUsuarioService {
         catchError(this.handleError)
       )
   }
+   
   // HttpClient API post() method => Criar usuario
   criarUsuario(usuario): Observable<Number> {
     return this.http.post<Number>(this.apiURL + '/usuario', JSON.stringify(usuario), this.httpOptions)

@@ -69,11 +69,12 @@ export class PerfilPessoaComponent implements OnInit {
           this.getPessoaJuridica()
         }
       )
-      this.router.navigate(['/', 'endereco'])
+      
       alert("Cadastro concluido!")
     }
 
   }
+
 
   getPessoaJuridica(): void {
     this.perfilPessoaService.getPessoaJuridicaS().subscribe(
@@ -88,7 +89,6 @@ export class PerfilPessoaComponent implements OnInit {
           this.getPessoaFisica()
         }
       )
-      this.router.navigate(['/', 'endereco'])
       alert("Cadastro concluido!")
     }
   }

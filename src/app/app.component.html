@@ -30,9 +30,12 @@
                 <input class="form-control campo-pesquisa" type="text" placeholder="Pesquisa" aria-label="Search">
             </form>
 
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" routerlink="perfil_pessoa">Meus Dados</a>
+            <ul class="navbar-nav mr-auto" id="linksuser">
+                <li class="nav-item active m-2">
+                    <a *ngIf="loginService.isUserLoggedIn()" class="link" routerLink="/endereco">Meus Dados</a>
+                </li>
+                <li class="nav-item active m-2">
+                    <a *ngIf="loginService.isUserLoggedIn()" class="link" routerLink="/anuncio">Anuncie aqui!</a>
                 </li>
             </ul>
         </div>

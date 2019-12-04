@@ -1,6 +1,6 @@
 <section class="container">
-    <form #Form="ngForm" (ngSubmit)="onSubmitEndereco(Form)" id="endereco">
-        <div class=" form-group col-md-6 tab-pane fade border p-5 rounded" id="endereco" role="tab">
+    <form #Form="ngForm" (ngSubmit)="onSubmitEndereco(Form)">
+        <div class="col-md-6 p-5 " id="endereco">
             <h2>Endereço</h2>
             <div class="input-group mb-3">
                 <input type="text" class="form-control" name="pais" [(ngModel)]="novoEndereco.pais" placeholder="Pais" required>

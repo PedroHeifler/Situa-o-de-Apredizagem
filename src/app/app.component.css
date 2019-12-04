@@ -1,74 +1,88 @@
 /*---Header---*/
 
 #logo {
-  width: 75px;
+    width: 75px;
+}
+
+#linksuser {
+    font-family: 'sans-serif', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* link que ainda não foi visitado */
+
+#linkuser a:link {
+    color: red;
 }
 
 .form-inline.my-2.my-md-0 .form-control {
-  height: 0% !important;
-  background: white;
-  border: 2px solid;
-  border-radius: 25px;
+    height: 0% !important;
+    background: white;
+    border: 2px solid;
+    border-radius: 25px;
 }
 
 .fa-shopping-cart {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .fa-shopping-cart:hover {
-  color: #484848
+    color: #484848
 }
 
 .reverter {
-  display: flex;
-  flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row-reverse;
 }
+
 
 /*---conteudo---*/
 
 #conteudo {
-  background-size: cover;
-  background-image: url(src/assets/Black-and-Orange-Wallpaper-Full-HD.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  font-family: 'Numans', sans-serif;
+    background-size: cover;
+    background-image: url(src/assets/Black-and-Orange-Wallpaper-Full-HD.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Numans', sans-serif;
 }
 
+
 /*Footer*/
+
 .logo {
-  margin: auto;
-  display: block;
-  width: 120px;
+    margin: auto;
+    display: block;
+    width: 120px;
 }
 
 h3 {
-  color: #f8b003;
+    color: #f8b003;
 }
 
 .imgSocial {
-  height: 50px;
-  margin-top: 20px;
+    height: 50px;
+    margin-top: 20px;
 }
 
 div.imgSocial img {
-  width: 50px;
-  position: relative;
-  float: right;
-  margin-right: 8.3px;
-  margin-left: 8.3px;
+    width: 50px;
+    position: relative;
+    float: right;
+    margin-right: 8.3px;
+    margin-left: 8.3px;
 }
 
 .imgSocial .imgPagamento img {
-  width: 50px;
-  float: left;
+    width: 50px;
+    float: left;
 }
 
 .imgPagamento img {
-  width: 50px;
+    width: 50px;
 }
 
-footer a{
-  color: white;
-  text-shadow: 1px 1px 1px #000;
-  text-decoration: none
+footer a {
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    text-decoration: none
 }
