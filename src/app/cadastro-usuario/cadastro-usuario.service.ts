@@ -35,7 +35,7 @@ export class CadastroUsuarioService {
       )
   }
   // HttpClient API put() method => Update usuario
-  updateProduto(id, usuario): Observable<Usuarios> {
+  updateUsuario(id, usuario): Observable<Usuarios> {
     return this.http.put<Usuarios>(this.apiURL + '/usuario/update' + id, JSON.stringify(usuario), this.httpOptions)
       .pipe(
         retry(1),
@@ -43,7 +43,7 @@ export class CadastroUsuarioService {
       )
   }
   // HttpClient API delete() method => Delete usuario
-  deleteProduto(id) {
+  deleteUsuario(id) {
     return this.http.delete<Usuarios>(this.apiURL + '/usuario/deletar' + id, this.httpOptions)
       .pipe(
         retry(1),

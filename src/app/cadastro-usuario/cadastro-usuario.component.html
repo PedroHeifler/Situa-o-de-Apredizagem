@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form #f="ngForm">
+                    <form #f="ngForm" (ngSubmit)="onSubmitUsuario(Form)">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-dark"><i class="fas fa-user"></i></span>
