@@ -1,3 +1,6 @@
+import { Enderecos } from './endereco';
+import { Usuarios } from './usuarios';
+
 export class PessoaFisica {
     id: number;
     nome: String;
@@ -5,8 +8,8 @@ export class PessoaFisica {
     cpf: String;
     telefone: String;
     celular: String;
-    endereco:number;
-    usuario:number;
+    endereco:Enderecos;
+    usuario:Usuarios;
 }
 
 export class PessoaJuridica {
@@ -16,9 +19,8 @@ export class PessoaJuridica {
     cnpj: String;
     telefone: String;
     celular: String;
-    endereco:number;
-    usuario:number;
-    //*fazer verificação de tipo de cliente com o radio selecionado
-    //*tipo_cliente:''
+    endereco:Enderecos;
+    usuario:Usuarios;
+   
 }
 

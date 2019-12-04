@@ -27,13 +27,13 @@
                             <input type="text" class="form-control" name="sobrenome" [(ngModel)]="novoPessoaFisica.sobrenome" placeholder="Sobrenome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cpf" [(ngModel)]="novoPessoaFisica.cpf" id="cpf" placeholder="CPF" required>
+                            <input type="text" class="form-control" name="cpf" data-inputmask="'mask': '999.999.999-99'" [(ngModel)]="novoPessoaFisica.cpf" id="cpf" placeholder="CPF" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="telefone" [(ngModel)]="novoPessoaFisica.telefone" id="telefone" placeholder="Telefone Fixo" required>
+                            <input type="text" class="form-control" name="telefone" data-inputmask="'mask': '(999)9999-9999'" [(ngModel)]="novoPessoaFisica.telefone" id="telefone" placeholder="Telefone Fixo" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="celular" [(ngModel)]="novoPessoaFisica.celular" id="celular" placeholder="Celular" required>
+                            <input type="text" class="form-control" name="celular" data-inputmask="'mask': '(999)99999-9999'" [(ngModel)]="novoPessoaFisica.celular" id="celular" placeholder="Celular" required>
                         </div>
                     </div>
 
@@ -66,13 +66,13 @@
                             <input type="text" class="form-control" name="responsavel" [(ngModel)]="novoPessoaJuridica.responsavel" placeholder="Responsavel" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cnpj" data-inputmask="'mask': '00.000.000/0000-00'" placeholder="00.000.000/0000-000" [(ngModel)]="novoPessoaJuridica.cnpj" required>
+                            <input type="text" class="form-control" name="cnpj" data-inputmask="'mask': '99.999.999/9999-99'" [(ngModel)]="novoPessoaJuridica.cnpj" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="tel" class="form-control" maxlength="14" data-inputmask="'mask': '(000)0000-0000'" name="telefone_fixo" [(ngModel)]="novoPessoaJuridica.telefone" placeholder="Telefone Fixo" required>
+                            <input type="tel" class="form-control" maxlength="14" data-inputmask="'mask': '(999)9999-9999'" name="telefone_fixo" [(ngModel)]="novoPessoaJuridica.telefone" placeholder="Telefone Fixo" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" maxlength="15" data-inputmask="'mask': '(000)00000-0000'" name=" celular " [(ngModel)]="novoPessoaJuridica.celular " placeholder="Celular " required>
+                            <input type="text" class="form-control" maxlength="15" data-inputmask="'mask': '(999)99999-9999'" name=" celular " [(ngModel)]="novoPessoaJuridica.celular " placeholder="Celular " required>
                         </div>
                     </div>
 

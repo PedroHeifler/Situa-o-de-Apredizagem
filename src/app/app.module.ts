@@ -42,7 +42,7 @@ import { AuthenticationService } from './login/authentication.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthenticationService,AnunciarService, PerfilPessoaService, CadastroUsuarioService, EnderecoService],
+  providers: [AuthenticationService,AnunciarService, PerfilPessoaService, CadastroUsuarioService, EnderecoService,],
   bootstrap: [AppComponent]
 
 })

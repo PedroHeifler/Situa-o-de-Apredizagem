@@ -4,6 +4,12 @@ import * as $ from 'jquery';
 import { PerfilPessoaService } from './perfil-pessoa.service';
 import { PessoaJuridica, PessoaFisica } from '../clientes';
 import * as Inputmask from "inputmask";
+import { Alert } from 'selenium-webdriver';
+
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Usuarios } from '../usuarios';
+import { CadastroUsuarioService } from '../cadastro-usuario/cadastro-usuario.service';
+import { EnderecoService } from '../endereco/endereco.service';
 
 
 @Component({
@@ -19,16 +25,20 @@ export class PerfilPessoaComponent implements OnInit {
   novoPessoaFisica: PessoaFisica = new PessoaFisica();
   private pessoafisica: PessoaFisica[];
 
-  constructor(private perfilPessoaService : PerfilPessoaService ){
-    this.perfilPessoaService = perfilPessoaService;
+
+  router: Router;
+  constructor(private usuario: CadastroUsuarioService ,private perfilPessoaService: PerfilPessoaService, router: Router) {
+    this.router = router;
   }
 
   ngOnInit() {
     this.novoPessoaFisica = new PessoaFisica();
-    this.novoPessoaJuridica = new PessoaJuridica;
+    this.novoPessoaJuridica = new PessoaJuridica();
     $('#pessoaJuridica').hide();
     $('#pessoaFisica').hide();
     Inputmask().mask(document.querySelectorAll("input"));
+    this.getPessoaFisica();
+    this.getPessoaJuridica();
 
   }
 
@@ -53,21 +63,39 @@ export class PerfilPessoaComponent implements OnInit {
 
   onSubmitPessoaJuridica(formulario: NgForm) {
     if (formulario.valid) {
-      this.perfilPessoaService.criarPessoaJuridica(this.novoPessoaJuridica).subscribe(
+        this.perfilPessoaService.criarPessoaJuridica(this.novoPessoaJuridica).subscribe(
         id => {
           this.novoPessoaJuridica
+          this.getPessoaJuridica()
         }
       )
+      this.router.navigate(['/', 'endereco'])
+      alert("Cadastro concluido!")
     }
+
   }
+
+  getPessoaJuridica(): void {
+    this.perfilPessoaService.getPessoaJuridicaS().subscribe(
+      pessoajuridica => this.pessoajuridica = pessoajuridica);
+  }
+
   onSubmitPessoaFisica(formulario: NgForm) {
     if (formulario.valid) {
       this.perfilPessoaService.criarPessoaFisica(this.novoPessoaFisica).subscribe(
         id => {
           this.novoPessoaFisica
+          this.getPessoaFisica()
         }
       )
+      this.router.navigate(['/', 'endereco'])
+      alert("Cadastro concluido!")
     }
+  }
+
+  getPessoaFisica(): void {
+    this.perfilPessoaService.getPessoaFisicaS().subscribe(
+      pessoafisica => this.pessoafisica = pessoafisica);
   }
 }
 
