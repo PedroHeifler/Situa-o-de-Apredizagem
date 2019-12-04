@@ -5,6 +5,7 @@ import { AnunciarService } from '../anunciar/anunciar.service';
 import { Location } from '@angular/common';
 import { CarrinhoComponent } from '../carrinho/carrinho.component';
 import { CarrinhoService } from '../carrinho/carrinho.service';
+import { Carrinho } from '../Carrinho';
 
 @Component({
   selector: 'app-detalhe-produto',
@@ -14,6 +15,8 @@ import { CarrinhoService } from '../carrinho/carrinho.service';
 export class DetalheProdutoComponent implements OnInit {
 
   produto: Produtos;
+  novoCarrinho: Carrinho;
+  carrinho: Carrinho = new Carrinho();
 
   constructor(
     private route: ActivatedRoute,
@@ -27,7 +30,7 @@ export class DetalheProdutoComponent implements OnInit {
       this.getProduto(+params.get('productId'));
     });
     console.log(this.produto);
-
+    
   }
 
   getProduto(id: Number) {
@@ -39,10 +42,15 @@ export class DetalheProdutoComponent implements OnInit {
     this._location.back();
   }
 
-  enviarParaCarrinho(produto: Produtos) {
-    this.carrinhoService.enviarParaCarrinho(produto).subscribe(
+  enviarParaCarrinho(produtos: Produtos) {
+    this.carrinho = new Carrinho();
+    this.carrinho.produto = produtos.id;
+    this.carrinho.valor_unitario = produtos.preco_unit;
+    console.log(this.carrinho);
+    
+    this.carrinhoService.enviarParaCarrinho(this.carrinho).subscribe(
       id => {
-        this.produto
+        this.novoCarrinho
       }
     )
   }

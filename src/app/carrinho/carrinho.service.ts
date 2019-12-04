@@ -23,8 +23,8 @@ export class CarrinhoService {
 
 
   // HttpClient API post() method => Create product
-  enviarParaCarrinho(produto): Observable<Number> {
-    return this.http.post<Number>(this.apiURL + '/carrinho', JSON.stringify(produto), this.httpOptions)
+  enviarParaCarrinho(carrinho): Observable<Number> {
+    return this.http.post<Number>(this.apiURL + '/carrinho', JSON.stringify(carrinho), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)
