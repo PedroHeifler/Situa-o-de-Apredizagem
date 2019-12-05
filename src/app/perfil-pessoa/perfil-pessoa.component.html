@@ -4,19 +4,10 @@
         <div>
             <H1>Cadastro de Cliente</H1>
             <br>
-            <div style="font-size: 30px">
-                <label><input type="radio" title="Fisica" name="TipoPessoa"
-                        (click)="RadioFisicaOuJuridica(fisica, 'fisica')" #fisica /> Fisica</label>
-                <br>
-                <label><input type="radio" title="Juridica" name="TipoPessoa"
-                        (click)="RadioFisicaOuJuridica(juridica, 'juridica')" #juridica /> Juridica </label>
-            </div>
         </div>
-        <form #Form1="ngForm" (ngSubmit)="onSubmitPessoaFisica(Form1)" id="pessoaFisica">
+        <form #Form="ngForm" (ngSubmit)="onSubmitPessoa(Form)" id="pessoaFisica">
             <hr>
             <section style="max-width: 1000px">
-                <h2>Pessoa Fisica</h2>
-
                 <div class="row tab-content bg-white text-center d-flex justify-content-center needs-validation" novalidate id="myTabContent1">
                     <div class=" form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais" role="tab">
                         <h2>Dados pessoais</h2>
@@ -89,5 +80,4 @@
             </section>
         </form>
     </div>
-
 </section>

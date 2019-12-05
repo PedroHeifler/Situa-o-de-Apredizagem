@@ -2,15 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import * as $ from 'jquery';
 import { PerfilPessoaService } from './perfil-pessoa.service';
-import { PessoaJuridica, PessoaFisica } from '../clientes';
-import * as Inputmask from "inputmask";
-import { Alert } from 'selenium-webdriver';
-
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { Usuarios } from '../usuarios';
-import { CadastroUsuarioService } from '../cadastro-usuario/cadastro-usuario.service';
-import { EnderecoService } from '../endereco/endereco.service';
-
+import { Pessoas } from '../pessoas';
 
 @Component({
   selector: 'app-perfil-pessoa',
@@ -18,84 +10,28 @@ import { EnderecoService } from '../endereco/endereco.service';
   styleUrls: ['./perfil-pessoa.component.css']
 })
 export class PerfilPessoaComponent implements OnInit {
-
-  novoPessoaJuridica: PessoaJuridica = new PessoaJuridica();
-  private pessoajuridica: PessoaJuridica[];
-
-  novoPessoaFisica: PessoaFisica = new PessoaFisica();
-  private pessoafisica: PessoaFisica[];
-
-
-  router: Router;
-  constructor(private usuario: CadastroUsuarioService ,private perfilPessoaService: PerfilPessoaService, router: Router) {
-    this.router = router;
+ 
+  novoPessoa: Pessoas = new Pessoas();
+  private pessoas: Pessoas[];
+  
+  constructor(private perfilPessoaService : PerfilPessoaService ){
+    this.perfilPessoaService = perfilPessoaService;
   }
 
   ngOnInit() {
-    this.novoPessoaFisica = new PessoaFisica();
-    this.novoPessoaJuridica = new PessoaJuridica();
-    $('#pessoaJuridica').hide();
-    $('#pessoaFisica').hide();
-    Inputmask().mask(document.querySelectorAll("input"));
-    this.getPessoaFisica();
-    this.getPessoaJuridica();
-
+    this.novoPessoa = new Pessoas();
   }
-
-  RadioFisicaOuJuridica(seletor, nome) {
-
-    if (seletor.checked) {
-      // tslint:disable-next-line: triple-equals
-      if (nome == 'fisica') {
-        $('#pessoaFisica').fadeIn();
-        $('#pessoaJuridica').fadeOut();
-      }
-      // tslint:disable-next-line: triple-equals
-      if (nome == 'juridica') {
-        $('#pessoaJuridica').fadeIn();
-        $('#pessoaFisica').fadeOut();
-      }
-    } else {
-      $('#pessoaJuridica').fadeOut();
-      $('#pessoaFisica').fadeOut();
-    }
-  }
-
-  onSubmitPessoaJuridica(formulario: NgForm) {
+  
+  onSubmitPessoa(formulario: NgForm) {
     if (formulario.valid) {
-        this.perfilPessoaService.criarPessoaJuridica(this.novoPessoaJuridica).subscribe(
+      this.perfilPessoaService.criarPessoa(this.novoPessoa).subscribe(
         id => {
-          this.novoPessoaJuridica
-          this.getPessoaJuridica()
+          this.novoPessoa
         }
       )
-      
-      alert("Cadastro concluido!")
-    }
-
-  }
-
-
-  getPessoaJuridica(): void {
-    this.perfilPessoaService.getPessoaJuridicaS().subscribe(
-      pessoajuridica => this.pessoajuridica = pessoajuridica);
-  }
-
-  onSubmitPessoaFisica(formulario: NgForm) {
-    if (formulario.valid) {
-      this.perfilPessoaService.criarPessoaFisica(this.novoPessoaFisica).subscribe(
-        id => {
-          this.novoPessoaFisica
-          this.getPessoaFisica()
-        }
-      )
-      alert("Cadastro concluido!")
     }
   }
-
-  getPessoaFisica(): void {
-    this.perfilPessoaService.getPessoaFisicaS().subscribe(
-      pessoafisica => this.pessoafisica = pessoafisica);
-  }
+  
+ 
 }
 
