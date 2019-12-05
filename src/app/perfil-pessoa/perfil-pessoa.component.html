@@ -12,69 +12,56 @@
                     <div class=" form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais" role="tab">
                         <h2>Dados pessoais</h2>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="nome" [(ngModel)]="novoPessoaFisica.nome" placeholder="Nome" required>
+                            <input type="text" class="form-control" name="nome" [(ngModel)]="novoPessoa.nome" placeholder="Nome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="sobrenome" [(ngModel)]="novoPessoaFisica.sobrenome" placeholder="Sobrenome" required>
+                            <input type="text" class="form-control" name="sobrenome" [(ngModel)]="novoPessoa.sobrenome" placeholder="Sobrenome" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cpf" data-inputmask="'mask': '999.999.999-99'" [(ngModel)]="novoPessoaFisica.cpf" id="cpf" placeholder="CPF" required>
+                            <input type="text" class="form-control" name="cpf" data-inputmask="'mask':'999.999.999-99'" [(ngModel)]="novoPessoa.cpf" id="cpf" placeholder="CPF" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="telefone" data-inputmask="'mask': '(999)9999-9999'" [(ngModel)]="novoPessoaFisica.telefone" id="telefone" placeholder="Telefone Fixo" required>
+                            <input type="text" class="form-control" name="telefone" data-inputmask="'mask':'(999)9999-9999'" [(ngModel)]="novoPessoa.telefone" id="telefone" placeholder="Telefone Fixo" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="celular" data-inputmask="'mask': '(999)99999-9999'" [(ngModel)]="novoPessoaFisica.celular" id="celular" placeholder="Celular" required>
+                            <input type="text" class="form-control" name="celular" data-inputmask="'mask':'(999)99999-9999'" [(ngModel)]="novoPessoa.celular" id="celular" placeholder="Celular" required>
                         </div>
-                    </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="nome_empresa" [(ngModel)]="novoPessoa.nome_empresa" placeholder="Empresa" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="responsavel" [(ngModel)]="novoPessoa.responsavel" placeholder="Responsavel" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="cnpj" data-inputmask="'mask': '99.999.999/9999-99'" [(ngModel)]="novoPessoa.cnpj" placeholder="CNPJ" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="pais" [(ngModel)]="novoPessoa.pais" placeholder="Pais" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="estado" [(ngModel)]="novoPessoa.estado" placeholder="Estado" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="cidade" [(ngModel)]="novoPessoa.cidade" placeholder="Cidade" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="bairro" [(ngModel)]="novoPessoa.bairro" placeholder="Bairro" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="rua" [(ngModel)]="novoPessoa.rua" placeholder="rua" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="cep" data-inputmask="'mask': '99999-999'" [(ngModel)]="novoPessoa.cep" placeholder="CEP" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <a href="#">Termos de aceitação</a>
+                            <br>
+                            <input type="checkbox" class="form-check-input" id="termosAcaitacao" required>
+                            <label class="form-check-label" for="termosAcaitacao">Concordo com os termos</label>
+                            <br>
 
-                    <div class="form-group col-md-12">
-                        <a href="#">Termos de aceitação</a>
-                        <br>
-                        <input type="checkbox" class="form-check-input" id="termosAceitacao" required>
-                        <label class="form-check-label" for="termosAceitacao">Concordo com os termos</label>
-                        <br>
-                        <button type="submit" [disabled]="!Form1.valid" class="btn btn-success mt-2">Cadastrar</button>
-                    </div>
-
-                </div>
-
-            </section>
-
-        </form>
-        <form #Form2="ngForm" (ngSubmit)="onSubmitPessoaJuridica(Form2)" id="pessoaJuridica">
-            <hr>
-            <section style="max-width: 1000px">
-                <h2>Pessoa Juridica</h2>
-
-                <div class="row tab-content bg-white text-center d-flex justify-content-center" id="myTabContent">
-                    <div class=" form-group col-md-6 tab-pane fade show active border p-5 rounded" id="dadosPessoais2" role="tab">
-                        <h2>Dados da Empresa</h2>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="nome_empresa" [(ngModel)]="novoPessoaJuridica.nome" placeholder="Nome" required>
                         </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="responsavel" [(ngModel)]="novoPessoaJuridica.responsavel" placeholder="Responsavel" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cnpj" data-inputmask="'mask': '99.999.999/9999-99'" [(ngModel)]="novoPessoaJuridica.cnpj" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="tel" class="form-control" maxlength="14" data-inputmask="'mask': '(999)9999-9999'" name="telefone_fixo" [(ngModel)]="novoPessoaJuridica.telefone" placeholder="Telefone Fixo" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" maxlength="15" data-inputmask="'mask': '(999)99999-9999'" name=" celular " [(ngModel)]="novoPessoaJuridica.celular " placeholder="Celular " required>
-                        </div>
-                    </div>
-
-
-                    <div class="form-group col-md-12 ">
-                        <a href="# ">Termos de aceitação</a>
-                        <br>
-                        <input type="checkbox" class="form-check-input " id="termosAceitacao " required>
-                        <label class="form-check-label " for="termosAceitacao ">Concordo com os termos</label>
-                        <br>
-                        <button type="submit" [disabled]="!Form2.valid " class="btn btn-success mt-2 ">Cadastrar</button>
+                        <button type="submit" [disabled]="!Form.valid" class="btn btn-success mt-2">Cadastrar</button>
                     </div>
                 </div>
             </section>

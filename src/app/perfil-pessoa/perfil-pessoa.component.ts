@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import * as $ from 'jquery';
 import { PerfilPessoaService } from './perfil-pessoa.service';
 import { Pessoas } from '../pessoas';
+import * as Inputmask from "inputmask";
 
 @Component({
   selector: 'app-perfil-pessoa',
@@ -13,13 +14,16 @@ export class PerfilPessoaComponent implements OnInit {
  
   novoPessoa: Pessoas = new Pessoas();
   private pessoas: Pessoas[];
+ 
   
   constructor(private perfilPessoaService : PerfilPessoaService ){
     this.perfilPessoaService = perfilPessoaService;
+    
   }
 
   ngOnInit() {
     this.novoPessoa = new Pessoas();
+    Inputmask().mask(document.querySelectorAll("input"));
   }
   
   onSubmitPessoa(formulario: NgForm) {
