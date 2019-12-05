@@ -41,7 +41,7 @@ export class CarrinhoService {
       )
   }
   getCarrinho(id): Observable<Carrinho> {
-    return this.http.get<Carrinho>(this.apiURL + '/carrinho' + id)
+    return this.http.get<Carrinho>(this.apiURL + '/carrinho/' + id)
     .pipe(
       retry(1),
       catchError(this.handleError)

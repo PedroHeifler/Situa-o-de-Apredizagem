@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'carrinho', component: CarrinhoComponent, canActivate:[AuthGaurdService] },
   { path: 'endereco', component: EnderecoComponent, canActivate:[AuthGaurdService] },
   { path: 'cadastro', component: CadastroUsuarioComponent},
-  { path: 'pagamento', component: PagamentoComponent},
+  { path: 'pagamento/:id', component: PagamentoComponent},
   { path: 'logout', component: LogoutComponent, canActivate:[AuthGaurdService] }
 
 ];

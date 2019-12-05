@@ -101,12 +101,12 @@
                             </div>
                         </div>
                         <div class="col-md-4 ml-5 mb-5 mt-3" >
-                            <div class="border p-4 pb-5">
+                            <div class="border p-4 pb-5" *ngIf="carrinho">
                                 <h3 class="text-success">TESTE</h3>
                                 <br>
-                                <h3 class="text-success"></h3>
+                                <h3 class="text-success">FRETE:{{carrinho.valor_frete}}</h3>
                                 <br>
-                                <h3 class="text-success">Total: R$ 1.200,00</h3>
+                                <h3 class="text-success">Total:{{carrinho.total_pedido}}</h3>
                             </div>
                         </div>
                     </aside>

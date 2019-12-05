@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AnunciarService } from '../anunciar/anunciar.service';
 import { Carrinho } from '../carrinho';
 
+
 @Component({
   selector: 'app-pagamento',
   templateUrl: './pagamento.component.html',
@@ -16,13 +17,13 @@ export class PagamentoComponent implements OnInit {
   carrinho: Carrinho;
   constructor(
     private route: ActivatedRoute,
-    private anunciarService: AnunciarService,
-    private carrinhoService: CarrinhoService,
-    private _location: Location
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit() {
-
+    this.route.paramMap.subscribe(params => {
+      this.getCarrinho(+params.get('id'));
+    });
   }
 
   escolhaPagamento(seletor){
@@ -32,7 +33,10 @@ export class PagamentoComponent implements OnInit {
   getCarrinho(id: Number) {
     this.carrinhoService.getCarrinho(id).subscribe(
       carrinho => this.carrinho = carrinho);
+      console.log(this.carrinho);
+      
   }
+    
     
 
 }
